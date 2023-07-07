@@ -1,0 +1,50 @@
+{
+  "Classname": "Weapon",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "dmg",
+      "keyDescription": "Custom damage of weapon.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wpn_v_model",
+      "keyDescription": "You can set the custom view model (v_model) for this item here. It's a first person weapon model.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wpn_w_model",
+      "keyDescription": "You can set the custom world model (w_model) for this item here. It's on-ground weapon model.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wpn_p_model",
+      "keyDescription": "You can set the custom player model (p_model) for this item here. It shows on other players when they are holding it.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "soundlist",
+      "keyDescription": "Set the path to a sound replacement file for the weapon. The path begins in 'svencoop/sound/mapname', whereas 'mapname' would be your map's name. You can go to the parent directory using '../'. A valid sound replacement file contains one or more lines with two sound-paths, which are separated by a space and wrapped into quotes. The first sound is the sound to be replaced. The second sound is the new sound. Sound-paths start in the sound directory. You cannot go to the parent directory using '../' in that case. These sounds do not need to be precached using a [custom_precache](../custom_precache) point entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "CustomSpriteDir",
+      "keyDescription": "HUD weapon sprites override. Custom sprites needs .txt file to be created and placed inside \"sprites/<your custom folder>\" directory. Content of those text files keeps the same format as other \"weapon_X.txt\" (where X is the name of the weapon) files inside \"/sprites\" folder. If you have your sprites text files under \"sprites/mymap\", the Custom Sprite Directory (this keyvalue) should be set to \"mymap\". Keep in mind that there must be a text file with name equivalent to this weapon name.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "IsNotAmmoItem",
+      "keyDescription": "Is set to 'Yes', the weapon is not removed from the map when player pick it up, and 'mp_weaponstay' command is disabled.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

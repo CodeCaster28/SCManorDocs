@@ -1,0 +1,16 @@
+{
+  "Classname": "Targetx",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "delay",
+      "keyDescription": "Delay before trigger entity specified in \"Target\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Same as target, except that this supposedly causes the specified entity/entities to be removed from the game. Not all entities which have a target to trigger will also handle killtarget. You may want to use a [trigger_relay](../trigger_relay) to make sure it is working.",
+      "keyChoices": []
+    }
+  ]
+}

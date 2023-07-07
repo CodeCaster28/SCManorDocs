@@ -1,0 +1,44 @@
+{
+  "Classname": "env_shake",
+  "Description": "Causes nearby players' screens to shake. Used for simulating earthquakes.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "The env_shake will affect the whole map equally, instead of a radius around it."
+        }
+      ]
+    },
+	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to apply a screen shake. Every trigger use-type works uniformly. Multiple triggering will override previous shake. Can be kill-targeted but shake won't stop playing until finished.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "amplitude",
+      "keyDescription": "Ranging from 0.0 to 16.0, this sets the amplitude in degrees.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "radius",
+      "keyDescription": "Radius around the entity in which the rumble affects players. Becomes less noticeable towards the outside of the radius.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "duration",
+      "keyDescription": "The duration, in seconds, which the rumble lasts. This includes a linear fade-out: The rumble starts with the set amplitude, which becomes less towards the duration time running out.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "frequency",
+      "keyDescription": "The frequency of the rumble. A value of 10 would mean that your screen will shake up and down ten times per second.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Env_shakes can safely be triggered while a rumble is still in progress, causing the new rumble to overwrite the old one entirely."
+  ]
+}

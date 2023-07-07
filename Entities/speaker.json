@@ -1,0 +1,81 @@
+{
+  "Classname": "speaker",
+  "Description": "A black mesa announcer doing random announcements.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable announcements. Depending on trigger use-type: 'On'- enable announcement, 'Off'- disable announcement, 'Toggle'- toggle announcement. Can be kill-targeted but sound already played won't be removed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "preset",
+      "keyDescription": "Name of announcement group to play. Found in default_senteces.txt, look for grouped \"intercom\" labeled entries.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Better use presets to choose announcement group.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "Announcement volume.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Speaker need to be triggered in order to be enabled."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "Classname": "env_sprite",
+  "Description": "The env_sprite entity allows you to render sprites, which are common 2D-graphics which will appear aligned to face you at all times, unless specified otherwise.",
+  "KeyDescriptions": [
+  	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable sprite. Depending on trigger use-type: 'On'- show sprite, 'Off'- hide sprite, 'Toggle'- toggle sprite. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "framerate",
+      "keyDescription": "Sprite framerate.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "Set a sprite to be displayed. Path start in modification's folder.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "scale",
+      "keyDescription": "Set the scale of the sprite effect. This defaults to 0.25 if not set.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "vp_type",
+      "keyDescription": "Feature that allows to override view port of the sprite.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Default setting."
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "Parallel: Always face the player."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Parallel Upright: Sprites rotates around vertical axis to always face player, but it's fixed to this axis."
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Parallel Orientated: Rotate sprite to env_sprite angles."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Facing Upright: Not supported/unused."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Orientated: Sprite is oriented to the worlds, uses it's angles and it's not rotating."
+        }
+      ]
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Causes the env_sprite effect to be visible from map-load onwards. Useful when the env_sprite has a targetname. Makes little to no sense in combination with \"Play Once\"."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If set, the sprite animation won't loop and end after cycling through all of its frames once. If the sprite is not animated, only the first frame will show for a moment."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "If set along with \"Play once\", causes the env_sprite entity to be removed from the game after having played. Useful for saving some entities."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "To make sprite work properly use \"Render Mode\" with optional \"FX Amount\". Most sprites can make use of 'Glow' or 'Additive' render modes (most sprites are in 'additive' format), however sprites with 'alphatest' works best with 'Texture' mode (background gets removed, image is opaque), while 'indexalpha' sprites are rendered properly only in 'Solid' and 'Texture', in any other mode they appearance is invalid. You can use third party tools like Sprite Explorer to check format of sprite if you are not sure, or check this Sprite List to check format type each sprite.",
+    "Sprite alignment can also be set through the sprite itself. To do this, edit byte at offset 8 (meaning the 9th byte) in the sprite file using a HEX editor: 00: Sprite fixed on vertical axis- SPR_VP_PARALLEL_UPRIGHT; 01: Not supported- SPR_FACING_UPRIGHT; 02: Normal behaviour, sprite always faces you- SPR_VP_PARALLEL; 03: Sprite is fixed in space and can be rotated using angles- SPR_ORIENTED; 04: As SPR_VP_PARALLEL, but sprite can be rotated relatively to perspective using angles- SPR_VP_PARALLEL_ORIENTED.",
+    "Oriented mode sprites tend to have problems with angle co-ordinates in hammer so its best to set them manually starting from [180,180,180] instead of [0,0,0]. In addition don't use negative numbers; instead subtract from 360. Also use 360 instead of 0 and carefully watch the use of hammer transforms as it will likely give you numbers that might look fine in hammer but will not work in-game. If you are still having troubles with angles not appearing in map I have an example RMF included in the example file download at the bottom (called \"oriented_angles.rmf\"). Taken from: [http://www.the303.org/tutorials/gold_sprite.htm](http://www.the303.org/tutorials/gold_sprite.htm)."
+  ]
+}

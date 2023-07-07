@@ -1,0 +1,49 @@
+{
+  "Classname": "monster_turret",
+  "Description": "Big turret, does moderate amount of damage.<br>Class: Machine.",
+  "KeyDescriptions": [
+    {
+      "keyName": "orientation",
+      "keyDescription": "Determines orientation of the mounted turret- floor or ceiling.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "If selected, turrets can auto-activate themselfes when enemy is in their LoS."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "Start disabled, ignore environment until triggered."
+        }
+      ]
+    },
+    {
+      "keyName": "maxsleep",
+      "keyDescription": "Time to auto-deactivation when no enemies tracked.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "turnrate",
+      "keyDescription": "Rate of turret rotating when navigating enemies.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "attackrange",
+      "keyDescription": "Range of firing. Note that too high values may not be supported.",
+      "keyChoices": []
+    }
+  ]
+}

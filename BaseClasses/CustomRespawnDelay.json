@@ -1,0 +1,11 @@
+{
+  "Classname": "CustomRespawnDelay",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "m_flCustomRespawnTime",
+      "keyDescription": "Customize pickup respawn delay in seconds.",
+      "keyChoices": []
+    }
+  ]
+}

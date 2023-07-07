@@ -1,0 +1,39 @@
+{
+  "Classname": "player_weaponstrip",
+  "Description": "Removes all weapons and ammo from player. It's possible to also remove HEV suit.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "(Also) remove HEV suit."
+        }
+      ]
+    },
+    {
+      "keyName": "m_iAffected",
+      "keyDescription": "Allows to change which players will be affected by player_weaponstrip.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Strip only !activator of the script e.g. player who pressed a button that targeted this entity."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Strip everyone on map."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Strip everyone except the !activator of the script- e.g. strip everyone except player who pressed a button that targeted this entity."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to remove player's weapons. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    }
+  ]
+}

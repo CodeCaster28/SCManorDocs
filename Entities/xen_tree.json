@@ -1,0 +1,24 @@
+{
+  "Classname": "xen_tree",
+  "Description": "An aggressive life form that hits his enemy whenever they stand under it. It also react when it's attacked.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Self explanatory."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Spawn facing random direction."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Disables collision box of entity. It still can hurt you."
+        }
+      ]
+    }
+  ]
+}

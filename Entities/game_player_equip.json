@@ -1,0 +1,91 @@
+{
+  "Classname": "game_player_equip",
+  "Description": "The game_player_equip entity is a powerful entity for managing player weapons/items/ammo loadout. You can gradually enable more and more game_player_equip entities to increase the players' arsenal as your map progresses, or allow players to trigger it directly. This entity exhibits strange behaviour when used incorrectly, so set it up carefully: Basically, you disable smart edit mode when viewing its properties in Valve Hammer Editor, then add new keyvalues, whereas the key's name be the name of the weapon-/item-/ammo-entity to supply, and value the quantity in which it shall be provided, per player. When providing an uzi, provide either weapon_uzi or weapon_uziakimbo, never both. For weapon quantity, always set 1. Never supply more than the player can pick up/carry. If at least one game_player_equip entity is enabled, the default weapon and ammo loadout from your map's config file will be ignored entirely. So if your map is using game_player_equip entities, you will probably want to have one game_player_equip entity that is always enabled to provide a default loadout. Whether a game_player_equip entity is enabled or not depends on the state of its master. If no master is set, it's always enabled. When the game_player_equip is triggered normally, it will equip the activating player. Be careful with that, as giving a player things he cannot pick up/carry will spawn and lie around till collected, possibly flooding the server.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, the game_player_equip entity will not equip respawning players, but only react to direct triggering, equipping its activator. This makes its master obsolete."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If selected, this game_player_equip will only equip players with a targetname 'Player targetname' (see below)."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "If set, the game_player_equip entity will strip all weapons/ammo from the triggering player and then re-equip him. This is useful for preventing the aforementioned overflow."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "If selected, also give weapons specified in this map configuration file (mapname.cfg) instead of ignoring it."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Set the targetname of a player to be the only one to ever receive equipment from this game_player_equip, if the 'Filter playername'-flag is set. This can be used for creating maps with roleplaying (when paired with the CVar mp_dropweapons set to '0'), or preventing a player from using the same triggerable game_player_equip entity multiple times per life.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to apply inventory changes. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when equipment is applied."
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Currently unusable.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "equipmode",
+      "keyDescription": "Set equipping mode.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Provide players with items/weapons/ammo as described above."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Allows to change .cfg file inventory and enable \"Inventory Mode\" to be used."
+        }
+      ]
+    },
+    {
+      "keyName": "inventorymode",
+      "keyDescription": "Allows advanced inventory manipulation, changes player's equip on respawn.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Overrides inventory with given items."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Adds given items to inventory. If any item already exists, the values are sum together."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Removes given items from inventory. If any item already exists, the values are substracted from them."
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "Removes given items from inventory (if they exists)."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Set items if given value is greater than current value."
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Set items if given value is lesser than current value."
+        }
+      ]
+    }
+  ]
+}

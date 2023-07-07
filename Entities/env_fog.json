@@ -1,0 +1,40 @@
+{
+  "Classname": "env_fog",
+  "Description": "Entity which creates a fog effect within a specific area around it. Fog, unfortunately, will only show to players who have it enabled in their options.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to control fog. Depending on trigger use-type: 'On'- enable fog, 'Off'- disable fog, 'Toggle'- toggle fog. Can be kill-targeted which removes fog effect as well.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "The env_fog entity will start disabled and needs to be triggered in order for fog to show."
+        }
+      ]
+    },
+    {
+      "keyName": "rendercolor",
+      "keyDescription": "The color of the fog.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "iuser2",
+      "keyDescription": "Distance, in units, at which the fog starts to be visible. This needs to be greater than zero.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "iuser3",
+      "keyDescription": "Distance, in units, at which the fog appears opaque. This needs to be greater than the start distance.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Fog works only for OpenGL graphics mode.",
+	"Entities with 'Render mode' set to other than 'Normal' (including sprites) are not affected by env_fog."
+  ]
+}

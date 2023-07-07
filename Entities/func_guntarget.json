@@ -1,0 +1,49 @@
+{
+  "Classname": "func_guntarget",
+  "Description": "Func_guntarget is a [func_train](../func_train) able to fire it's target once, on receiving specified amount of damage. It need to be turned on (to make it move) in order to take a damage. Once it's gets activated it won't stop it's movement unless \"killed\". This entity cannot be stopped by triggering it nor reactivated. It is used in the Half-Life training course as gun target, hence the name.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, this func_guntarget starts enabled."
+        }
+      ]
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Movement-speed in units per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start it's movement. Only 'On' and 'Toggle' trigger use-types are accepted. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "The name of the first [path_corner](../path_corner) (where the train starts). The {{ entname }} is teleported to this position on map start, no matter where it's placed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Entity to trigger when func_guntarget receive a specified in \"Damage to Take\" amount of damage. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "Point of damage to take before guntarget trigger an entity typed in \"Fire on damage\". Should be different than 0.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "When moving, func_guntarget can receive the damage like regular breakable entity, but when it stops, it behaves like regular func_train- some projectiles would bounce off out of it's surface."
+  ]
+}

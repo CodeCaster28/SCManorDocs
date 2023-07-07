@@ -1,0 +1,11 @@
+{
+  "Classname": "func_tankcontrols",
+  "Description": "This entity is used as a [func_tank](../func_tank) or [func_tanklaser](../func_tanklaser) or [func_tankrocket](../func_tankrocket) or [func_tankmortar](../func_tankmortar) controlling area. It works like an invisible button, when pressed, player can control the tank. Usage of this entity is very simple- place it in front of func_tank and set \"Tank entity name\" to name of any type of tank. If func_tankcontrols is too far away from tank entity, the func_tankcontrols won't work. Keep in mind that all tanks entities need to have their \"Controllable\" flag checked.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Name of [func_tank](../func_tank) or [func_tanklaser](../func_tank) or [func_tankrocket](../func_tankrocket) or [func_tankmortar](../func_tankmortar) entity to control.",
+      "keyChoices": []
+    }
+  ]
+}

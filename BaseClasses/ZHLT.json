@@ -1,0 +1,37 @@
+{
+  "Classname": "ZHLT",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "zhlt_lightflags",
+      "keyDescription": "Brush entities only. Changes light casting or receiving setting.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Let the entity decide about lightning setting."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Disables bleed fix on given entity. Sometimes when entity gets trough the wall, it may get wrong lighting in one of the site. Use this flag when this problem appear."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "May be useful for func_door or func_illusionary to generate shadows. Can also generate shadows on transparent '{' textures with 'Solid' Render Mode (amount: 255). Note that shadow sharpness depends on '-blur' compile value. The blur value of map above is 0.5 (it's 1.5 by default)."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "both 'Opaque' and 'Embedded Fix' settings."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Instead of using 'Embedded Fix' you can use 'Concave Fix'. It's generally used for curved entities, use it when you spot a black seems on curved (arched) entities."
+        }
+      ]
+    },
+    {
+      "keyName": "light_origin",
+      "keyDescription": "Set it to the name of [info_target](../info_target), this entity will receive lights from specified [info_taget](../info_taget) position instead of it's own position. As a lot of entites can moves and lightning is not updated dynamically you can choose how your entity will be lit in game (e.g. elevators, pushables e.t.c.). Now you don't need to put the whole entity in the well-lit room at map start to make them look desirable.",
+      "keyChoices": []
+    }
+  ]
+}

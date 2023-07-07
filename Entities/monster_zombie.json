@@ -1,0 +1,152 @@
+{
+  "Classname": "monster_zombie",
+  "Description": "Scientist possessed by headcrab. Slow but dangerous in close combat.<br>Alien Monster.",
+  "KeyDescriptions": [
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model display sequence in editor by specifying it's number.",
+      "keyChoices": [
+        {
+          "choiceValue": "0  ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "19 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "20 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "21 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "22 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "23 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "24 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "25 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "26 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "27 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "28 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "29 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "30 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "31 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "33 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "34 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "35 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "36 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "37 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "38 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "39 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "40 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "41 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "42 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "43 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "44 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "45 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "48 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "46 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "47 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "49 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "50 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "51 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "52 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

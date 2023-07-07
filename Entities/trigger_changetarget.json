@@ -1,0 +1,26 @@
+{
+  "Classname": "trigger_changetarget",
+  "Description": "The proper method for changing the target-keyvalue of an entity. You should prefer this to using a trigger_changevalue, if you can, because this entity takes several special cases into account.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Entity which \"Target\" value will be changed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to apply target change. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszNewTarget",
+      "keyDescription": "New \"Target\" value for targeted entity.",
+      "keyChoices": []
+    }
+  ]
+}

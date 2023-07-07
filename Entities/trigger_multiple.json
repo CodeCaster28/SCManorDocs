@@ -1,0 +1,29 @@
+{
+  "Classname": "trigger_multiple",
+  "Description": "A simple brush-based trigger which triggers its target when a players enters it and whenever something enters it or is still inside of it when its delay before reset runs out. In simple words, this entity works as the [trigger_once](../trigger_once) does, except this can be triggered multiple times.",
+  "KeyDescriptions": [
+    {
+      "keyName": "wait",
+      "keyDescription": "Time, in seconds, the trigger_multiple can fire it's target again after touched.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }}. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when {{ entname }} is touched (or when stop touched if \"Fire On Exit\" flag is selected).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when {{ entname }} is touched (or when stop touched if \"Fire On Exit\" flag is selected).",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Monsters are only able to trigger brush trigger entities while moving inside of them."
+  ]
+}

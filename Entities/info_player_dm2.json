@@ -1,0 +1,20 @@
+{
+  "Classname": "info_player_dm2",
+  "Description": "Obsolete entity- you might want to use [info_player_deathmatch](../info_player_deathmatch) entity instead. This entity is still functional though, it's used when there is no info_player_deathmatch available for players- when those are either disabled temporary or not put at map at all.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable/disable this spawn point. Depending on trigger use-type: 'On'- enable spawn point, 'Off'- disable spawn point, 'Toggle'- toggle spawn point. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when player is spawned at this point. Trigger use-type is defined in \"Trigger State\" keyvalue.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "When there is no active or not obstructed spawnpoints, the players are forced to wait until at least one of the spawnpoints become available again- the message will be displayed: \"No respawn points available. Please wait...\".",
+    "Remember that even when you disabled all {{ entname }} entities, the info_player_coop and info_player_start entities (that you might put in your map accidentally) will be used instead.."
+  ]
+}

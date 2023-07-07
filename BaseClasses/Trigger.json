@@ -1,0 +1,75 @@
+{
+  "Classname": "Trigger",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "netname",
+      "keyDescription": "Non functional.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) disables this {{ entname }}. If master is specified the {{ entname }} will be disabled and will not work. When [multisource](../multisource) entity is triggered/being triggering by all possible inputs, the {{ entname }} will work again. When [multisource](../multisource) lost at least one input signal, the entities becomes disabled again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sounds",
+      "keyDescription": "Non functional.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Non functional.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "tiny_monsters",
+      "keyDescription": "If set to 'Yes', monsters like cockroaches can trigger this entity as well as other monsters.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": " If set, monsters can trigger this but only works when monster is moving within trigger."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If set, players won't be able to trigger this."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "If set, [func_pushable](../func_pushable) entities can trigger this."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": " If set, everything other than monsters, clients and pushables can trigger this. Does not exclude the above."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Not applicable on {{ entname }}- it's already get triggered on enter!"
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": " If set, {{ entname }} will trigger as soon as something that entered it left it, instead of the instant something enters it."
+        }
+      ]
+    }
+  ]
+}

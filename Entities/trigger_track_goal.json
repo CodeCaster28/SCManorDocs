@@ -1,0 +1,43 @@
+{
+  "Classname": "trigger_track_goal",
+  "Description": "Allows calling a [func_tracktrain](../func_tracktrain) to a specific [path_track](../path_track). The func_train and path_corner entities are not supported and will cause the game to crash if used in combination with this anyway.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": " If set, trigger_track_goal will only allow the train to be called when it is currently not moving."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Prevents the train from moving backward if it can't find another path for func_tracktrain."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of a func_tracktrain to send towards a path_track.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to send a func_tracktrain to specified path. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "path_name",
+      "keyDescription": "Name of a path_track entity which the targeted func_tracktrain can reach.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszSoundNoPath",
+      "keyDescription": "If there is no another path_track this train can be direct to, this is the sound to play when it happens.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Causing the train to move backwards on its path only works in looped tracks."
+  ]
+}

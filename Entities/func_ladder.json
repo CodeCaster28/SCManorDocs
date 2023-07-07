@@ -1,0 +1,21 @@
+{
+  "Classname": "func_ladder",
+  "Description": "Invisible brush entity which allows players to climb on its surface on touch. Player won't stop using the ladder unless jumping off or moving away from the ladder's surface sideways. Ladders on ceilings works as well. Sloped ladders produce unsatisfactory results and should not be used. Touching a ladder while falling will nullify the player's velocity and safe him from falling damage. Usually used in combination with a [func_illusionary](../func_illusionary) with ladder-textures for the visual counterpart.",
+  "KeyDescriptions": [
+    {
+      "keyName": "  spawnflags",
+      "keyDescription": "Keyvalue_Description_here",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Ladder starts disabled, must be further triggered to be enabled."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable it. Depending on trigger use-type: 'On'- enable ladder, 'Toggle'- toggle ladder, 'Off'- disable ladder. Can be kill-targeted.",
+      "keyChoices": []
+    }
+  ]
+}

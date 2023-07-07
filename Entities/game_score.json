@@ -1,0 +1,47 @@
+{
+  "Classname": "game_score",
+  "Description": "Gives score points to the triggering player, as can be seen on the multiplayer scoreboard.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "When reducing score as a means of penalty, this allows the score to go below zero."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "All players receive the specified amount of points, instead of only the triggering player."
+        }
+      ]
+    },
+    {
+      "keyName": "points",
+      "keyDescription": "Amount of points to add to the score. Can be negative.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) locks this {{ entname }}. If master is specified the {{ entname }} will be disabled and it will not give points to activating player. When [multisource](../multisource) entity is triggered/being triggering by all possible inputs, the {{ entname }} will be unlocked. When [multisource](../multisource) lost at least one input signal, the entities becomes locked again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to give points to player (he must be an !activator of triggering chain). Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Non-functional in {{ entname }}."
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}."
+    },
+    {
+      "keyName": "delay",
+      "keyDescription": "Non-functional in {{ entname }}."
+    }
+  ]
+}

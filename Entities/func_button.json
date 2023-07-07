@@ -1,0 +1,171 @@
+{
+  "Classname": "func_button",
+  "Description": "A brush entity, which can be triggered by the player by issuing his 'Use'-command on it while standing next to it and looking at it. The func_button then triggers its target. This is the most common entity for players interacting with other map entities or entity systems.",
+  "KeyDescriptions": [
+    {
+      "keyName": "speed",
+      "keyDescription": "Speed at which the button moves when pressed, unless \"Don't move\" keyvalue is set. The button moves for its width in the move direction, specified by \"Pitch Yaw Roll\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "If you enter here value higher than 0 the button becomes shootable only and can be activated when it's out of health.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "lip",
+      "keyDescription": "This value will be deducted from the buttons move distance. Negative values are allowed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when {{ entname }} gets pressed. Trigger use-type is defined in \"Use Type\" keyvalue.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to press/toggle it. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when {{ entname }} gets pressed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) disables this {{ entname }}. If master is specified the {{ entname }} won't work. When multisource entity is triggered/being triggering by all possible inputs, the {{ entname }} will be enabled and ready to be pressed. When multisource lost at least one input signal, the entities becomes disabled again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sounds",
+      "keyDescription": "Set the sound to be played when the button is pressed. It will play when the button is locked, too.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "",
+          "media": "../audio/button1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "",
+          "media": "../audio/button2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "",
+          "media": "../audio/button3.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "",
+          "media": "../audio/button4.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "",
+          "media": "../audio/button5.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "",
+          "media": "../audio/button6.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "",
+          "media": "../audio/button7.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "",
+          "media": "../audio/button8.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "",
+          "media": "../audio/button9.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": "",
+          "media": "../audio/button10.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": "",
+          "media": "../audio/button11.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": "",
+          "media": "../audio/button1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": "",
+          "media": "../audio/lightswitch2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        }
+      ]
+    },
+    {
+      "keyName": "noise",
+      "keyDescription": "Custom sound, that overrides default sound from \"Sounds\" list to play when the button is pressed. It will play when the button is locked, too.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wait",
+      "keyDescription": "When the button is pressed, it will remain in its pressed state for this amount of time. This also affects any toggleable textures on it. If set to '-1', the button can be pressed only once, and will then remain in its pressed state forever. If a multisource entity is among the func_button's targets, that multisource entity will recognize the button's input to be active only for this amount of time.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, this func_button won't move when pressed and be activated instantly instead."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "If set, this func_button will ignore its delay before reset and be toggleable instead, switching between the texture states whenever pressed, if such a texture is assigned on one of its faces. The delay before reset still needs to be greater than zero in order for this to work, though."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If set, the func_breakable occasionally emits sparks. You can use this for easily creating buttons which appear to be broken."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "If set, this func_button can be activated by touching it. This disables activating per use-key."
+        }
+      ]
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "use_type",
+      "keyDescription": "Set the use-type with which the button will trigger its targets. Default is 'Toggle'.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

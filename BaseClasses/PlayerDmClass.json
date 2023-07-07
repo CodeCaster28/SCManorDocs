@@ -1,0 +1,70 @@
+{
+  "Classname": "PlayerDmClass",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "If set, {{ entname }} will be disabled on map load. Players cannot spawn here until the {{ entname }} is triggered by another entity targetting it."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Player will spawn rappeling down using a rope (like rappeling soldiers) until arriving at the ground."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "If set, only players having their targetname match the \"Filter player targetname\" can spawn here."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "If set along with \"Filter player targetname\", only players having a different targetname than set by \"Filter player targetname\" can spawn here."
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "If set, the {{ entname }} will trigger its target whenever a player respawns at its position."
+        }
+      ]
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "If set, every player spawning here will get this string as his/her targetname.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Targetname required on the player to spawn here, or targetname not allowed to spawn here, if \"Invert filter\" flag is set.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) disables this {{ entname }}. If master is specified the {{ entname }} won't spawn anyone here. When multisource entity is triggered/being triggering by all possible inputs, the {{ entname }} will be enabled and ready to spawn players here. When multisource lost at least one input signal, the entities becomes disabled again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "frags",
+      "keyDescription": "Speed, in units per second, with which the player will rappel down, if that is enabled.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "triggerstate",
+      "keyDescription": "Set the use-type with which the entity specified in \"Target\" will be triggered (after someone spawns here).",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

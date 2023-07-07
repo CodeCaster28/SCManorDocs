@@ -1,0 +1,25 @@
+{
+  "Classname": "player_respawn_zone",
+  "Description": "This brush entity functions the same as [trigger_respawn](../trigger_respawn) which respawns players to any active spawn point when triggered, but only filters for players in or outside the zone in the moment of triggering. Player's inventory is left unmodified.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to respawn players. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "zonetype",
+      "keyDescription": "Set whether to respawn all players that are inside or outside of this entity when it is triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Only players outside the player_respawn_zone brush are respawned at the time of trigger, players within the brush are ignored."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Only players outside the player_respawn_zone brush are respawned at the time of trigger, players within the brush are ignored."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "Classname": "env_message",
+  "Description": "An entity to display messages from the titles.txt file on the HUD. You probably are better off with the much more customizable [game_text](../game_text) entity.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to display message.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Name of the message from titles.txt to display.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "The message can show up only once."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Everyone will see the message, instead of only the !activator."
+        }
+      ]
+    },
+    {
+      "keyName": "messagesound",
+      "keyDescription": "An optional sound effect to play. Path starts in the 'sound'-folder.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "messagevolume",
+      "keyDescription": "The volume, from 0 to 10, to play the sound at.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "messageattenuation",
+      "keyDescription": "The radius in which the sound can be heard.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

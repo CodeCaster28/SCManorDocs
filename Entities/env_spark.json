@@ -1,0 +1,30 @@
+{
+  "Classname": "env_spark",
+  "Description": "The env_spark entity is used for emitting the visuals and sounds of a spark, often used for implying cut electric cables, broken buttons and malfunctioning machinery.",
+  "KeyDescriptions": [
+    {
+      "keyName": "MaxDelay",
+      "keyDescription": "Set the maximum delay, in seconds, between sparks, when the 'Toggle'-flag is set. Otherwise, this is redundant.",
+      "keyChoices": []
+    },
+	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to make a spark or toggle sparks if 'Toggle' flag is used. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "32",
+          "choiceDescription": "Instead of emitting one spark whenever it is fired, the env_spark will automatically emit multiple sparks consecutively, with a delay between them, while activated."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If set, the env_spark entity will start enabled. Makes sense only in combination with the 'Toggle'-flag above."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "Classname": "monster_furniture",
+  "Description": "Monster_furniture works in the same way as a [monster_generic](../monster_generic) does, but it has some features cut.",
+  "KeyDescriptions": []
+}

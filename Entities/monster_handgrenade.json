@@ -1,0 +1,16 @@
+{
+  "Classname": "monster_handgrenade",
+  "Description": "Grenade that will explode after a set amount of time after spawned.",
+  "KeyDescriptions": [
+    {
+      "keyName": "health",
+      "keyDescription": "Delay in seconds before grenade explodes after spawn.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "new_model",
+      "keyDescription": "Custom grenade model.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Classname": "func_plat",
+  "Description": "Vertically moving elevator that moves up automatically when player step on it. It is also automatically called when player wait for it at the top of the whole travel altitude.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If selected, the func_plat is no more automatically called from top and activated by stepping on it. It required trigger to do so."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable it (or move it manually with \"Toggle\" flag checked). Func_plat is automatically enabled if this key is empty. With \"Toggle\" flag enabled the behaviour is based on trigger use-type: 'On'- move forward, 'Off'- move backward, 'Toggle'- move. With \"Toggle\" flag disabled all trigger use-types are accepted to enable lift. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "height",
+      "keyDescription": "How many units func_plat travels from it's starting position when someone step on it. Set to negative to make func_plat travels down.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Movement-speed in units per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Just specifying a targetname makes func_plat not working until triggered."
+  ]
+}

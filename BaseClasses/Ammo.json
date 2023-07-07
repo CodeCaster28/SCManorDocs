@@ -1,0 +1,11 @@
+{
+  "Classname": "Ammo",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "model",
+      "keyDescription": "You can set the custom model (w_model) for this item here. Can be any model or sprite (it will not animate). That will NOT replace default v_model and p_model of weapon.",
+      "keyChoices": []
+    }
+  ]
+}

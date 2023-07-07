@@ -1,0 +1,50 @@
+{
+  "Classname": "monster_torch_ally_repel",
+  "Description": "Ally engineer that will appear rappelling down when triggered.<br>Class: Player Ally.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start rappelling. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "Name of a squad for this monster to be part of. Monsters which share the same squad name are in the same squad, will attempt to stay together and follow their squad's leader (monster with \"SquadLeader\" flag).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "Select this flag if you want this monster to become a leader of squad typed in \"Squad name\"."
+        }
+      ]
+    },
+    {
+      "keyName": "weapons",
+      "keyDescription": "You can choose which weapon the monster uses.",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model display sequence in editor by specifying it's number.",
+      "keyChoices": [
+        {
+          "choiceValue": "39 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

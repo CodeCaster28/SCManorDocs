@@ -1,0 +1,5 @@
+{
+  "Classname": "info_player_coop",
+  "Description": "Obsolete entity that is used to determine a spawnpoint for players. You might want to use [info_player_deathmatch](../info_player_deathmatch) entity for this. This entity is still functional though, it's used when there is no info_player start nor info_player_dm on map, along with info_player_start. Note that temporary disabled spawnpoint are counted as disabled- so if all info_player_deathmatch are disabled, and info_player_coop available, the players will be spawned on that info_player_coop entity. When there is no active or not obstructed spawnpoints, the players are forced to wait until at least one of the spawnpoint become available again.",
+  "KeyDescriptions": []
+}

@@ -1,0 +1,14 @@
+{
+  "Classname": "func_friction",
+  "Description": "The func_friction entity will modify the ground friction for all players moving inside of it. The func_friction itself is non-solid and invisible. This entity can for example be used to simulate slippy surfaces as well as hard to navigate mud. You can add targetname manually to this entity.",
+  "KeyDescriptions": [
+    {
+      "keyName": "modifier",
+      "keyDescription": "100 is default floor friction, less values for less slippery floor.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Func_friction supports to have a name (even if it is not listed in object properties). You can set it by adding \"targetname\" key with SmartEdit mode disabled. It can be kill-targeted."
+  ]
+}

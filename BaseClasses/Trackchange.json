@@ -1,0 +1,71 @@
+{
+  "Classname": "Trackchange",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "height",
+      "keyDescription": "Travel distance, from top to bottom. If \"Start at Bottom\" flag is selected, the travel distance won't change from bottom to top, it only makes platform start at bottom and awaits for [func_tracktrain](../func_tracktrain) to arrive.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If selected, train isn't paused at the top/bottom of the path after {{ entname }} finish it's movement. Instead, it's continue moving forward."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "The functionality of this flag is unknown. However, this entity seems to work fine whenever this flag is selected or not."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Platform starts at the bottom instead at the top path_track if this flag is ticked."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If selected, the platform only rotates in place of it's origin without travelling specified altitude. The top and the bottom path_tracks should have their origin positioned in the same coordinates."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "Train rotates around X axis instead of Z axis. Can be combined with \"Y Axis\"."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "Train rotates around Y axis instead of Z axis. Can be combined with \"X Axis\"."
+        }
+      ]
+    },
+    {
+      "keyName": "rotation",
+      "keyDescription": "The spin done by this platform on entire way up/down.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "train",
+      "keyDescription": "Name of the [func_tracktrain](../func_tracktrain) this platform will transport to top/bottom track.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "toptrack",
+      "keyDescription": "Name of last path_track of the top path (if \"Start at Bottom\" is selected this is the name of the first path_track at the top path).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bottomtrack",
+      "keyDescription": "Name of first path_track of the bottom track. (if \"Start at Bottom\" is selected this is the name of the last path_track at the bottom path).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Speed in which {{ entname }} travel the whole way up/down (units per seconds).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "noise2",
+      "keyDescription": "Sound file to use when the {{ entname }} is blocked. This overrides default \"Stop Sound\" sound. Note that other sounds format (AIFF, ASF, DLS, FLAC, IT, M3U, MID, MOD, MP2, MP3, OGG, S3M, VAG, WMA, XM) can be used, even if editor sound browser allows to pick only WAV files.",
+      "keyChoices": []
+    }
+  ]
+}

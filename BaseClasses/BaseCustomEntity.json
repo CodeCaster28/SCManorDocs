@@ -1,0 +1,17 @@
+{
+  "Classname": "BaseCustomEntity",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "m_iszScriptFile",
+      "keyDescription": "Keyvalue_Description_here",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Insert additional notes here"
+  ],
+  "Issues": [
+    "Insert known issues here"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "Classname": "monstermaker",
+  "Description": "Used to spawn monsters (works with other stuff too e.g. items!). Very limited. Use [squadmaker](../squadmaker) instead for better results and more control. You must specify monster type, otherwise it will crash the game with \"Spawned a NULL entity!\" error message.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever a monster is spawned. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to spawn monsters. With 'Cyclic' flag disabled the behaviour is based on trigger use-type: 'On'- turn spawner on, 'Off'- turn spawner off, 'Toggle'- toggle spawner. With 'Cyclic' flag enabled every trigger use-type works uniformly to spawn a single monster. Can be kill-targeted but monsters already spawned are not removed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "monstertype",
+      "keyDescription": "Set the classname of the monster, weapon, item, ammunition or whatever else may be spawned by {{ entname }} without working incorrectly here. You must specify monster type, otherwise it will crash the game with \"Spawned a NULL entity!\" error message.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "If set, everything that is spawned by this {{ entname }} will receive this as it's targetname.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "The {{ entname }} will start on and start spawning as soon as the map loads."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Changes the {{ entname }} toggle-behaviour to a single-fire-behaviour. With this flag set, the entity will spawn one time every time it is fired."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Monsters spawned by a {{ entname }} with this flag set will be blocked by the [func_monsterclip](../func_monsterclip) brush entity."
+        },
+        {
+          "choiceValue": "1024 ",
+          "choiceDescription": "If the spawned entity is a weapon, an item or ammunition, it won't respawn after being collected when this flag is set."
+        }
+      ]
+    },
+    {
+      "keyName": "monstercount",
+      "keyDescription": "Total amount of monsters which can be spawned by this {{ entname }}. If this value runs, the {{ entname }} won't spawn anything anymore. Setting this to '-1' means an endless supply.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "respawn_as_playerally",
+      "keyDescription": "Set whether the spawned monster is an ally or a foe of the players.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "delay",
+      "keyDescription": "Delay, in seconds, between spawns.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_imaxlivechildren",
+      "keyDescription": "Maximum amount of spawns by this {{ entname }} which may exist at a time. Note that for monsters, they will be counted as a live child till their corpse has faded out.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "If set, this will overwrite the monster's default health value managed by the skill configuration.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "path_name",
+      "keyDescription": "Name of first [path_waypoint](../path_waypoint) to go to.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "You must specify monster type, otherwise it will crash the game with \"Spawned a NULL entity!\" error message."
+  ]
+}

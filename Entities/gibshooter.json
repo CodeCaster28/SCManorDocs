@@ -1,0 +1,16 @@
+{
+  "Classname": "gibshooter",
+  "Description": "Similar to [env_shooter](../env_shooter), except that this can only fire human gibs.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start shooting gibs. Every trigger use-type works uniformly. Can't be triggered when gibs shooting is in progress. Can be kill-targeted but gibs stay.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "If your delay between shots is 0, the game may increase it notably; 0.01 works, though.",
+    "The gibs also bounce off players.",
+    "Gibs do not get stuck in each other."
+  ]
+}

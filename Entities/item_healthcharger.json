@@ -1,0 +1,16 @@
+{
+  "Classname": "item_healthcharger",
+  "Description": "Non-functional.",
+  "KeyDescriptions": [
+    {
+      "keyName": "capacity",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_juice",
+      "keyDescription": "",
+      "keyChoices": []
+    }
+  ]
+}

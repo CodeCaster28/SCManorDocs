@@ -1,0 +1,25 @@
+{
+  "Classname": "weapon_gauss",
+  "Description": "A gauss gun with a single-fire primary and a chargeable secondary attack. Uses [ammo_gaussclip](../ammo_gaussclip), of which you can carry 100 rounds at a time, directly. No clip ammo. No reload. Charged attack can fire through walls. Primary attack consumes 1, secondary attack up to 10 rounds. CVars:<ul><li>mp_disablegaussjump 1/0 (Default: 0): If set to 1, the gauss gun's secondary fire will not affect the carrying player's vertical velocity.</li><li>sk_plr_gauss# (Default: 19, 19, 35): Gauss gun's primary attack damage.</li><li>sk_plr_secondarygauss# (Default: 190, 190, 350): Gauss gun's full charge's damage.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

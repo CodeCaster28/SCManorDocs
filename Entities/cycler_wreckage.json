@@ -1,0 +1,43 @@
+{
+  "Classname": "cycler_wreckage",
+  "Description": "The cycler_wreckage entity emits smoke and shows a custom sprite.",
+  "KeyDescriptions": [
+    {
+      "keyName": "framerate",
+      "keyDescription": "Set the sprite's framerate in Hertz. Only makes sense for animated sprites.",
+      "keyChoices": []
+    },
+	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can kill-target it (can't be triggered).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "Specify a valid sprite-file to display here. Path starts from within the modification's folder e.g.'models/cleansuit_scientist.mdl'",
+      "keyChoices": []
+    },
+    {
+      "keyName": "scale",
+      "keyDescription": "Set the sprite's y- and x-scale.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "32",
+          "choiceDescription": "Non-functional in {{ entname }}."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "Non-functional in {{ entname }}."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "Sprites are barely visible under emitted smoke."
+  ]
+}

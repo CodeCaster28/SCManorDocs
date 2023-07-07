@@ -1,0 +1,26 @@
+{
+  "Classname": "game_slot_counter",
+  "Description": "This entity suppose to count the total number of player slots on the server on map load and triggers its target on the first server frame if the amount of slots equals a value you specify. However I couldn't get it to work. Contact me if you managed to make it working. It won't trigger if the amount of slots is greater or smaller than the specified value. This entity will remove itself from the game right afterwards.",
+  "KeyDescriptions": [
+    {
+      "keyName": "frags",
+      "keyDescription": "Player slots required for this entity to trigger its target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Tested, doesn't work."
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Tested, doesn't work."
+    },
+    {
+      "keyName": "delay",
+      "keyDescription": "Tested, doesn't work."
+    }
+  ],
+  "Notes": [
+    "Once a map is running, the maximum player count (stored in CVar \"maxplayers\") cannot be changed."
+  ]
+}

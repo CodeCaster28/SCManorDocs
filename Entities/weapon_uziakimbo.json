@@ -1,0 +1,28 @@
+{
+  "Classname": "weapon_uziakimbo",
+  "Description": "Two uzis, which can store 32 bullets each in their clips. You can carry 250 bullets as backpack ammo. Uses [ammo_9mmAR](../ammo_9mmAR)/[ammo_9mmbox](../ammo_9mmbox)/[ammo_9mmclip](../ammo_9mmclip)/[ammo_uziclip](../ammo_uziclip). Some donors and Sven Co-op staff members have the golden uzis in place of the normal uzis, which cause double damage but have less accuracy. CVars:<ul><li>sk_plr_uzi# (Default: 10, 10, 16): Uzi bullet hit damage.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ],
+  "Issues": [
+    "If you throw away one of your two uzis and recollect it, you will have both clips refilled without the cost of backpack ammunition."
+  ]
+}

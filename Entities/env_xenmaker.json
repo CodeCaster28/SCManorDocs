@@ -1,0 +1,106 @@
+{
+  "Classname": "env_xenmaker",
+  "Description": "The env_xenmaker allows to spawn monsters with teleportation and beam effects. It can be set to act as a spawn-effect-data-template for [squadmakers](../squadmaker), in case you want to pair this spawn-effect with the customizability-features of the [squadmaker](../squadmaker) entity.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to spawn monster (if place available). Every trigger use-type works uniformly. Can be kill-targeted. Monster in queue (those who couldn't spawn because there was no room for them) won't spawn.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, the env_xenmaker will attempt to spawn only once when triggered, instead of waiting till the spawn-zone is unobscured."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If set, nothing will spawn at this env_xenmaker. Use this when you only want the visual and audible effect. You still must specify monster to spawn in 'Monster Type' keyvalue, otherwise it will crash the game."
+        }
+      ]
+    },
+    {
+      "keyName": "monstertype",
+      "keyDescription": "Entity classname of the monster type to spawn here. This must be set even if 'No Spawn' flag is set otherwise it will crash the game with \"Spawned a NULL entity!\" error message.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flBeamRadius",
+      "keyDescription": "Maximum beam strike radius.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iBeamAlpha",
+      "keyDescription": "Alpha of the beam. 255 for full opaque beam.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iBeamCount",
+      "keyDescription": "Number of single beam instances.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_vBeamColor",
+      "keyDescription": "Set the beam's color. Note that, because of bolts being rendered additively, darker colors mean greater transparency.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flLightRadius",
+      "keyDescription": "Radius of the light that appears while spawning monster.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_vLightColor",
+      "keyDescription": "Color of the light that appears while spawning monster.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flStartSpriteFramerate",
+      "keyDescription": "Frame display rate of the first animated sprite.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flStartSpriteScale",
+      "keyDescription": "Scale of the first sprite.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iStartSpriteAlpha",
+      "keyDescription": "Alpha of the first sprite, 255 for full opaque sprite.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_vStartSpriteColor",
+      "keyDescription": "First prite Color override.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flEndSpriteFramerate",
+      "keyDescription": "Frame display rate of the second animated sprite.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flEndSpriteScale",
+      "keyDescription": "Scale of the second sprite.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iEndSpriteAlpha",
+      "keyDescription": "Alpha of the second sprite, 255 for full opaque sprite.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_vEndSpriteColor",
+      "keyDescription": "Second sprite Color override.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Insert known issues here",
+    "Using multiple env_xenmaker at one time sums up emitted sounds, what makes them very loud. It's not really a bug but it's very unpleasant effect.",
+    "When using an env_xenmaker as an effect-template for squadmakers, you may have to ensure its position in the entity list to be after its according squadmaker(s) in order to avoid a crash on map-load. To achieve that, follow these steps: Select all env_xenmakers in your map and group them. Perform a copy-paste-special or clone-drag (hold shift), leaving the copy in the exact same position as its original. Hide the copy. Delete the original group. Unhide the copy and ungroup it. Save your map.",
+    "Sprites doesn't work."
+  ]
+}

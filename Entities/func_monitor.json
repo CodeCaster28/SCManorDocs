@@ -1,0 +1,26 @@
+{
+  "Classname": "func_monitor",
+  "Description": "Brush entity that displays view of target [trigger_camera](../trigger_camera) on selected surfaces, turning it into display screen. This entity can be freely triggered to enable/disable rendering.",
+  "KeyDescriptions": [
+    {
+      "keyName": "width",
+      "keyDescription": "Resolution (width). Better keep it low.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "height",
+      "keyDescription": "Resolution (height). Better keep it low.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Specify [trigger_camera](../trigger_camera) to display a view from.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable it. Depending on trigger use-type: 'On'- enable monitor, 'Toggle'- toggle monitor, 'Off'- disable monitor. Disabled monitor still renders the brush. Can be kill-targeted.",
+      "keyChoices": []
+    }
+  ]
+}

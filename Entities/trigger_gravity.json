@@ -1,0 +1,29 @@
+{
+  "Classname": "trigger_gravity",
+  "Description": "An entity which modifies the gravity within it. The gravity is applied globally (it won't switch gravity back to normal after leaving it).",
+  "KeyDescriptions": [
+    {
+      "keyName": "gravity",
+      "keyDescription": "Gravity factor, multiplied by the value of sv_gravity CVar.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }}. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "\"Target\", \"Kill Target\" and \"Delay Before Trigger\" keyvalues does not work on this entity. That means this trigger can't act like touch detectors (to fire it's target when touched)."
+  ]
+}

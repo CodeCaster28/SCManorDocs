@@ -1,0 +1,44 @@
+{
+  "Classname": "monster_bodyguard",
+  "Description": "Very dangerous agent who can wield a wide selection of weapon.<br>Class: Human Military.",
+  "KeyDescriptions": [
+    {
+      "keyName": "weapons",
+      "keyDescription": "You can choose which weapon the monster uses.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

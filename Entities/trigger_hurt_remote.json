@@ -1,0 +1,151 @@
+{
+  "Classname": "trigger_hurt_remote",
+  "Description": "This is a more feature-rich variant of [game_player_hurt](../game_player_hurt).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Kill the target instantly. That will heal the target instantly when \"Damage\" value is negative."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Make use of \"Delay\" keyvalue and affect target entities repeatedly."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Trigger_hurt_remote is enabled at start, this only makes sense when \"Constant\" flag is selected."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Allows to use \"Armor Damage\" keyvalue."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to apply damage (or enable constant damage when \"Constant\" flag is checked). With \"Constant\" flag enabled the behaviour is based on trigger use-type: 'On'- turn constant damage on, 'Off'- turn constant damage off, 'Toggle'- toggle constant damage. With \"Constant\" flag disabled only \"On\" and \"Toggle\" trigger use-types are accepted to apply damage. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Target entity to deal a damage. Write '!activator' to make it hurt activator of the script.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetclass",
+      "keyDescription": "If specified, all entities with the given class will be affected. Write 'player' in this field to make it hurt players.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "dmg",
+      "keyDescription": "Damage to deal. If \"Constant\" flag is selected, this is a damage to deal every \"Delay\" seconds. Can be negative to provide healing instead of dealing damage.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "armordmg",
+      "keyDescription": "Armor damage to deal, works only if \"Do Armor\" flag is selected. When target is out of armor, the damage is not dealt. Can be negative to give an armor instead of draining it.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "delay",
+      "keyDescription": "Delay between hurts when \"Constant\" flag is selected.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "damagetype",
+      "keyDescription": "Used for HUD info icon, determines which damage icon appears when player is taking damage from trigger.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "128 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "256 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "512 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1024 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16384 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "32768 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "65536 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "131072 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "262144 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "524288 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1048576 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2097152 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4194304 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ],
+  "Issues": [
+    "Constant feature is unstable for server, it's recommended to trigger this entity with looped [multi_manager](../multi_manager) to achieve similar effect."
+  ]
+}

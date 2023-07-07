@@ -1,0 +1,433 @@
+{
+  "Classname": "ambient_generic",
+  "Description": "This entity is used to play sound-files. They can be looping or not. You can use this to play music as well but [ambient_music](../ambient_music) fits more for this purpose.",
+  "KeyDescriptions": [
+  	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to play sound. Depending on trigger use-type: 'Off'- stop the sound, 'Toggle'- play/stop sound interchangeably, 'On'- start the sound but it's working only when any other signal was received previously. Kill-targeting this entity will stop sound from playing.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Name of the sound file to play. Supported formats are: AIFF, ASF, DLS, FLAC, IT, M3U, MID, MOD, MP2, MP3, OGG, S3M, VAG, WAV, WMA, XM. Hammer will only let you select WAV-files, but other formats do work as they are fully supported by the game's sound engine. Type the path in manually in that case. File Path starts in the 'sound'-folder, example: 'mymap/soundfile.ogg'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "Set how loud the sound shall be in a range from 0 (not audible) to 10 (normal). Note that this is linear, while the human hearing sense is logarithmic. That means, 10 people talking sound two times as loud as one person talking. 100 people talking sound three times as loud as one person talking. So, a value of '1' will make the sound sound only half as loud as a value of '10' would. A value of '0.1' would make it a third as loud as a value of '10' would. So, if you want your sound to actually be quiet, you are likely to set a value below 1.0.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "playmode",
+      "keyDescription": "This is the new way of setting whether a sound will loop or not. If a value other than 'Default' is selected, the 'Unlooped/Cyclic'-flag will be ignored and this option will be referenced to instead. You can also enable linear rolloff with this option, to allow you to setup your own radius. Note that linear rolloff isn't true to how sound works in real life, so it might sound/feel odd.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Looping /on/off set to default for sound."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Always play once. 'Unlooped/Cyclic'-flag will be ignored."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Always loop. 'Unlooped/Cyclic'-flag will be ignored"
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Always play once and use linear rolloff- \"Linear minimum radius\" and \"Linear maximum radius\". 'Unlooped/Cyclic'-flag will be ignored"
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "Always loop and use linear rolloff- \"Linear minimum radius\" and \"Linear maximum radius\". 'Unlooped/Cyclic'-flag will be ignored"
+        }
+      ]
+    },
+    {
+      "keyName": "preset",
+      "keyDescription": "Allows you to specify a dynamic preset to enhance the sound. Used for sounds like machines warmup as it will repeatedly play a sound changing it's pitch and other parameters. You should probably experiment with these to find something that sounds good, if you don't want to stick with the default.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "15",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "17",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "18",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "19",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "20",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "21",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "22",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "23",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "24",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "25",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "26",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "27",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "volstart",
+      "keyDescription": "Start volume for fade-in; between 0.0 and 10.0.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fadein",
+      "keyDescription": "Time, in seconds, till the sound will reach \"Volume\"-value after being triggered on, starting from \"Start volume\"-value.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fadeout",
+      "keyDescription": "Time, in seconds, till the sound will have faded out completely after being triggered off.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pitch",
+      "keyDescription": "Sound playback speed, in per-cent.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pitchstart",
+      "keyDescription": "Initial sound playback speed, in per-cent. Changes towards \"Pitch\" within fade in time.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spinup",
+      "keyDescription": "Time, in seconds, over which a spinup sound-effect (consecutive fade-ins) shall be applied as the sound starts playing.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spindown",
+      "keyDescription": "Time, in seconds, over which a spindown sound-effect (consecutive fade-outs) shall be applied as the sound is turned off.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "lfotype",
+      "keyDescription": "Allows you to set up a low frequency oscillator to modify volume and/or pitch over time, as the sound plays.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "lforate",
+      "keyDescription": "Rate, in Hertz, at which the LFO oscillates. You'll usually want to put low values like 0.3.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "lfomodpitch",
+      "keyDescription": "Set how much the LFO shall affect the sound's pitch.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "lfomodvol",
+      "keyDescription": "Set how much the LFO shall affect the sound's volume.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "cspinup",
+      "keyDescription": "Set how many consecutive fade-ins/fade-outs shall be applied to spin-up and spin-down sound-effect.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "linearmin",
+      "keyDescription": "When you set the play mode to use linear rolloff, the value set here will be used as the minimum sound radius, meaning the sound will be heard at full volume within this radius around the ambient_generic. You may only choose one of these preset values, as the volume curves need to be precalculated for performance reasons.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "15",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "linearmax",
+      "keyDescription": "When you set the play mode to use linear rolloff, the value set here will be used as the maximum sound radius, meaning the sound cannot be heard outside of this radius around the ambient_generic. You may only choose one of these preset values, as the volume curves need to be precalculated for performance reasons.",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "15",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "The sound will play everywhere."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Non-linear big sound radius."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Non-linear huge sound radius."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Non-linear extra-huge sound radius."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "If set, this sound will start off. Only makes sense for looped sounds. This is usually left unchecked for ambient looping sounds, however only with other than default play mode. See notes for more info."
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "The sound will play once when triggered. If triggered while playing, the sound will stop and restart immediately."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "The sound will be ADDITIONALLY played for activator (only for him and at specified volume regardless of player and entity position). See notes."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "Looped sounds that starts enabled (\"Start silent\" flag unchecked) should use other than default play mode (preferably Linear/Looped) or they need to be triggered by trigger_auto after short delay (e.g. one second) with \"Start silent\" flag selected. This is because ambient_generics with default play mode are not correctly processed at map start, and works only after triggered.",
+	"If no sound radius is set, 'Medium radius' is used as a default. You should set only one sound radius, or 'Play everywhere'.",
+	"'User Only' allows to play a sound in \"activator's head\", but entity will still attempt to play audio on it's position, in that case it's good to move entity away from map and set it's radius to minimum, so activator won't hear both sounds: one made by default ambient_generic behaviour AND other made from this flag."
+  ]
+}

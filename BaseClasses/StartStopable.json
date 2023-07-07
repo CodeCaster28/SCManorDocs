@@ -1,0 +1,52 @@
+{
+  "Classname": "StartStopable",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "fireonstart",
+      "keyDescription": "Entity to trigger when {{ entname }} starts moving. Trigger use-type can be specified below.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fireonstart_triggerstate",
+      "keyDescription": "Set the use-type with which the entity specified above will be triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+		{
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+	{
+      "keyName": "fireonstop",
+      "keyDescription": "Entity to trigger when {{ entname }} stops moving. Trigger use-type can be specified below.",
+      "keyChoices": []
+    },
+	{
+      "keyName": "fireonstop_triggerstate",
+      "keyDescription": "Set the use-type with which the entity specified above will be triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+		{
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

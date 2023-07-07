@@ -1,0 +1,44 @@
+{
+  "Classname": "FilterOut",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "toutfilter",
+      "keyDescription": "Semicolon-separated list of targetnames to either be forbidden or required (specified in \"Name Out Filter Type\") on targeted entities. Can also specify only one.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "toutfiltertype",
+      "keyDescription": "Set whether to forbid or require certain targetname(s) (specified in \"Name Out Filter\") on the target entities.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "coutfilter",
+      "keyDescription": "Semicolon-seperated list of classnames to either be forbidden or required (specified in \"Class Out Filter Type\") on targeted entities. Can also specify only one.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "coutfiltertype",
+      "keyDescription": "Set whether to forbid or require certain classname(s) (specified in \"Class Out Filter\") on the target entities.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

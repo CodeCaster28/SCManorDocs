@@ -1,0 +1,69 @@
+{
+  "Classname": "ItemWithDefaultModel",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "solid",
+      "keyDescription": "Determines item solidity.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1",
+          "choiceDescription": "Disables solidity completely."
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Default setting that makes item behave as trigger."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Makes item solid, it enables collision but requires hull sizes to be specified."
+        }
+      ]
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "You need to specify model of {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "skin",
+      "keyDescription": "Model skin to use, if model have multiple skins.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "body",
+      "keyDescription": "Model body to use, if model have multiple bodies.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sequencename",
+      "keyDescription": "Default model sequence name to set.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model sequence by specifying it's number.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "scale",
+      "keyDescription": "Model size scale, higher values for bigger model. Hull is resized as well.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "minhullsize",
+      "keyDescription": "If set, this will overwrite the monster's default minimum hullsize. Minimum and maximum hullsize form a solid cuboid which define the monster's collision hull. Think of them as two span-vectors originating from the monster's origin.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "maxhullsize",
+      "keyDescription": "If set, this will overwrite the monster's default maximum hullsize. Minimum and maximum hullsize form a solid cuboid which define the monster's collision hull. Think of them as two span-vectors originating from the monster's origin.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "soundlist",
+      "keyDescription": "Set the path to a sound replacement file for the item. The path begins in 'svencoop/sound/mapname', whereas 'mapname' would be your map's name. You can go to the parent directory using '../'. A valid sound replacement file contains one or more lines with two sound-paths, which are seperated by a space and wrapped into quotes. The first sound is the sound to be replaced. The second sound is the new sound. Sound-paths start in the sound directory. You cannot go to the parent directory using '../' in that case. These sounds do not need to be precached using a [custom_precache](../custom_precache) point entity.",
+      "keyChoices": []
+    }
+  ]
+}

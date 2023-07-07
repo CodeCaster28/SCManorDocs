@@ -1,0 +1,5 @@
+{
+  "Classname": "monster_sqknest",
+  "Description": "Live small amount of time. Snark nests are thrown by Alien Grunts. Breaks after short amount of time releasing a pack of snarks. It's better to destroy it, so it will release smaller amount of snarks.<br>Class: Alien Bioweapon.",
+  "KeyDescriptions": []
+}

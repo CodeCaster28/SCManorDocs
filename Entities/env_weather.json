@@ -1,0 +1,116 @@
+{
+  "Classname": "env_weather",
+  "Description": "Doesn't work. The idea was to create entity that have weather effects but that was too unoptimised to be added to game.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "drop_model",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "drop_scale",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "drop_vp_type",
+      "keyDescription": "",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "splash_model",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "splash_scale",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "splash_vp_type",
+      "keyDescription": "",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "density",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "angle_variance",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed_variance",
+      "keyDescription": "",
+      "keyChoices": []
+    }
+  ]
+}

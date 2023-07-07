@@ -1,0 +1,105 @@
+{
+  "Classname": "func_illusionary",
+  "Description": "Essentially an entirely non-solid func_wall.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }}. Can't be triggered. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "style",
+      "keyDescription": "Apply a style to texlights of this brush (texlights are textures specified in [info_texlights](../info_texlights). This is not required when using [light_surface](../light_surface).",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-3",
+          "choiceDescription": "Allow your texlights to be switchable. To use it, create a light entity with the same name as this brush entity. Turning the light on and off will now turn the texlights on and off, too."
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "skin",
+      "keyDescription": "It's used to change the 'contents' of this brush.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1",
+          "choiceDescription": "Default, empty content. Nothing special happens when walking through {{ entname }}."
+        },
+        {
+          "choiceValue": "-7",
+          "choiceDescription": "Mimic water behaviour."
+        }
+      ]
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "If set, the func_illusionary will use its angles (Pitch Yaw Roll). This requires origin brush tied to it, otherwise it will pick world origin."
+        }
+      ]
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Even if non-solid, this entity still adds clipnodes. Set \"ZHLT Disable Clipping\" to 'Always non-solid' to prevent that or add zhlt_noclip key with value of 1."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "Classname": "Global",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "globalname",
+      "keyDescription": "Global name of entity, allows to have one entity in the multiple maps (e.g. elevator in map1 and map2 have the same \"Global Entity Name\" which tells the engine to treat those entities as a one single entity, so all elevator settings, positions, actions e.t.c. are copied to another map in a moment of map transitions.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "Classname": "path_waypoint",
+  "Description": "Path_waypoint is a waypointing entity, mostly works correctly but suffers from few minor bugs. Need to be tested, keep in mind that some keyvalues might not work properly. The most important feature of this entity is that monster following it would always finish his route, even when blocked, attacked, disturbed, after overriding his AI or revived. Use entity by specifying name of first path_waypoint in the monster/squadmaker/monstermaker \"Path Name\" keyvalue.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Name of the next path_waypoint to go after entity reach this path_waypoint.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "alternate_target",
+      "keyDescription": "Alternate Waypoint to use.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "movementtype",
+      "keyDescription": "How monster will move to this waypoint.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "radius",
+      "keyDescription": "When in radius, monster has finished moving to the waypoint. Only works for Walk / Run.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "useangles",
+      "keyDescription": "If set to yes, monster's YAW will change gradually to match the path_waypoint's YAW",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "trigger_on_arrival",
+      "keyDescription": "Entity to trigger whenever monster arrives here.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "arrival_animation",
+      "keyDescription": "Animation to play on arrival.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "trigger_after_arrival",
+      "keyDescription": "Entity to trigger upon completing the arrival animation. If no arrival animation, trigger after Trigger on Arrival is triggered.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wait_activity",
+      "keyDescription": "Controls monster behaviour when waiting at this path_waypoint.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Play wait animation specified in \"Wait Animation\"."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Stay in place, look around."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Wal around close area."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Let the monster AI take over while waiting."
+        }
+      ]
+    },
+    {
+      "keyName": "wait_animation",
+      "keyDescription": "Animation to play when waiting at this waypoint. (Looped) If animation is blank, the monster will stand in place. If wait time is zero, this is not used.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wait_time",
+      "keyDescription": "After the position is reached, the monster must wait this long before moving to the next waypoint, and before any targets are triggered.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wait_master",
+      "keyDescription": "Name of the [Multisource](../multisource) entity. Monsters will wait here until multisource is activated.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "waituntilfull",
+      "keyDescription": "Force monsters to wait until this waypoint is full before proceeding to the next waypoint. If Maximum Occupants is 0, a level error message will occur.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "departure_animation",
+      "keyDescription": "Animation to play before leaving waypoint. \"Target On Departure\" is triggered after animation completes if animation is present.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "trigger_on_departure",
+      "keyDescription": "Target to trigger when monster finishes the Departure Animation. If no Departure Animation, trigger immediately after waiting.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "occupant_radius_check",
+      "keyDescription": "If an monster is within the radius of this path_waypoint, it takes up an occupant slot.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "occupant_limit",
+      "keyDescription": "This point only accepts this number of monsters at a time.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "overflow_waypoint",
+      "keyDescription": "If this waypoint is full, monsters will go to the specified waypoint instead. If the provided overflow point is removed or not available, monster will remain at the previous waypoint or position until room is available.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "force_complete",
+      "keyDescription": "Forces monster to finish this particular path_waypoint even if a higher priority path is found, provided that the stop conditions are not met. This disables path_condition / path_condition_controller evaluation during the extent of the trip and departure.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "stop_trigger",
+      "keyDescription": "If this path_waypoint releases monster because of a stop condition, (e.g. a new enemy appears) something can be triggered.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "restart_delay",
+      "keyDescription": "If monster has stopped moving because of a stop condition (E.g. hearing a gunshot), the NPC will wait this long before continuing back to this path_waypoint.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "When 'Wait Animation' is not specified, and wait activity is set to 'Play Wait Animation', monster will be playing it's last movement animation during wait time.",
+    "Monsters can be easily interrupted by blocking their way, interacting with them e.t.c. they will finish their route after dealing with interruptions, but there is also possibility that they will start whole path from beginning instead of continuing from last node.",
+    "When next waypoint is overflowed by 'Maximum # Occupant' monster that are waiting for free slot have problems with their animations.",
+    "Multiple monsters proceeding nodes with 'Maximum # Occupant' and animation set (e.g. 'Departure Animation') may cause issues with monster walking animation."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "Classname": "env_glow",
+  "Description": "The env_glow is a castrated [env_sprite](../env_sprite). Use that instead for more features.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Can't be triggered, use [env_sprite](../env_sprite) for this. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "Set a sprite to be displayed. Path start in modification's folder.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "scale",
+      "keyDescription": "Set the scale of the sprite effect. This defaults to 0.25 if not set.",
+      "keyChoices": []
+    }
+  ]
+}

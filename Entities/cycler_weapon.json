@@ -1,0 +1,16 @@
+{
+  "Classname": "cycler_weapon",
+  "Description": "The cycler_weapon entity appears to be an unfinished/debug entity originally by Valve. It appears to be made specifically for displaying weapon models, but provides no special features.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of entity to trigger (fire). Which function relates to it depends on the respective entity. Most will just trigger their target, while others will perform actions on their target or use it as a reference for other activities. Often, multiple entities by the same name may be targeted. Most entities need no target, but having one is essential for most logic entities and basic trigger-systems.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "Classname": "monster_otis_dead",
+  "Description": "Non-solid corpse of [Barney](../monster_barney).",
+  "KeyDescriptions": [
+    {
+      "keyName": "pose",
+      "keyDescription": "Pose to use in game.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model display sequence in editor by specifying it's number.",
+      "keyChoices": [
+        {
+          "choiceValue": "35 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "36 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "37 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "38 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "39 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "If set, this will overwrite the monster's default model. This needs to be precached using a [custom_precache](../custom_precache) entity.",
+      "keyChoices": []
+    }
+  ]
+}

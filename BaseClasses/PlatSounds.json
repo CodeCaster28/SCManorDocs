@@ -1,0 +1,165 @@
+{
+  "Classname": "PlatSounds",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "movesnd",
+      "keyDescription": "Sound that is played while the {{ entname }} is moving.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "",
+		  "media": "../audio/big-elev-1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "",
+		  "media": "../audio/big-elev-2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "",
+		  "media": "../audio/tech-elev-1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "",
+		  "media": "../audio/tech-elev-2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "",
+		  "media": "../audio/tech-elev-3.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "",
+		  "media": "../audio/freight-elev-1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "",
+		  "media": "../audio/freight-elev-2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "",
+		  "media": "../audio/heavy-elev.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": "",
+		  "media": "../audio/rack-elev.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": "",
+		  "media": "../audio/rail-elev.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": "",
+		  "media": "../audio/squeek-elev.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": "",
+		  "media": "../audio/odd-elev-1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": "",
+		  "media": "../audio/odd-elev-2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        }
+      ]
+    },
+    {
+      "keyName": "movesnd_loop",
+      "keyDescription": "Sets if \"Move Sound\" should be looped during movement until it stops.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "stopsnd",
+      "keyDescription": "Sound which is played once as the {{ entname }} stops moving.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "",
+		  "media": "../audio/big-elev-stop-1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "",
+		  "media": "../audio/big-elev-stop-2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "",
+		  "media": "../audio/freight-elev-stop.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "",
+		  "media": "../audio/heavy-elev-stop.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "",
+		  "media": "../audio/rack-stop.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "",
+		  "media": "../audio/rail-stop.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "",
+		  "media": "../audio/squeek-stop.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "",
+	      "media": "../audio/quick-stop.wav?controlsList=nodownload-nofullscreen-noremoteplayback"		  
+		}
+      ]
+    },
+    {
+      "keyName": "noise",
+      "keyDescription": "Sound file to use when the {{ entname }} is moving. Useful when you don't want to use sound from default sound list. This overrides default \"Move Sound\" sound.  Note that other sounds format (AIFF, ASF, DLS, FLAC, IT, M3U, MID, MOD, MP2, MP3, OGG, S3M, VAG, WMA, XM) can be used, even if editor sound browser allows to pick only WAV files.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "noise1",
+      "keyDescription": "Sound file to use when the {{ entname }} is stop moving. Useful when you don't want to use sound from default sound list. This overrides default \"Stop Sound\" sound.  Note that other sounds format (AIFF, ASF, DLS, FLAC, IT, M3U, MID, MOD, MP2, MP3, OGG, S3M, VAG, WMA, XM) can be used, even if editor sound browser allows to pick only WAV files.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "volume",
+      "keyDescription": "Move and stop sound volume.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "soundlist",
+      "keyDescription": "Allows you to setup a sound replacement file for the {{ entname }} sounds. The path begins in 'svencoop/sound/mapname', whereas 'mapname' would be your map's name. You can go to the parent directory using '../'. A valid sound replacement file contains one or more lines with two sound-paths, which are separated by a space and wrapped into quotes. The first sound is the sound to be replaced. The second sound is the new sound. Sound-paths start in the sound directory. You cannot go to the parent directory using '../' in that case. These sounds do not need to be precached using a [custom_precache](../custom_precache) point entity.",
+      "keyChoices": []
+    }
+  ]
+}

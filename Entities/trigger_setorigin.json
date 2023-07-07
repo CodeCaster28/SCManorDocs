@@ -1,0 +1,122 @@
+{
+  "Classname": "trigger_setorigin",
+  "Description": "Copies the position and orientation of one entity to another, providing several additional options for angles and relative rotation. Entities moved with this won't shove away any objects blocking them, but pass through them, blocking said objects instead. (This entity does set the origin, it does not perform movement of an entity) This entity has several inconsistencies in its design. Most of the time you are better off assembling the operation you require using a few [trigger_copyvalue](../trigger_copyvalue).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Always update the target's position and orientation."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Only update the target once and remove the trigger_setorigin from the game afterwards."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Use the vector between the target and the copypointer plus the \"Offset\"-keyvalue as the offset vector."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Copy the X angle of the copypointer."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "Copy the Y angle of the copypointer."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "Copy the Z angle of the copypointer."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "Copy the X axis of the copypointer."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "Copy the Y axis of the copypointer."
+        },
+        {
+          "choiceValue": "512",
+          "choiceDescription": "Copy the Z axis of the copypointer."
+        },
+        {
+          "choiceValue": "1024",
+          "choiceDescription": "If set, the target entity will not be moved to the copypointer's origin before doing the offset difference calculation (set this unless you want the target entity stuck to the center of the copypointer)."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of the entity to attach to or move to the copy-pointer entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to set origin (or start constant origin copier with \"Constant\" flag checked). With \"Constant\" flag enabled the behaviour is based on trigger use-type: 'On','Toggle'- start constant origin set, 'Off'- stop constant origin set. With \"Constant\" flag disabled only 'On' and 'Toggle' use-types are accepted which sets origin once. Can be kill-targeted and constantly positioned entities are dropped.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "copypointer",
+      "keyDescription": "The entity to copy coordinates/angles from.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "offset",
+      "keyDescription": "Offset the target entity by this vector when \"Offset Difference\" is set.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "angleoffset",
+      "keyDescription": "Offsets the target entity's angles by this value when trigger_setorigin is first activated. Will only touch angles set to be copied as per spawnflags.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "invert_x",
+      "keyDescription": "Use inverted pitch for the target entity's orientation.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "invert_y",
+      "keyDescription": "Use inverted yaw for the target entity's orientation.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "invert_z",
+      "keyDescription": "Use inverted roll for the target entity's orientation.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "If you are copying the origin/angles from or to a brush based entity, then that entity must have an origin brush attached to it. The center of that origin brush will be used as the origin of the entire brush entity."
+  ]
+}

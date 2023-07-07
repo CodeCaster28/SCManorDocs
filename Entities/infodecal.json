@@ -1,0 +1,11 @@
+{
+  "Classname": "infodecal",
+  "Description": "This entity is used to place decals onto level geometry, e.g. cracks in walls, supposedly caused by explosions. It can only utilize textures from the decals.wad wad-file located in the svencoop directory. Using decals tool is more efficient and faster.",
+  "KeyDescriptions": [
+    {
+      "keyName": "texture",
+      "keyDescription": "Name of the texture to use. Only textures with '{' prefix and white background are supported.",
+      "keyChoices": []
+    }
+  ]
+}

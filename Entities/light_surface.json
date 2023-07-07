@@ -1,0 +1,201 @@
+{
+  "Classname": "light_surface",
+  "Description": "Allows you to create texture lights (textures that emits lights) in more advanced way than [info_texlights](../info_texlights) does. All keyvalues set to default, change \"Texture Name\" keyvalue and it will emit light of this texture color and power of 80. All other keyvalues and flag are optional.",
+  "KeyDescriptions": [
+    {
+      "keyName": "_tex",
+      "keyDescription": "Name of texture to emit light.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_frange",
+      "keyDescription": "Excludes faces whose centers are far from this light_surface.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_fdist",
+      "keyDescription": "Same as above, but checking the distance to the whole texture plane (instead of face center).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_fclass",
+      "keyDescription": "Same as \"Class In Filter\" with <unknown> filter type.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_fname",
+      "keyDescription": "Same as \"Name In Filter\" with <unknown> filter type.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_light",
+      "keyDescription": "The brightness of texture. Works the same way as in [light](../light) and [light_spot](../light_spot).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_texcolor",
+      "keyDescription": "Leave it empty, so color is auto-generated based on texture color.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_cone",
+      "keyDescription": "Like in [light_spotlight](../light_spotlight), custom values used to simulate spotlight.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_cone2",
+      "keyDescription": "Like in [light_spotlight](../light_spotlight), custom values used to simulate spotlight.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_scale",
+      "keyDescription": "When simulating [light_spotlight](../light_spotlight), this is scale value for light emission.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_chop",
+      "keyDescription": "Grid size of sampling. However lightmap grid cannot be changed. This keyvalue functionality is very limited.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_texlightgap",
+      "keyDescription": "Moves lights out of texture by few units (specified amount or chosen from pre-definied values). It's useful in situations where light leaking out of the brush in opposite direction of light. Example:\n![](light_surface.jpg)",
+      "keyChoices": [
+        {
+          "choiceValue": "\"\"",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"0.0\"",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"3.0\"",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"12.0\"",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "_fast",
+      "keyDescription": "Determines usage of '-fast' compile parameter for light. Set it to 'Yes' if brightness is low and the face is large.",
+      "keyChoices": [
+        {
+          "choiceValue": "\"\"",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "convertto",
+      "keyDescription": "Used by compilers. You don't need to set this.\n",
+      "keyChoices": [
+        {
+          "choiceValue": "\"light\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"light_spot\" ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to turn texture lights on and off. Depending on trigger use-type: 'On'- turn light on, 'Off'- turn light off, 'Toggle'- toggle light. Kill-targeting this entity will remove {{ entname }} but won't remove lightstyles (you might want to just turn it off instead).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "style",
+      "keyDescription": "Allows you to select a light style.",
+      "keyChoices": [
+        {
+          "choiceValue": "\"\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "pattern",
+      "keyDescription": "Allows you to set up a custom appearance of light. To do this, you will have to enter 1 to 64 chars from the alphabet ('a' to 'z'), whereas 'a' stands for being dark and 'z' for very bright. Normal lights' appearances uses 'm'. The program [Custom Lightstyle Generator](https://twhl.info/wiki/page/VERC%3A_Custom_Lightstyle_Generator_v1.0) by Craig \"CRAZG\" McLaren might help you here. Whatever sequence you enter is stepped through at about 8 Hertz. This will only work when a targetname is set. Note that there can be at most 4 different light styles affecting a face in your map. Otherwise, light styles will be discarded from it, causing unrealistic lighting in extreme cases.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, the light emmited from textures will be turned off at map start. This will only work when a targetname is set. This counts as an additional lightstyle. If you have multiple lights by the same name, they will count as one additional lightstyle, even if some of the lights are initially dark while others are not. Note that there can be at most 4 different light styles affecting a face in your map. Otherwise, light styles will be discarded from it, causing unrealistic lighting in extreme cases."
+        },
+        {
+          "choiceValue": "2048 ",
+          "choiceDescription": "Obsolete in Sven Co-op. Makes the entity don't appear in Multiplayer Games."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "The brightness does not work in the same way as in the \"info_texlight\" (it does not scale with texture size) so you don't need to multiply \"Texture brightness\" value to achieve sufficient brightness.",
+    "When you want to set some of the values to '0', you'll need to set them to '0.0' instead. Editor ignores raw '0' value."
+  ]
+}

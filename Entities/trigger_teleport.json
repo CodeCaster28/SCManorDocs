@@ -1,0 +1,97 @@
+{
+  "Classname": "trigger_teleport",
+  "Description": "A brush entity which teleports a player to a destination of your choice as he enters the trigger. Also fires it's target whenever something or someone teleports through it.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If multiple targets are set, one will be chosen as the destination randomly for every single player as he enters the trigger."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "The player's destination will be the location of the destination plus his offset from the trigger_teleport's origin in the moment of the player entering the trigger. If you decide to use this, you will probably want to add an origin brush to your trigger_teleport."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "Instead of copying the destination entity's angles onto the player as part of the teleportation, let the player keep his angles as they are."
+        },
+        {
+          "choiceValue": "512",
+          "choiceDescription": "Do not set the players velocity to 0 as he enters the trigger_teleport and keep his current velocity instead."
+        },
+        {
+          "choiceValue": "1024",
+          "choiceDescription": "Add the angles of the trigger_teleport's destination onto the player's angles."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable. Depending on trigger use-type: 'On'- enable, 'Toggle'- toggle, 'Off'- disable. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of [info_teleport_destination(s)](../info_teleport_destination) where players will be teleported to.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "teleport_cooldown",
+      "keyDescription": "Time, in seconds, the trigger_teleport can be used (can teleport another entity/player) again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "teleport_ignore_delay",
+      "keyDescription": "If set to 'Yes', \"Teleport Cooldown Delay\" will be ignored.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "teleport_start_inactive",
+      "keyDescription": "If set to 'Yes', this Trigger starts disabled, which means it need to be triggered in order to work.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "teleport_if_blocked",
+      "keyDescription": "If set to 'Yes', players will be teleported to target even if this target is blocked.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "\"Kill Target\" and \"Delay Before Trigger\" keyvalues does not work on this entity. Also \"Target\" keyvalue can be used only to specify teleportation destination. That means this trigger can't act like touch detectors (to fire it's target when touched)."
+  ]
+}

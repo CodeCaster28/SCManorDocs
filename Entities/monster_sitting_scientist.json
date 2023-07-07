@@ -1,0 +1,58 @@
+{
+  "Classname": "monster_sitting_scientist",
+  "Description": "Scientist that is set to be sitting.<br>Class: Human Passive.",
+  "KeyDescriptions": [
+    {
+      "keyName": "body",
+      "keyDescription": "This will set which body to use. Body's are different submodels/appearances in model files. Think of the different scientists. Not all models do have multiple body's. '-1' means random.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model display sequence in editor by specifying it's number.",
+      "keyChoices": [
+        {
+          "choiceValue": "71 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "72 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "73 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "74 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "75 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

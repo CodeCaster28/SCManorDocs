@@ -1,0 +1,214 @@
+{
+  "Classname": "BaseLockable",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "locked_sound",
+      "keyDescription": "Sound to play when a player tries to use the {{ entname }} but it's locked because it has a targetname or uses a [multisource](../multisource) entity.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "",
+		  "media": "../audio/access-denied.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "",
+		  "media": "../audio/small-zap.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": "",
+		  "media": "../audio/buzz.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": "",
+		  "media": "../audio/buzz-off.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": "",
+		  "media": "../audio/latch-locked.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        }
+      ]
+    },
+    {
+      "keyName": "unlocked_sound",
+      "keyDescription": "Sound to play if {{ entname }} is pressed/touched while not locked.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "",
+		  "media": "../audio/big-zap-warmup.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "",
+		  "media": "../audio/access-granted.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "",
+		  "media": "../audio/quick-combolock.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "",
+		  "media": "../audio/power-deadbolt-1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "",
+		  "media": "../audio/power-deadbolt-2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "",
+		  "media": "../audio/plunger.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "",
+		  "media": "../audio/small-zap.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": "",
+		  "media": "../audio/keycard-sound.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": "",
+		  "media": "../audio/buzz.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": "",
+		  "media": "../audio/latch-unlocked.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": "",
+		  "media": "../audio/lightswitch.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        }
+      ]
+    },
+    {
+      "keyName": "locked_sentence",
+      "keyDescription": "Sentence to play when a player tries to use {{ entname }} but it's locked because it has a targetname or uses a [multisource](../multisource) entity. Sentences are picked from sound/default_sentences.txt file.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Play one out of 18(!) announcements subsequently. Check NA0-NA18 sentences from \"default_sentences.txt\" for detailed list."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Play one of the following announcements subsequently: \"security lock is engaged\", \"secure area, no entry\", \"security lockout, no entry\", \"secure door, no entry\", \"security system in force\", \"security system armed, no entry\", \"door is secured\" and \"illegal access, move away\"."
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "Play one of the following announcements subsequently: \"emergency blast door activated\", \"emergency blast shield activated\" and \"the blast containment shield is down\"."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Play \"fire containment door is down\" announcement."
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Play \"chemical leak containment door activated\" announcement."
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "Play \"radiation containment door activated\" announcement."
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "Play \"emergency containment door engaged\" announcement."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Play one of the following announcements subsequently: \"no access, maintenance area\" and \"no personnel permitted in maintenance area\"."
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": "Play one of the following announcements subsequently: \"sorry, this door is inoperative\", \"sorry, door out of service\" and \"door damage detected, please call service personnel\"."
+        }
+      ]
+    },
+    {
+      "keyName": "unlocked_sentence",
+      "keyDescription": "Sentence to play when the door is opened. Plays only few times.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Play one of the following announcements subsequently: \"access granted\", \"access permitted\", \"entry granted\", \"entry permitted\", \"access authorized\", \"entry is permitted\", \"access authorized\", \"access to facility, granted\" and \"access granted\"."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Play one of the following announcements subsequently: \"security lock disengaged\", \"security clear, proceed\", \"security lockout, released\", \"secure override accepted\", \"security access acknowledged\", \"security system disengaged\" and \"door security disengaged\"."
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "Play one of the following announcements subsequently: \"emergency blast door, open\", \"emergency blast shield, deactivated\" and \"blast containment shield is, open\"."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Play \"fire containment door, open\" announcement."
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Play \"chemical leak containment door, open\" announcement."
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "Play \"radiation containment door, open\" announcement."
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "Play \"emergency containment door disengaged\" announcement."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Play one of the following announcements subsequently: \"maintenance area access granted\" and \"maintenance area door open\"."
+        }
+      ]
+    },
+    {
+      "keyName": "locked_sound_override",
+      "keyDescription": "Sound file to use when attempting to open locked {{ entname }}. Useful when you don't want to use sound from default sound list. This overrides default \"Locked Sound\" sound.  Note that other sounds format (AIFF, ASF, DLS, FLAC, IT, M3U, MID, MOD, MP2, MP3, OGG, S3M, VAG, WMA, XM) can be used, even if editor sound browser allows to pick only WAV files.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "unlocked_sound_override",
+      "keyDescription": "Sound file to use when {{ entname }} opens. Useful when you don't want to use sound from default sound list. This overrides default \"Unlocked Sound\" sound. Note that other sounds format (AIFF, ASF, DLS, FLAC, IT, M3U, MID, MOD, MP2, MP3, OGG, S3M, VAG, WMA, XM) can be used, even if editor sound browser allows to pick only WAV files.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "locked_sentence_override",
+      "keyDescription": "Sentence from \"default_sentences.txt\" or custom sentences file (which can be added in map properties) to use when attempting to open locked {{ entname }}. Useful when you want to override locked sentence with your own sentence.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "unlocked_sentence_override",
+      "keyDescription": "Sentence from \"default_sentences.txt\" or custom sentences file (which can be added in map properties) to use when {{ entname }} opens. Useful when you want to override locked sentence with your own sentence.",
+      "keyChoices": []
+    }
+  ]
+}

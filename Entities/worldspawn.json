@@ -1,0 +1,291 @@
+{
+  "Classname": "worldspawn",
+  "Description": "Worldspawn is non-interactive entity, everything that builds a map except placed or spawned entities- brushes, sky, tool textures e.t.c. Map itself is an unique entity, which options you can access by going into 'Map'-->'Map properties'. Environmental death are caused by World e.g. when player dies because of fall damage, the entity which killed player is \"worldspawn\". Whenever mapper is placing new brush into the map, it's becomes the part of the \"worldspawn\". You can change important settings of your map like sky texture to use, render distance, replacement files and even player models restrictions.",
+  "KeyDescriptions": [
+    {
+      "keyName": "message",
+      "keyDescription": "Title of the map. The usage is unknown- it won't show any kind of text.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "skyname",
+      "keyDescription": "Name of sky to use, e.g. 'cliff'. You can check all skies names by going into 'gfx'-->'env' folder, or just choose you sky by going here: Sky List. Note that every sky is split into 6 different files, two last characters represent the direction. Remember to NOT include those characters (as well as '_' symbol in some of skies), if you do, the default sky will be used ('desert'). To determine where the sky will be seen, use 'sky' texture on surfaces where you want your sky.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sounds",
+      "keyDescription": "Doesn't work- it's an old method to play music from CD.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "light",
+      "keyDescription": "Seems to not working.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "WaveHeight",
+      "keyDescription": "Wave height of [func_water](../func_water) entities. It is not overriding func_water \"Wave Height\" setting.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "MaxRange",
+      "keyDescription": "Render distance, higher values for farther distance but slower render. Decrease this value greatly improves performance but causes player to see end of the render plane what looks terrible.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "chaptertitle",
+      "keyDescription": "Simple method to show a text message on screen- it's a chapter-type string that appears on map start.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "startdark",
+      "keyDescription": "If set to 'Yes', the fade in effect (from completely dark to fully transparent) will be applied as soon as map starts.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "gametitle",
+      "keyDescription": "If set to 'Yes', the Half Life logo title (as seen in the beginning of Half-Life campaign) will be displayed.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "newunit",
+      "keyDescription": "Removes data and global triggers from previous levels. Not applicable for Sven Co-op.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "mapteams",
+      "keyDescription": "Not supported.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "defaultteam",
+      "keyDescription": "Not supported.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "freeroam",
+      "keyDescription": "If set to 'Yes', monsters will use nodes (info_node entities) to roam (walk from one point to another freely) at map start. Note that each monster can override this behaviour by \"Monster Roaming (nodes)\" keyvalue.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "sentence_file",
+      "keyDescription": "You can specify your own \"senteces.txt\" file in a replacement of default sentences.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "materials_file",
+      "keyDescription": "You can specify your own \"materials.txt\" file in a replacement of default material sounds. Example path string: \"sound/mapname/filename.txt\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "globalsoundlist",
+      "keyDescription": "Path to a sound replacement file to use.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "globalmodellist",
+      "keyDescription": "Path to a model replacement file to use.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "forcepmodels",
+      "keyDescription": "List of models that can be used for this map, separated by comma \",\" symbol. Model names are the same as subfolders in \"models/player\" folder. Note that models not listed here cannot be used in this map.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "scversion2",
+      "keyDescription": "Game version required for this map to run. Leave that as it is.",
+      "keyChoices": [
+	    {
+          "choiceValue": "525 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "524 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "523 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "522 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "521 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "520 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "519 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "518 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "517 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "516 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "515 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "514 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "513 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "512 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "511 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "510 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "509 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "508 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "507 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "506 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "505 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "504 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "503 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "502 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "501 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "500 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "480 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "470 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "460 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "450 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "407 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "406 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "405 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "401 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "400 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "300 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

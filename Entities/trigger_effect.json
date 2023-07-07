@@ -1,0 +1,227 @@
+{
+  "Classname": "trigger_effect",
+  "Description": "Apply chosen effects or modifiers to target players or monsters. This includes visual effects like glow shell but also modifiers to speed, friction, gravity and more. Multiple effects can be applied at once. Each effect can be either added or subtracted. Effect can be added and subtracted multiple times, even if an effect name suggests it can be either disabled or enabled, e.g. applying invisibility to player with 'Add' value three times (by triggering trigger_effect three times) makes player invisible at first 'Add' but the second and third trigger still counts. In that case another trigger_effect must apply invisibility with 'Subtract' value to make player visible again.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Target to apply effects on.",
+      "keyChoices": []
+    },
+
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it apply effect(s). Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "effect_glow_mode",
+      "keyDescription": "Specify if glow shell effect should be added or subtracted from player. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_glow",
+      "keyDescription": "Color to add or subtract if 'Glow Shell Mode' is other than 'No Change'. This allow to mix color when multiple trigger_effects are used e.g. first one can have 'Glow Shell Mode' set to 'Add' with value of 0 255 140, and the second can have 'Glow Shell Mode' set to 'Subtract' with value of 0 155 10. Player would end up with glow shell color of 0 100 130. Note that this value can drop below 0 0 0 and go above 255 255 255 and trigger_effect can add or subtract specified value infinitely every time it's triggered.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "effect_block_weapons_mode",
+      "keyDescription": "Add 1 or subtract 1 from effect that prevent usage of weapons. Note that this value can drop below 0 go above 1 because trigger_effect can add or subtract value infinitely every time it's triggered, yet it's always blocks target weapon the same way if total value is more than 0. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_invulnerable_mode",
+      "keyDescription": "Add 1 or subtract 1 from effect that makes target invulnerable. Note that this value can drop below 0 go above 1 because trigger_effect can add or subtract value infinitely every time it's triggered, yet it's always makes target invulnerable the same way if total value is more than 0. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_invisible_mode",
+      "keyDescription": "Add 1 or subtract 1 from effect that makes target invisible. Note that this value can drop below 0 go above 1 because trigger_effect can add or subtract value infinitely every time it's triggered, yet it's always makes target invisible the same way if total value is more than 0. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_nonsolid_mode",
+      "keyDescription": "Add 1 or subtract 1 from effect that makes target non solid to certain objects. Note that this value can drop below 0 go above 1 because trigger_effect can add or subtract value infinitely every time it's triggered, yet it's always makes target non-solid the same way if total value is more than 0. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_respiration_mode",
+      "keyDescription": "Specify if time before drown modifier effect should be added or subtracted from target. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_respiration",
+      "keyDescription": "Seconds of time before drown to add or subtract if 'Time Before Drown Mode' is other than 'No Change'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "effect_friction_mode",
+      "keyDescription": "Specify if friction modifier effect should be added or subtracted from target. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_friction",
+      "keyDescription": "Friction percentage to add or subtract if 'Friction Modifier Mode' is other than 'No Change'. Value specified is a percentage of target's total friction, so subtracting 50 and adding 50 will end up with normal friction.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "effect_gravity_mode",
+      "keyDescription": "Specify if gravity modifier effect should be added or subtracted from target. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_gravity",
+      "keyDescription": "Gravity percentage to add or subtract if 'Gravity Modifier Mode' is other than 'No Change'. Value specified is a percentage of target's total gravity, so subtracting 50 and adding 50 will end up with normal gravity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "effect_speed_mode",
+      "keyDescription": "Specify if speed modifier effect should be added or subtracted from target. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_speed",
+      "keyDescription": "Speed percentage to add or subtract if 'Speed Modifier Mode' is other than 'No Change'. Value specified is a percentage of target's total speed, so subtracting 50 and adding 50 will end up with normal speed. This value can go above 100 and below 0 but final target's speed will be kept between 0 and 100 value.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "effect_damage_mode",
+      "keyDescription": "Specify if damage modifier effect should be added or subtracted from target. Leave 'No change' to disable effect change.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "effect_damage",
+      "keyDescription": "Damage percentage to add or subtract if 'Damage Modifier Mode' is other than 'No Change'. Value specified is a percentage of target's total damage, so subtracting 50 and adding 50 will end up with normal damage. This can go above 100 and below 0 so damage will heal instead.",
+      "keyChoices": []
+    }
+  ]
+}

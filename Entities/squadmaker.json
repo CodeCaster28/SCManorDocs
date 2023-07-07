@@ -1,0 +1,407 @@
+{
+  "Classname": "squadmaker",
+  "Description": "A point entity which allows you to spawn any amount of a specific monster type. This can also be used to spawn other entities as well, though only partially supported. It can be toggled on and off or spawn one monster every time it is triggered and allows many options to be set for the spawned monster(s). You must specify monster type, otherwise it will crash the game with \"Spawned a NULL entity!\" error message.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "The {{ entname }} will start on and start spawning as soon as the map loads."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Changes the {{ entname }} toggle-behaviour to a single-fire-behaviour. With this flag set, the entity will spawn one time every time it is fired."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Monsters spawned by a {{ entname }} with this flag set will be blocked by the [func_monsterclip](../func_monsterclip) brush entity."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "Causes the spawned monster to be an enemy regardless of the ally setting, but it won't attack or harm you in any way."
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "When trying to spawn something, the {{ entname }} checks whether the spawn area is free or not. If it is not free, it won't spawn. By default, the checked area is way larger than the average monster. Checking this flag will resize the checked area depending on what you set the {{ entname }} to spawn. Setting this flag is highly recommended."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "When \"Cyclic\" flag is selected this will keep track of that and spawn the monster as soon as the spawn is free. This works for multiple monsters and makes a sort of spawn queue. This is useful when a game_counter of yours is triggered by monster death events and thus expects a minimum amount of monsters to be spawned, so the trigger can ever fire."
+        },
+        {
+          "choiceValue": "128 ",
+          "choiceDescription": "If set, a spawned monster won't react to anything after being spawned until it enters a scripted sequence."
+        },
+        {
+          "choiceValue": "1024 ",
+          "choiceDescription": "If the spawned entity is a weapon, an item or ammunition, it won't respawn after being collected when this flag is set."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever a monster is spawned. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to spawn monsters. With 'Cyclic' flag disabled the behaviour is based on trigger use-type: 'On'- turn spawner on, 'Off'- turn spawner off, 'Toggle'- toggle spawner. With 'Cyclic' flag enabled every trigger use-type works uniformly to spawn a single monster. Can be kill-targeted but monsters already spawned are not removed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "monstertype",
+      "keyDescription": "Set the classname of the monster, weapon, item, ammunition or whatever else may be spawned by {{ entname }} without working incorrectly here. You must specify monster type, otherwise it will crash the game with \"Spawned a NULL entity!\" error message.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "If set, everything that is spawned by this {{ entname }} will receive this as it's targetname.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "monstercount",
+      "keyDescription": "Total amount of monsters which can be spawned by this {{ entname }}. If this value runs, the {{ entname }} won't spawn anything anymore. Setting this to '-1' means an endless supply.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "delay",
+      "keyDescription": "Delay, in seconds, between spawns.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_imaxlivechildren",
+      "keyDescription": "Maximum amount of spawns by this {{ entname }} which may exist at a time. Note that for monsters, they will be counted as a live child till their corpse has faded out.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawn_mode",
+      "keyDescription": "Determines how monster spawn is handled when there is no room for monster to spawn.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "The next monster will spawn as soon as the delay between spawns is over and the spawn area is free."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Ignore the delay between spawns and spawn as soon as the spawn area is clear. Not recommendable for spawning multiple monsters."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Causes a monster to spawn every instant the delay between spawns is over, ignoring whether the spawn area is free or not. If \"Cyclic\" is selected, this will be used as well."
+        }
+      ]
+    },
+    {
+      "keyName": "dmg",
+      "keyDescription": "Amount of damage to apply to entities that are blocking this spawner. If the entity dies by this a new monster is spawned.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "trigger_target",
+      "keyDescription": "Entity to trigger when condition in \"Trigger Condition\" is met. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "trigger_condition",
+      "keyDescription": "Choose trigger condition for spawned monster. When condition is met, the entity specified in \"TriggerTarget\" is triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "When enemy player is seen by monster, or player became an enemy of this monster."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "When damage is taken, no matter if it's ally, enemy or trigger."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "When monster health drops to 50% or below."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "When monster dies."
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": "When monster hear environmental sounds like door opening/closing or glass breaking."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "When monster hear a player for the first time, his footsteps or weapons. Note that crouching makes player harder to hear, just like some quieter weapons are harder to heard by monsters. Allies might ignore hearing player when they are moving behind monster's back, but still this trigger will fire when monster saw player."
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": "When monster hear combat sounds like weapon shooting or explosions."
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": "When monster see a player for the first time."
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": "When monster see a player for the first time, but it's not in combat of any kind. When player attack a monster before monster even saw him, the trigger will fire."
+        }
+      ]
+    },
+    {
+      "keyName": "new_body",
+      "keyDescription": "This will set which body to use. Body's are different submodels/appearances in model files. Think of the different scientists. Not all models do have multiple body's. '-1' means random.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "respawn_as_playerally",
+      "keyDescription": "Set whether the spawned monster is an ally or a foe of the players. Note that keyvalue name is misleading.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Keep game defaults."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Invert relationship, e.g. monster_barney becomes enemy because he is friendly by default; monster_zombie becomes friendly because he is an enemy by default e.t.c."
+        }
+      ]
+    },
+    {
+      "keyName": "change_rendermode",
+      "keyDescription": "If set to 'Yes', the rendermode of the spawned entity will be changed to the one set in this squadmaker.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "xenmaker",
+      "keyDescription": "If you set the name of an [env_xenmaker](../env_xenmaker) here, its effects will appear every time the squadmaker spawns something.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "notsolid",
+      "keyDescription": "Set whether the spawned monsters will appear solid to each other and the players or not.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "gag",
+      "keyDescription": "Allows you to mute the spawned monsters.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "weapons",
+      "keyDescription": "You can choose which weapon the monster uses (HG = Hand Grenade, GL= M16 Grenade Launcher e.t.c.). Remember that monster must support chosen weapon.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "66 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "128 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "130 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "256 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "squadname",
+      "keyDescription": "Name of a squad for this monster to be part of. Monsters which share the same squadname/are in the same squad, will attempt to stay together and follow their squad's leader (monster with \"SquadLeader\" set to 'Yes').",
+      "keyChoices": []
+    },
+    {
+      "keyName": "is_squad_leader",
+      "keyDescription": "Set whether the spawned monsters will be leaders of their squad or not.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "displayname",
+      "keyDescription": "If set, this will overwrite the monster's default in-game name, which appears in the HUD monsterinfo, which can be enabled/disabled using the CVar 'mp_allowmonsterinfo'. You can use '\\n' here to perform a line-break.\n",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bloodcolor",
+      "keyDescription": "Allows you to customize the monster's blood color (or disable it).",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "If set, this will overwrite the monster's default health value managed by the skill configuration.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "new_model",
+      "keyDescription": "If set, this will overwrite the monster's default model. This needs to be precached using a [custom_precache](../custom_precache) point entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "minhullsize",
+      "keyDescription": "If set, this will overwrite the monster's default minimum hullsize. Minimum and maximum hullsize form a solid cuboid which define the monster's collision hull. Think of them as two span-vectors originating from the monster's origin.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "maxhullsize",
+      "keyDescription": "If set, this will overwrite the monster's default maximum hullsize. Minimum and maximum hullsize form a solid cuboid which define the monster's collision hull. Think of them as two span-vectors originating from the monster's origin.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "soundlist",
+      "keyDescription": "Allows you to setup a sound replacement file for the {{ entname }} sounds. The path begins in 'svencoop/sound/mapname', whereas 'mapname' would be your map's name. You can go to the parent directory using '../'. A valid sound replacement file contains one or more lines with two sound-paths, which are separated by a space and wrapped into quotes. The first sound is the sound to be replaced. The second sound is the new sound. Sound-paths start in the sound directory. You cannot go to the parent directory using '../' in that case. These sounds do not need to be precached using a [custom_precache](../custom_precache) point entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "freeroam",
+      "keyDescription": "Set whether monsters spawned by this squadmaker use nodes to free roam and find their way or don't use nodes at all.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Keep game defaults."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Disable nodes roaming."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Enable nodes roaming."
+        }
+      ]
+    },
+    {
+      "keyName": "path_name",
+      "keyDescription": "Name of the optional [path_waypoint](../path_waypoint) to go to.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "guard_ent",
+      "keyDescription": "If set, the monster will try to follow and protect (attack its attackers) the given entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wpn_v_model",
+      "keyDescription": "If spawning a weapon, this will replace its view model (the weapon as seen in first person view).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wpn_w_model",
+      "keyDescription": "If spawning a weapon, this will replace its world model (the weapon as seen when lying somewhere).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wpn_p_model",
+      "keyDescription": "If spawning a weapon, this will replace its player model (the model as seen held by other players).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "function_name",
+      "keyDescription": "Name of the function to use from already parsed .as script files. If the function belongs to namespace, you must use prefix with the namespace name (e.g. mynamespace::MyFunction) for the keyvalue.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "You must specify monster type, otherwise it will crash the game with \"Spawned a NULL entity!\" error message."
+  ]
+}

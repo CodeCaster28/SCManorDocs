@@ -1,0 +1,153 @@
+{
+  "Classname": "env_sound",
+  "Description": "Allows you to set up specific ambient effects for increasing the sound experience and making it consistent with the visuals of your map.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If selected, the env_sound apply sound effect directly (if radius is 0), or will check for players inside that radius single time whenever it is triggered."
+        }
+      ]
+    },
+	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to apply sound effect to entities in radius- only when 'Use only' and 'Radius' are used. Every trigger use-type works uniformly. Can be kill-targeted but already applied effects persist.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "radius",
+      "keyDescription": "Radius, in units, in which a player has to be for the ambient effect to change for him. The ambient effect will stay after leaving the radius, until another env_sound is entered. If set to 0, the radius won't be used, this is useful when entity is \"Use only\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "roomtype",
+      "keyDescription": "Pick the ambient effect here. There are 29 options.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "15",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "17",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "18",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "19",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "20",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "21",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "22",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "23",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "24",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "25",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "26",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "27",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "28",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ],
+  "Issues": [
+	"When a player spawns within the radius of an env_sound, he won't be affected.",
+	"Being in an env_sound for too short of a time won't cause its effects to be applied on the player.",
+	"An env_sound effect is not reset to normal after a map change. If you do not want to use env_sounds in your map, you should at least add a few around its start locations to properly reset the effect."
+  ]
+}

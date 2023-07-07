@@ -1,0 +1,16 @@
+{
+  "Classname": "Appearflags",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "2048 ",
+          "choiceDescription": "Obsolete in Sven Co-op. Makes the entity don't appear in Multiplayer Games."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "Classname": "trigger_auto",
+  "Description": "Trigger_auto is a simple point entity which will trigger in the first server frame, right after the map has loaded. Because some entities still set themselves up properly in the first server frame, it is advised to set a little delay of about 0.5 seconds, so trigger_auto does fire in a later frame and no unwanted behaviour is exhibited.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Remove this entity when it's done triggering. This should be always selected due to performance reasons."
+        }
+      ]
+    },
+    {
+      "keyName": "globalstate",
+      "keyDescription": "Reads a global state variable (from env_global) to use as use-type/trigger-state.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger on map start. Trigger use-type is defined in \"Trigger State\" keyvalue.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove on map start.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "triggerstate",
+      "keyDescription": "Changes trigger use-type in which target will be triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Trigger use-type 'Off'."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Trigger use-type 'On'."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Trigger use-type 'Toggle'."
+        }
+      ]
+    }
+  ]
+}

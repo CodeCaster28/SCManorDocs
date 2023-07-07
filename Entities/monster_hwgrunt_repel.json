@@ -1,0 +1,64 @@
+{
+  "Classname": "monster_hwgrunt_repel",
+  "Description": "Heavy weapon grunt that will appear rappelling down when triggered.<br>Class: Human Military.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start rappelling. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "Name of a squad for this monster to be part of. Monsters which share the same squad name are in the same squad, will attempt to stay together and follow their squad's leader (monster with \"SquadLeader\" flag).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "Select this flag if you want this monster to become a leader of squad typed in \"Squad name\"."
+        }
+      ]
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model display sequence in editor by specifying it's number.",
+      "keyChoices": [
+        {
+          "choiceValue": "14 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "weapons",
+      "keyDescription": "You can choose which weapon the monster uses.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "256 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "disable_minigun_drop",
+      "keyDescription": "If set to 'Yes' the minigun won't be dropped so players can't use it after grunt death.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "Classname": "env_blood",
+  "Description": "Point entity which, when triggered, creates a blood splash at its origin, which can cause blood decals on nearby walls, ceiling and floor.",
+  "KeyDescriptions": [
+     {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to emit blood (if place available). Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "color",
+      "keyDescription": "Choose from one of two exciting colors.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "amount",
+      "keyDescription": "Greater amount causes the decal to be more likely to appear, more blood to appear and the blood to fly faster. Above 255, blood won't fly faster anymore. Basically, greater values simulate greater damage.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, instead of the direction set by the env_blood's angles, a random direction will be used into which the blood splash will splatter."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Instead of a mere blood splash, a blood stream from multiple particles will fly through the air. Basically, this means more blood."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "If set, the blood splash will be created somewhere at the activating player's head."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "If set, blood will appear on a nearby wall, ceiling or floor."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "If 'Move to position' is set to 'Instantaneous' and you have an action animation set, the monster may freeze up and no longer react."
+  ]
+}

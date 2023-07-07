@@ -1,0 +1,52 @@
+{
+  "Classname": "func_platrot",
+  "Description": "Same as [func_plat](../func_plat), but it also rotates with customizable rotation speed. Vertically moving elevator that moves up automatically when player step on it. It is also automatically called when player wait for it at the top of the whole travel altitude. This entity requires origin brush tied to it.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If selected, the lift is no more automatically called from top and activated by stepping on it. It required trigger to do so."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "Enable this to make platform rotate around x axis instead of z axis."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "Enable this to make platform rotate around y axis instead of z axis."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable it (or move it manually with \"Toggle\" flag checked). Func_platrot is automatically enabled if this key is empty. With \"Toggle\" flag enabled the behaviour is based on trigger use-type: 'On'- move forward, 'Off'- move backward, 'Toggle'- move. With \"Toggle\" flag disabled all trigger use-types are accepted to enable lift. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Movement-speed in units per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "height",
+      "keyDescription": "How many units func_plat travels from it's starting position when someone step on it. Set to negative to make func_plat travels down.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rotation",
+      "keyDescription": "Total amount of degrees this entity spins from it's starting to ending position.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Just specifying a targetname makes func_plat not working until triggered."
+  ]
+}

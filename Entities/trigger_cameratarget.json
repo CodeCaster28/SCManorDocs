@@ -1,0 +1,384 @@
+{
+  "Classname": "trigger_cameratarget",
+  "Description": "A brush-based entity you can click on using the mouse cursor function of the [trigger_camera](../trigger_camera).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "All brushes of this entity are invisible- can still be clicked, have collision, it's not visible, bullets can be shot through it (just like in the 'CLIP' brushes), but any other projectiles can't (like grenades, spore grenades, hornets e.t.c.)."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Disable entity at map start so {{ entname }}} need to be triggered in order to be usable."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable camera target. Depending on trigger use-type: 'On'- enable camera target, 'Toggle'- toggle camera target, 'Off'- disable camera target. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_action_0_0",
+      "keyDescription": "Perform selected action when this entity is clicked with left mouse button.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "No action (disable this feature)."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Off' use-type."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'On' use-type."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Toggle' use-type."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Remove target specified in \"Click Target\"."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Deal a damage to target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Heal a target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_param_0_0",
+      "keyDescription": "Some actions from keyvalue above can have parameter specified.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_block_drag_0_0",
+      "keyDescription": "Block a repeating action from firing when a mouse button is held down then moved about whilst held, e.g. constantly triggering a door open/close just by holding a mouse button and jittering movement a bit.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_target_0_0",
+      "keyDescription": "Entity to trigger with specified action and parameter.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_action_1_0",
+      "keyDescription": "Perform selected action when this entity is clicked with right mouse button.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "No action (disable this feature)."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Off' use-type."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'On' use-type."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Toggle' use-type."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Remove target specified in \"Click Target\"."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Deal a damage to target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Heal a target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_param_1_0",
+      "keyDescription": "Some actions from keyvalue above can have parameter specified.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_block_drag_1_0",
+      "keyDescription": "Block a repeating action from firing when a mouse button is held down then moved about whilst held, e.g. constantly triggering a door open/close just by holding a mouse button and jittering movement a bit.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_target_1_0",
+      "keyDescription": "Entity to trigger with specified action and parameter.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_action_2_0",
+      "keyDescription": "Perform selected action when this entity is clicked with middle mouse button.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "No action (disable this feature)."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Off' use-type."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'On' use-type."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Toggle' use-type."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Remove target specified in \"Click Target\"."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Deal a damage to target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Heal a target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_param_2_0",
+      "keyDescription": "Some actions from keyvalue above can have parameter specified.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_block_drag_2_0",
+      "keyDescription": "Block a repeating action from firing when a mouse button is held down then moved about whilst held, e.g. constantly triggering a door open/close just by holding a mouse button and jittering movement a bit.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_target_2_0",
+      "keyDescription": "Entity to trigger with specified action and parameter.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_action_0_1",
+      "keyDescription": "Perform selected action when this entity is double-clicked with left mouse button.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "No action (disable this feature)."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Off' use-type."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'On' use-type."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Toggle' use-type."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Remove target specified in \"Click Target\"."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Deal a damage to target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Heal a target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_param_0_1",
+      "keyDescription": "Some actions from keyvalue above can have parameter specified.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_block_drag_0_1",
+      "keyDescription": "Block a repeating action from firing when a mouse button is held down then moved about whilst held, e.g. constantly triggering a door open/close just by holding a mouse button and jittering movement a bit.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_target_0_1",
+      "keyDescription": "Entity to trigger with specified action and parameter.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_action_1_1",
+      "keyDescription": "Perform selected action when this entity is double-clicked with right mouse button.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "No action (disable this feature)."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Off' use-type."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'On' use-type."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Toggle' use-type."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Remove target specified in \"Click Target\"."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Deal a damage to target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Heal a target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_param_1_1",
+      "keyDescription": "Some actions from keyvalue above can have parameter specified.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_block_drag_1_1",
+      "keyDescription": "Block a repeating action from firing when a mouse button is held down then moved about whilst held, e.g. constantly triggering a door open/close just by holding a mouse button and jittering movement a bit.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_target_1_1",
+      "keyDescription": "Entity to trigger with specified action and parameter.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_action_2_1",
+      "keyDescription": "Perform selected action when this entity is double-clicked with middle mouse button.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "No action (disable this feature)."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Off' use-type."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'On' use-type."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Triggers target specified in \"Click Target\" with 'Toggle' use-type."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Remove target specified in \"Click Target\"."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Deal a damage to target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Heal a target specified in \"Click Target\" by amount specified in \"Click Param\"."
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_param_2_1",
+      "keyDescription": "Some actions from keyvalue above can have parameter specified.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_block_drag_2_1",
+      "keyDescription": "Block a repeating action from firing when a mouse button is held down then moved about whilst held, e.g. constantly triggering a door open/close just by holding a mouse button and jittering movement a bit.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "mouse_target_2_1",
+      "keyDescription": "Entity to trigger with specified action and parameter.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mouse_digital_action_reset",
+      "keyDescription": "Change the wait/reset time between each digital mouse action, though there is still a minimum of 0.01 (10ms). Digital mouse action including clicking, double-clicking and wheel up/down. This doesn't apply to analogue actions, being moving or dragging.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "It's only trigger entity that can be visible in-game."
+  ],
+  "Issues": [
+    "All double click actions doesn't work properly."
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "Classname": "trigger_setcvar",
+  "Description": "Point entity which allows you to set several control variables (\"CVars\") such as sv_gravity. To do so, give it a name, set which CVar to change as well as the new desired value and trigger it.",
+  "KeyDescriptions": [
+    {
+      "keyName": "m_iszCVarToChange",
+      "keyDescription": "Set the name of the CVar to change.",
+      "keyChoices": [
+        {
+          "choiceValue": "\"mp_allowmonsterinfo\"",
+          "choiceDescription": "Allow players to see information about monsters they see. Disabling this will cause confusion over who is allied and who are enemies."
+        },
+        {
+          "choiceValue": "\"mp_banana\"",
+          "choiceDescription": "Allow players to throw banana bombs."
+        },
+        {
+          "choiceValue": "\"mp_barnacle_paralyze\"",
+          "choiceDescription": "Deny players to use weapons whilst caught by a Barnacle."
+        },
+        {
+          "choiceValue": "\"mp_disablegaussjump\"",
+          "choiceDescription": "Disable vertical knock back caused by the gauss cannon's charge up shot. This can sometimes be used to exploit maps or get places players aren't meant to go. This is a direct copy of mp_allowgaussjump, which for some reason got inverted in Sven Co-op 3.0."
+        },
+        {
+          "choiceValue": "\"mp_disable_autoclimb\"",
+          "choiceDescription": "Deny players to use the auto-climb feature."
+        },
+        {
+          "choiceValue": "\"mp_disable_pcbalancing\"",
+          "choiceDescription": "Disable player weapon damage balancing according to the mp_pcbalancing_factorlist setting."
+        },
+        {
+          "choiceValue": "\"mp_disable_player_rappel\"",
+          "choiceDescription": "Deny players to use the Barnacle grapple on each other."
+        },
+        {
+          "choiceValue": "\"mp_dropweapons\"",
+          "choiceDescription": "Allow players to drop weapons and ammo. Miniguns and shock rifles can always be dropped."
+        },
+        {
+          "choiceValue": "\"mp_falldamage\"",
+          "choiceDescription": "Specify how players receive damage from falling. 1: None, players never receive damage from falling. 0: Simple, a maximum of 10 points of damage is dealt. 1: Realistic, the speed and distance of the fall defines how much damage is dealt."
+        },
+        {
+          "choiceValue": "\"mp_flashlight\"",
+          "choiceDescription": "Allow players to use their flash light. Requires a HEV suit (provided by default)."
+        },
+        {
+          "choiceValue": "\"mp_forcerespawn\"",
+          "choiceDescription": "Force players to respawn after they die. Disabling this allows players to respawn when they are ready to (recommended)."
+        },
+        {
+          "choiceValue": "\"mp_fraglimit\"",
+          "choiceDescription": "Map changes after someone obtains this many points. Not recommended in most cases."
+        },
+        {
+          "choiceValue": "\"mp_grapple_mode\"",
+          "choiceDescription": "Players are pulled to monsters bigger than headcrabs when grappled rather than the monster being pulled to a player."
+        },
+        {
+          "choiceValue": "\"mp_monsterpoints\"",
+          "choiceDescription": "Let players get points for killing monsters, this can be toggled on or off, set it to 0 if you don't want players to get frags for killing monsters."
+        },
+        {
+          "choiceValue": "\"mp_noblastgibs\"",
+          "choiceDescription": "Deny monsters to be gibed (ripped apart) when killed with explosives."
+        },
+        {
+          "choiceValue": "\"mp_nomedkit\"",
+          "choiceDescription": "All players by default start the map with a Med Kit that lets them heal other players and NPC's, using this command stops the players starting with the Med Kit. You can let the players pick up the Med Kit in the map by placing a weapon_medkit somewhere in the map."
+        },
+        {
+          "choiceValue": "\"mp_no_akimbo_uzis\"",
+          "choiceDescription": "Deny players to have akimbo uzis. This may help balance power on some maps or large player capacities."
+        },
+        {
+          "choiceValue": "\"mp_npckill\"",
+          "choiceDescription": "Set the behaviour of killing allied NPCs. This replaces the old killnpc setting. 0: Disallows allied NPCs to be killed. 1: Allows allied NPCs to be killed. 2: Allows allied NPCs to be killed by anything other than players, allied NPCs, and human passive class."
+        },
+        {
+          "choiceValue": "\"mp_pcbalancing_factorlist\"",
+          "choiceDescription": "Balance player weapon damage based on the amount of players present based on a sequence of multipliers. The default value (1.0;1.8;1.4;1.2;1.1;1.0) means damage multipliers of 1x for 1 player, 1.8x for 2 players, 1.4x for 3 players, 1.2x for 4 players, 1.5x for 5 players, and 1x for 6 or more players."
+        },
+        {
+          "choiceValue": "\"mp_respawndelay\"",
+          "choiceDescription": "The time (seconds) a player must wait before respawning. This is 5 seconds by default to help encourage use of the reviving feature."
+        },
+        {
+          "choiceValue": "\"mp_timelimit\"",
+          "choiceDescription": "Map changes after this amount of time (minutes) if the map hasn't been completed already. Time limit is infinite if set to 0, but the server's mp_timelimit_empty will end your map early if there are no players present."
+        },
+        {
+          "choiceValue": "\"mp_weaponstay\"",
+          "choiceDescription": "Weapons can be picked up multiple times, with the exception of miniguns. Disabling this will result in a couple of players taking all the weapons leaving others with nothing."
+        },
+        {
+          "choiceValue": "\"mp_weapon_respawndelay\"",
+          "choiceDescription": "Set a custom respawning delay for weapons. -2: Use game default delay. -1: Never respawn. 0: Instantly respawn. >0: Respawn after this many seconds. Individual entities within the map can override this global setting."
+        },
+        {
+          "choiceValue": "\"mp_ammo_respawndelay\"",
+          "choiceDescription": "Set a custom respawning delay for ammo. -2: Use game default delay. -1: Never respawn. 0: Instantly respawn. >0: Respawn after this many seconds. Individual entities within the map can override this global setting."
+        },
+        {
+          "choiceValue": "\"mp_item_respawndelay\"",
+          "choiceDescription": "Set a custom respawning delay for items. -2: Use game default delay. -1: Never respawn. 0: Instantly respawn. >0: Respawn after this many seconds. Individual entities within the map can override this global setting."
+        },
+        {
+          "choiceValue": "\"npc_dropweapons\"",
+          "choiceDescription": "NPC's will drop their weapon upon death."
+        },
+        {
+          "choiceValue": "\"skill\"",
+          "choiceDescription": "The default skill level your server will use. Maps can override this in their configuration. 0: Always let the map choose. 1: Easy, enemies are easy to kill, players are hard to kill. 2: Hard, enemies are hard to kill, players are easy to kill. 3: Realistic, enemies are easy to kill, players are very easy to kill - enables realistic weapon damage. If you want to change a skill variable, make sure to append either 1, 2 or 3 to determine the according skill level. You can also omit the digit or put a hash ('#') instead, in order to have all 3 skill-variants of the skill-CVar changed and the according damage-, health- or miscellaneous value be updated to the game engine. If you change the \"skill\"-CVar itself, all skill-CVars will be reread, which is a relatively expensive operation, so better don't spam it."
+        },
+        {
+          "choiceValue": "\"sk_\"",
+          "choiceDescription": "All skill variables can be put here e.g. 'sk_headcrab_health'. For complete list of available 'sk_' variables see svencoop/skill.cfg file."
+        },
+        {
+          "choiceValue": "\"sv_ai_enemy_detection_mode\"",
+          "choiceDescription": "Allow NPC's to scan for enemies and fight even while no players are near enough."
+        },
+        {
+          "choiceValue": "\"sv_accelerate\"",
+          "choiceDescription": "The speed players accelerate while on ground."
+        },
+        {
+          "choiceValue": "\"sv_airaccelerate\"",
+          "choiceDescription": "The speed players accelerate while in the air."
+        },
+        {
+          "choiceValue": "\"sv_friction\"",
+          "choiceDescription": "The amount of friction created by the ground."
+        },
+        {
+          "choiceValue": "\"sv_gravity\"",
+          "choiceDescription": "The amount of gravity (maximum units/second)."
+        },
+        {
+          "choiceValue": "\"sv_maxspeed\"",
+          "choiceDescription": "The speed players can run on ground -- excluding aid from various triggers and effects (explosions etc) that can allow players to move faster."
+        },
+        {
+          "choiceValue": "\"sv_wateraccelerate\"",
+          "choiceDescription": "The speed players accelerate while underwater."
+        },
+        {
+          "choiceValue": "\"sv_waterfriction\"",
+          "choiceDescription": "Whether friction also applies to water."
+        }
+      ]
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Specify the new CVar value.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "Entity to trigger whenever a CVar is set. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to set cvar. Only 'On' and 'Toggle' trigger use-types are accepted. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "SetType",
+      "keyDescription": "Allows to filter CVAR Types.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "Players and the server console will receive a console message reading which CVar has changed and to what value. If you set a skill-CVar, only the server console will get information about the change printed."
+  ]
+}

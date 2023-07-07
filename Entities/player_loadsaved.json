@@ -1,0 +1,46 @@
+{
+  "Classname": "player_loadsaved",
+  "Description": "Player_loadsaved is used to restart map after screen fade and custom on-screen message.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger this to restart map.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "duration",
+      "keyDescription": "Time, in seconds, the fade effect will fade in.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "holdtime",
+      "keyDescription": "Time, in seconds, the fully faded-in screen will stay.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "renderamt",
+      "keyDescription": "Set how transparent/opaque the effect is at its peak (Hold fade). 0 means transparent. 255 means opaque.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rendercolor",
+      "keyDescription": "Fade color to use.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "messagetime",
+      "keyDescription": "Delay after triggering this entity to display text.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Text to show on screen.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "loadtime",
+      "keyDescription": "Delay after triggering this entity to restart level. Note that this time is not calculated after screen finished fading so by setting this value you should consider \"Fade Duration\" and \"Hold Fade Time\". E.g. \"Fade Duration\" is 2 and \"Hold Fade Time\" is 1.5. Preferable value for reload delay would be 2 + 1.5 = 3.5.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "Classname": "BeamStartEnd",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "LightningStart",
+      "keyDescription": "Entity at which the beam starts. If this and the \"End Entity\" are not set, the env_beam entity will cast a random bolt hitting a solid surface in the specified radius around itself. This is not guaranteed to work unless there are solid faces in every direction from the env_beam entity within the specified radius.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "LightningEnd",
+      "keyDescription": "Entity at which the beam ends. If this is not set, the env_beam entity will cast a random bolt hitting a solid surface in the specified radius the start entity. This is not guaranteed to work unless there are solid faces in every direction from the start entity within the specified radius.",
+      "keyChoices": []
+    }
+  ]
+}

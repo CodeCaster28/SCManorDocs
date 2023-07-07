@@ -1,0 +1,112 @@
+{
+  "Classname": "scripted_sequence",
+  "Description": "A point entity, which allows you to order a monster to walk or run to a specific location and, if wanted, play an animation. Furthermore, you may set up an idle animation which will play for the targeted monster till the scripted_sequence entity is triggered or have a specific monster or monster class use the scripted_sequence when entering its radius.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to play sequence. This will also toggle idle animation if specified. Every trigger use-type works uniformly. Can be kill-targeted which also stops action and idle animations.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when sequence ends. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when sequence ends."
+    },
+    {
+      "keyName": "m_iszEntity",
+      "keyDescription": "Name of the monster which shall do the sequence. When referencing multiple monsters, only one will react. If you want to make use of the search radius, you can also set a monster classname here.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszPlay",
+      "keyDescription": "Name of the animation to play when the monster arrives at the scripted_sequence's location. Animation names and animations vary between monsters. A model viewer like Jed's Half-Life Model Viewer allows you to look at the animations of a Half-Life model file. The action animation is optional.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszIdle",
+      "keyDescription": "If set, this animation will play for the target monster till the scripted_sequence is triggered. The animation should be an idle animation and the scripted_sequence requires a targetname for this to work.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flRadius",
+      "keyDescription": "Radius, in units, in which to search for a valid target monster. This will only work if you specified a monster classname for 'Target monster'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flRepeat",
+      "keyDescription": "Delay, in milliseconds, between checks for whether a valid target monster is within search radius or not. Set this to a large value if not used, as the game even does the check when the 'Search radius' is zero. Setting zero here means that it will check every server frame.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_fMoveTo",
+      "keyDescription": "Here, you can set in which manner the monster will move to the scripted_sequence, or to not have it move there at all. 'Turn to face', as all other options besides 'No', means that the monster will end the sequence with looking in the same direction as the scripted_sequence, followed by the action animation (You may change the scripted_sequence's yaw).",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Default and only bug-free setting. Idle animation is looped until triggered to play action animation."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Monster walks to this entity position, idle animation won't play, action animation plays automatically."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Monster runs to this entity position, idle animation won't play, action animation plays automatically."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Teleports to this entity then playing idle animation until triggered."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Idle animation playing infinitely, blocks action animation so entity cannot be triggered."
+        }
+      ]
+    },
+    {
+      "keyName": "moveto_radius",
+      "keyDescription": "When the monster hits the supplied radius around the script, it'll stop moving and start its sequence. Useful when the area around the scripted_sequence is hard to navigate or you want your monster to stop in a distance from the scripted_sequence no matter from which direction the monster comes.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "The scripted_sequence won't be removed after finishing, allowing to use it again."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "If the action animation is a death animation, causing the monster to die, the corpse will not fade out."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "The sequence will not end unless the monster finishes it. The monster can take damage, but won't die."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "Forces the monster to start the sequence regardless of its state. With this set, the sequence will start even when the monster is under attack by something."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "Certain target animations cause the monster to change its position. (E.g., an animation of the monster jumping ahead a few meters) This flag prevents the animation from causing the monster to get moved."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "y default, the monster is 'reset' after the sequence ends. This means, that its recent activity will be stopped and no animation interpolation will be done. The monster will appear to suddenly start its next action/animation of its own common AI behaviour, depending on the circumstances. Activity means the very action the monster is doing in a moment. These can be different attacks, movements into different directions, the monster flinching from the impact of an attack, dying or doing anything it can do. (E.g.: Barney has two activity states for drawing/holstering his gun.) Checking this flag disables this behaviour, causing a smoother transition from the end of the sequence to the monster picking up its AI again, in the sense of visual appearance and monster action. This comes at the risk of unwanted effects. You may experiment with this."
+        }
+      ]
+    }
+  ],
+  "Issues": [
+    "If 'Move to position' is set to 'Instantaneous' and you have an action animation set, the monster may freeze up and no longer react.",
+    "If 'Move to position' is set to 'No- Turn To Face' the idle animation won't stop playing when this entity is triggered.",
+    "If 'Move to position' is set to 'Run' or 'Walk' the idle animation won't play, and the whole animation is not played smoothly.",
+    "Kill-targeting this entity crashes the game when action animation ends or idle animation is being played."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "Classname": "trigger_save",
+  "Description": "Trigger_save allows to save an entity's keyvalue to external map-data stored in mapname.save in the \"maps\"-folder, which is stored on the server running the map. Its counterpart is [trigger_load](../trigger_load). Supports [custom keyvalues](../custom_keyvalues).",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to save keyvalue data.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "A label under which data is to be stored.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to read value from.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Name of the keyvalue of the source entity to read value from.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszTrigger",
+      "keyDescription": "Entity to trigger after the save-operation, even if nothing was loaded.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "If the entity to read from is not found, the save-file won't be touched."
+  ],
+  "Issues": [
+    "Trying to write strings containing line breaks (this does e.g. apply to game_text message-keyvalues containing the \"\\n\"-character sequence) or colons will corrupt the save-file. This is because of how the feature was implemented and is simply not supported."
+  ]
+}

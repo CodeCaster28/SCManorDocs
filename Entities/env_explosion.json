@@ -1,0 +1,46 @@
+{
+  "Classname": "env_explosion",
+  "Description": "Point entity which, when triggered, creates an explosion which damages everything damageable around it.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to create explosion. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "iMagnitude",
+      "keyDescription": "Explosion magnitude. Greater values mean bigger explosion size and damage. Note that explosion damage values above 200 are known to cause damage even through walls.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, the explosion deals no damage."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If set, the env_explosion entity won't be removed after being triggered, so you can use it again."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "If set, the explosion shows no fireball."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "If set, the explosion shows no smoke."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If set, the explosion causes no decal."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "If set, the explosion creates no sparks."
+        }
+      ]
+    }
+  ]
+}

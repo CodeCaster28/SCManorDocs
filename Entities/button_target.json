@@ -1,0 +1,173 @@
+{
+  "Classname": "button_target",
+  "Description": "A brush entity, which, in its essence, acts like a [func_button](../func_button), except that it has been designed specifically for triggering only when damaged unless set up otherwise. The damage it receives does not matter.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, the button_target can also be activated by a player using it. This is enabled by default!"
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Deprecated in Sven Co-op."
+        }
+      ]
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) disables this {{ entname }}. If master is specified the {{ entname }} won't work. When multisource entity is triggered/being triggering by all possible inputs, the {{ entname }} will be enabled and ready to be pressed. When multisource lost at least one input signal, the entities becomes disabled again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever a button is pressed. Trigger use-type is defined in \"Use Type\" keyvalue.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "renderfx",
+      "keyDescription": "Set custom render FX effect. Only works when \"Render Mode\" is set to different than 'Normal'",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Default rendering."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Transparency slow fading in and out in a loop."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Transparency fast fading in and out in a loop."
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "Transparency slow fading in and out widely in a loop."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Transparency fast fading in and out widely in a loop."
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": "Regular slow appearing/dissapearing."
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": "Regular fast appearing/dissapearing."
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": "Regular very fast appearing/dissapearing."
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": "Random slow appearing/dissapearing."
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": "Random fast appearing/dissapearing."
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Not working. Fading out slowly until reaching invisibility. Works once when entity spawns or have changed it's \"Render FX\" at a runtime (e.g. through env_render). Requires high \"FX Amount\""
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "Not working. Fading out quickly until reaching invisibility. Works once when entity spawns or have changed it's \"Render FX\" at a runtime (e.g. through env_render). Requires high \"FX Amount\""
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "Not working. Fading in slowly from invisible to fully visible. Works once when entity spawns or have changed it's \"Render FX\" at a runtime (e.g. through env_render). Requires low or zero \"FX Amount\""
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Not working. Fading in quickly from invisible to fully visible. Works once when entity spawns or have changed it's \"Render FX\" at a runtime (e.g. through env_render). Requires low or zero \"FX Amount\""
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": "Sprites with 'Glow' render mode only. Disables sprite resizing."
+        },
+        {
+          "choiceValue": "15",
+          "choiceDescription": "Random distortion, looped."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "'Random distortion' + 'Pulse' applied, looped."
+        },
+        {
+          "choiceValue": "19",
+          "choiceDescription": "Applies nice animated glowing shell on model. Color can be applied. \"FX Amount\" manipulates glow shell size."
+        }
+      ]
+    },
+    {
+      "keyName": "rendermode",
+      "keyDescription": "Render mode determines how this entity is rendered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Normal rendering. Entity will receive light, except if it is a sprite. \"FX Amount\" is obsolete when this is used."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Brush entities only: Instead of rendering the texture, the whole entity will appear in one color, set by \"FX Color\". \"FX Amount\" sets the transparency. 0 means invisible. 255 means fully opaque."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Texture-only rendering. Entity will not receive light. Instead, only the texture will be rendered as is. \"FX Amount\" sets the transparency. 0 means invisible. 255 means fully opaque. This is used for transparent things such as windows. Tip: If you have a window separating a dark and a bright room using only one entity, you can apply a brighter glass texture to the side of the window seen from within the dark room than to the side seen from the bright room. That way, the window's brightness will look realistic from both sides, instead of from just one. Generally, darker rooms require the render amount to be lower, making the glass more transparent, or it would look illogically bright."
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "Sprites only. The sprite will appear in the same size regardless of your distance to it. In addition to that, the further away you are from it, the less visible it will be. (It's only barely visible at about 500 units far away) Good for light coronas. This renders the sprite in additive mode."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Brush entities only. All textures of the brush entity starting with '{' will have the last color of their palette (usually blue, black or purple) be rendered fully transparent. This is used for textures with see-through parts, such as grates and railings. Requires \"FX Amount\" to be set to a value greater than 0, commonly 255."
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Works just as the \"Render Mode\" 'Texture', except that the entity's appearance will be added to the background instead of forming a mean. This means, black pixels of textures will be fully transparent, while full-bright pixels are added with a factor of \"FX Amount\" divided by 255. This is often used for sprites indicating a glowing light, as well as for overlay func_illusionaries to give a computer texture the appearance of having many small, glowing lights, screens and whatever other elements. Render-amount of 255 makes it bright. 0 makes it invisible."
+        }
+      ]
+    },
+    {
+      "keyName": "renderamt",
+      "keyDescription": "Render amount to use when other than \"Render Mode\" 'Normal' is used.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rendercolor",
+      "keyDescription": "Used with \"Render Mode\" 'Color' and 'Glow' to set color. Also sets color of 'Glow Shell' \"Render Mode\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "use_type",
+      "keyDescription": "Set the use-type with which the button will trigger its targets. Default is 'Toggle'.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ],  
+  "Notes": [
+    "Button_target supports to have a name (even if it is not listed in object properties). You can set it by adding \"targetname\" key with SmartEdit mode disabled. Now entity can be killed and when triggered, it's behaviour depends on use-type: 'On'- press button on, 'Off'- press button off, 'Toggle'- toggle button."
+  ]
+}

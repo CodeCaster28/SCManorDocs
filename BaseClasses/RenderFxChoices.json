@@ -1,0 +1,84 @@
+{
+  "Classname": "RenderFxChoices",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "renderfx",
+      "keyDescription": "Set custom render FX effect. Only works when \"Render Mode\" is set to different than 'Normal'",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Default rendering."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Transparency slow fading in and out in a loop."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Transparency fast fading in and out in a loop."
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "Transparency slow fading in and out widely in a loop."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Transparency fast fading in and out widely in a loop."
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": "Regular slow appearing/dissapearing."
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": "Regular fast appearing/dissapearing."
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": "Regular very fast appearing/dissapearing."
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": "Random slow appearing/dissapearing."
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": "Random fast appearing/dissapearing."
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Not working. Fading out slowly until reaching invisibility. Works once when entity spawns or have changed it's \"Render FX\" at a runtime (e.g. through env_render). Requires high \"FX Amount\""
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "Not working. Fading out quickly until reaching invisibility. Works once when entity spawns or have changed it's \"Render FX\" at a runtime (e.g. through env_render). Requires high \"FX Amount\""
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "Not working. Fading in slowly from invisible to fully visible. Works once when entity spawns or have changed it's \"Render FX\" at a runtime (e.g. through env_render). Requires low or zero \"FX Amount\""
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Not working. Fading in quickly from invisible to fully visible. Works once when entity spawns or have changed it's \"Render FX\" at a runtime (e.g. through env_render). Requires low or zero \"FX Amount\""
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": "Sprites with 'Glow' render mode only. Disables sprite resizing."
+        },
+        {
+          "choiceValue": "15",
+          "choiceDescription": "Random distortion, looped."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "'Random distortion' + 'Pulse' applied, looped."
+        },
+        {
+          "choiceValue": "19",
+          "choiceDescription": "Applies nice animated glowing shell on model. Color can be applied. \"FX Amount\" manipulates glow shell size."
+        }
+      ]
+	}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "Classname": "func_trackautochange",
+  "Description": "Brush entity that works as a rotating ascending/descending elevator for uncontrollable func_tracktrain. It connects two path_tracks- elevator takes the train from last path_track of the top path, rotating and descending, and then, after finishing, the train is assigned to path_track of the bottom path. This can be reverted for ascending platform. The func_trackautochange platform need origin brush (preferably located at the center of entity), and the top and the bottom path_corners should be centered to this entity for best results. See the picture on the left- the platform with origin brush tied to it (func_trackautochange), and orange cubes that represents the top and the bottom path_track. Similar variant to this entity is [func_trackchange](../func_trackchange) which reacts on all triggering inputs so you can move this platform by triggering it, instead of triggering connected train.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to control track train. Depending on trigger use-type: 'On'- stop train movement on path after track travel, 'Off'- start train movement on path after track travel, 'Toggle'- toggle train movement on path after track travel. Can be kill-targeted but track train won't travel any further if it's on {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Remember to create origin brush for this entity around which func_trackautochange rotates."
+  ]
+}

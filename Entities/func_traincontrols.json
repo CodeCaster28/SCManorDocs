@@ -1,0 +1,11 @@
+{
+  "Classname": "func_traincontrols",
+  "Description": "This entity represents an invisible, non-solid button which gives a player control over a [func_tracktrain](../func_tracktrain) when used. This entity automatically moves and rotates with its associated func_tracktrain. When uses it, the player can choose between speed levels.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Name of assigned func_tracktrain.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "Classname": "trigger_random_time",
+  "Description": "Obsolete, use [trigger_random](../trigger_random) with \"Timed\" flag. Trigger which will wait a random amount of time, then fire one of it's targets randomly, and then repeat that process while activated.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to pick random target.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "Classname": "game_player_counter",
+  "Description": "This entity keeps track of the total number of players currently on or connecting to the server. It will trigger its \"Min Target\" when \"Min Value\" is reach and its \"Max Target\" when \"Max Value\" is reached. You don't need to use minimum and maximum value and target. In fact they are completely unrelated and are named like that only to imply the intended use of toggling something in the map based on a player count threshold. You can use \"dmg\" key to get current number of players e.g. by using [trigger_copyvalue](../trigger_copyvalue) or [trigger_condition](../trigger_condition).",
+  "KeyDescriptions": [
+    {
+      "keyName": "frags",
+      "keyDescription": "Player-count required to trigger \"Min Target\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "Player-count required to trigger \"Max Target\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when \"Min Value\" is reached. Trigger use-type is 'On'",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "Target to trigger when \"Max Value\" is reached. Trigger use-type is 'On'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "If set, only players by that targetname will cause the game_player_counter to count up/down. It's not possible to set a targetname on a player before he connects, so don't ask me how to make use of this.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Unlike other entities, game_player_counter sends 'On' output instead of 'Toggle'."
+  ],
+  "Issues": [
+    "You can access current player value of this entity by refering to \"dmg\" keyvalue."
+  ]
+}

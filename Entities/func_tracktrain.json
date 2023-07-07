@@ -1,0 +1,146 @@
+{
+  "Classname": "func_tracktrain",
+  "Description": "This is a [func_train](../func_train) with a greater set of features (like auto-rotation). Func_tracktrains are supposed to be controlled by players. Triggering them manually to get them moving works once. Any further triggering is ignored. Origin brush is required for this entity. To make it controllable you must use [func_traincontrols](../func_traincontrols) as well.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Prevents train from auto-rotating around X axis. If path_tracks are on the same level, this flag is obsolete."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Func_tracktrain cannot be controlled by player."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Train can't travel backward."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Disable collision of train."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "Prevents train from auto-rotating around Y axis. If path_tracks are on the same level, this flag is obsolete."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start or stop it. Depending on trigger use-type: 'On'- start moving, 'Toggle'- start/stop moving, 'Off'- stop moving. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "The name of the first [path_track](..path_track/) (where the train starts). Train is teleported to this position on map start, no matter where it's placed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sounds",
+      "keyDescription": "Sound group (move, break, start) to use on that train.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "",
+          "media": "../audio/ttrain1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "",
+          "media": "../audio/ttrain2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "",
+          "media": "../audio/ttrain3.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "",
+          "media": "../audio/ttrain4.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "",
+          "media": "../audio/ttrain6.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "",
+          "media": "../audio/ttrain7.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        }
+      ]
+    },
+    {
+      "keyName": "noise",
+      "keyDescription": "Custom sound file that is playing when track train is moving. Overrides default \"Sound\" sounds.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "noise1",
+      "keyDescription": "Custom sound file to play when track train stops. Overrides default \"Sound\" sounds.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "noise2",
+      "keyDescription": "Custom sound file to play when track start it's movement. Overrides default \"Sound\" sounds.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wheels",
+      "keyDescription": "Distance between the virtual track train wheels. Set to higher value for smoother track train turning, but the best value is a func_tracktrain length.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "height",
+      "keyDescription": "This is the height above the path_track that the train will ride, based on the location of the train's origin brush.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "startspeed",
+      "keyDescription": "It's a starting speed of func_tracktrain. Set it to '0' so the track train is not moving at map start. Path_track and player controls may override this.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Maximum speed of the track train. If player controllable, this is a maximum speed level of the train.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "dmg",
+      "keyDescription": "Damage to deal to entities that attempts to block it.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "volume",
+      "keyDescription": "Volume of sounds produced by this train selected in \"Sound\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bank",
+      "keyDescription": "When func_trackrain is turning left of right, this is an bank angle (in degrees), e.g. when turning, the train will also rotate itself around track axis (by this value) in a moment of turning. To explain this, image a roller coaster cart that banks itself whenever it's at turning point.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "soundlist",
+      "keyDescription": "Allows you to setup a sound replacement file for the func_tracktrain sounds. The path begins in 'svencoop/sound/mapname', whereas 'mapname' would be your map's name. You can go to the parent directory using '../'. A valid sound replacement file contains one or more lines with two sound-paths, which are separated by a space and wrapped into quotes. The first sound is the sound to be replaced. The second sound is the new sound. Sound-paths start in the sound directory. You cannot go to the parent directory using '../' in that case. These sounds do not need to be precached using a custom_precache point entity.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Func_tracktrain must face west (90 degrees) at editor position. At map start the track train automatically rotates to face next path_track.",
+    "Func_tracktrain supports clip brushes tied onto it."
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "Classname": "InventoryRules",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "item_name_required",
+      "keyDescription": "Item(s) (names separated by spaces) required to use this entity. Refers to \"Item name\" value of item_inventory.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "item_group_required",
+      "keyDescription": "Groups (separated by spaces), in which carried items belong to, required to use this entity. Refers to \"Item group name\" value of item_inventory.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "item_group_required_num",
+      "keyDescription": "Minimal number of items, that belong to specified group, required to use this entity. Use with \"Inventory: Need item(s) from group(s)\" keyvalue. Value of '0' means that all items from current group are required.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "item_name_canthave",
+      "keyDescription": "Items in player inventory that will fail the test, and disallow usage of this entity. Refers to \"Item name\" value of item_inventory.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "item_group_canthave",
+      "keyDescription": "Items in player inventory, which belong to specified group, that will fail the test, and disallow usage of this entity. Refers to \"Item group name\" value of item_inventory.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "item_group_canthave_num",
+      "keyDescription": "Minimal number of items in player inventory, which belong to specified group, that will fail the test, and disallow usage of this entity. Refers to \"Item group name\" value of item_inventory. Value of '0' means no single item from current group should be equipped to pass the test.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pass_ignore_use_triggers",
+      "keyDescription": "If set to 'Yes' item's trigger targets from 'Target: On use (by trigger)' will not be triggered when item is used by this entity.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "pass_drop_item_name",
+      "keyDescription": "Items to force-drop when the test result is positive, and entity is used successfully. Refers to \"Item name\" value of item_inventory. Multiple item names are separated by spaces.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pass_drop_item_group",
+      "keyDescription": "Items to force-drop, that belong to specified group, when the test result is positive and entity is used successfully. All items from this group will be dropped. Refers to \"Item group name\" value of item_inventory. Multiple item names are separated by spaces.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pass_ignore_drop_triggers",
+      "keyDescription": "If set to 'Yes' item's trigger targets from \"Target: On drop\" will not be triggered when item is dropped by this entity with \"Drop items(s)\" events above.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "pass_return_item_name",
+      "keyDescription": "Items to return to their starting positions when test result is positive. Refers to \"Item name\" value of item_inventory. Multiple item names are separated by spaces.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pass_return_item_group",
+      "keyDescription": "Items, that belong to specified group, to return to their starting positions when test result is positive. All items from this group will be returned. Refers to \"Item group name\" value of item_inventory. Multiple group names are separated by spaces.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pass_ignore_return_triggers",
+      "keyDescription": "If set to 'Yes' item's trigger targets from \"Target: On return\" will not be triggered when item is returned by this entity with \"Return items(s)\" events above.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "pass_destroy_item_name",
+      "keyDescription": "Items to remove when test result is positive. Refers to \"Item name\" value of item_inventory. Multiple item names are separated by spaces.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pass_destroy_item_group",
+      "keyDescription": "Items, that belong to specified group, to remove when test result is positive. All items from this group will be removed. Refers to \"Item group name\" value of item_inventory. Multiple group names are separated by spaces.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pass_ignore_destroy_triggers",
+      "keyDescription": "If set to 'Yes' item's trigger targets from \"Target: On Destroy\" will not be triggered when item is destroyed by this entity with \"Destroy items(s)\" events above.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "target_on_fail",
+      "keyDescription": "Entity to trigger whenever test result is negative.",
+      "keyChoices": []
+    }
+  ]
+}

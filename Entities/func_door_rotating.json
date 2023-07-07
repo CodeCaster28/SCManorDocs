@@ -1,0 +1,53 @@
+{
+  "Classname": "func_door_rotating",
+  "Description": "A func_door_rotating will rotate around a point determined by the center of an origin brush tied to it for a set amount of degrees and return after a specified amount of time. The logic behind its mechanics are identical to those of a [func_door](../func_door).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Reverses the direction of rotation. Only makes sense when \"One-way\" is selected. The same effect is given by making \"Distance\" value negative."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Makes door rotates only in one direction (counter-clockwise when distance is positive)."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If selected, the door will rotate around X axis. Can be combined with \"Y Axis\". If either this flag and \"Y Axis\" are not selected, the doors rotates around z axis (like normal doors)."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "If selected, the door will rotate around Y axis. Can be combined with \"X Axis\". If either this flag and \"Y Axis\" are not selected, the doors rotates around z axis (like normal doors)."
+        }
+      ]
+    },
+    {
+      "keyName": "distance",
+      "keyDescription": "How many degrees the door rotates around it's axis. Can be negative.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever door completely opens or closes. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to open or close it. Behaviour, when triggered, depends on \"Obey Trigger Mode\" value. See \"Obey Trigger Mode\" for more details on how door behaves depending on selected mode. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when door opens.",
+      "keyChoices": []
+    }
+  ]
+}

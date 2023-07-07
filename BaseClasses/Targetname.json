@@ -1,0 +1,11 @@
+{
+  "Classname": "Targetname",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Classname": "FilterIn",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "tinfilter",
+      "keyDescription": "Semicolon-separated list of targetnames to either be forbidden or required (specified in \"Name In Filter Type\") on the caller-entity. Can also specify only one.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "tinfiltertype",
+      "keyDescription": "Set whether to forbid or require certain targetname(s) (specified in \"Name In Filter\") on the entity which tries to trigger me in order to accept triggering.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "cinfilter",
+      "keyDescription": "Semicolon-separated list of classnames to either be forbidden or required (specified in \"Class In Filter Type\") on the caller-entity. Can also specify only one.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "cinfiltertype",
+      "keyDescription": "Set whether to forbid or require certain classname(s) (specified in \"Class In Filter\") on the entity which tries to trigger me in order to accept triggering.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "Classname": "light_shadow",
+  "Description": "Allows mapper to toggle shadows among all toggleable/killable entities that cast shadows. Best effect when using among light_bounce. To use this entity place it anywhere on the map and set it's target to entity that will appear/disappear dynamically in-game. Targeting light_shadow will toggle the shadows. Note that entity need to have 'Opaque' selected in \"ZHLT Lightflags\" to cast a shadow. Does not support multiple or switchable light_environments.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Target solid entity that casted shadows will be toggled.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to toggle shadows on \"Target solid entity\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "style",
+      "keyDescription": "Not tested for {{ entname }}.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "pattern",
+      "keyDescription": "Not tested for {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "convertto",
+      "keyDescription": "Used by compilers. You don't need to set this.",
+      "keyChoices": [
+        {
+          "choiceValue": "\"light\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"light_spot\" ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Shadows starts turned ON at start (should be reverted to light_shadow at start). Make sure this is selected when the brush is visible at start."
+        },
+        {
+          "choiceValue": "2048 ",
+          "choiceDescription": "Obsolete in Sven Co-op. Makes the entity don't appear in Multiplayer Games."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "Classname": "momentary_door",
+  "Description": "This door gradually opens while using a [momentary_rot_button](../momentary_rot_button) and gradually closes while not using it, until it is either open or closed. It may or may not stay open after opened once, depending on the setup of the entities. Almost identical to [func_door](../func_door).",
+  "KeyDescriptions": [
+    {
+      "keyName": "message",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever door completely opens or closes. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to open or close it. Behaviour, when triggered, depends on \"Obey Trigger Mode\" value. See \"Obey Trigger Mode\" for more details on how door behaves depending on selected mode. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when door opens.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, the door will treat its predetermined open- and close-position as swapped, meaning it will start in its open position, but treat it as its closed position. This is useful when you want your door to start open and still receive proper lighting, or the node-graph to generate properly before closing the door manually (if it is a toggleable door)."
+        }
+      ]
+    }
+  ]
+}

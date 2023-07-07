@@ -1,0 +1,25 @@
+{
+  "Classname": "weapon_snark",
+  "Description": "A nest of 5 snark. You can carry 15. Primary fire throws a snark, which will attack enemies and explode after some time. Donors and Sven Co-op staff can throw a chubby when carrying at least 10 snarks, using secondary fire. Chubby attacks enemies with poisonous gas clouds, dealing massive damage. It is a very strong donor feature. CVars:<ul><li>sk_snark_health# (Default: 2, 2, 2): Snark health.</li><li>sk_snark_dmg_bite# (Default: 10, 12, 24): Snark bite damage.</li><li>sk_snark_dmg_pop# (Default: 5, 6, 15): Snark explosion damage. Explosion damage values greater than 200 are known to occasionally cause damage to apply even through walls.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

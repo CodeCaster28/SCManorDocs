@@ -1,0 +1,36 @@
+{
+  "Classname": "env_bubbles",
+  "Description": "A brush entity which creates bubbles at random positions inside it, which float up regardless of whether being in water or air and only are removed when hitting a water surface or solid wall. The bubbles sizes and rising-speed will vary slightly randomly.",
+  "KeyDescriptions": [
+    {
+      "keyName": "density",
+      "keyDescription": "The amount of bubbles to create per interval.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "frequency",
+      "keyDescription": "How often the amount of bubbles set by \"Bubble Density\" shall be created per second. Maximum is 20.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "current",
+      "keyDescription": "Sets the horizontal movement speed of the bubbles, to simulate them being in a current. The direction is set by the env_bubble's yaw. You cannot make the bubbles move downwards by trying to rotate the entity upside down.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable bubbles. Depending on trigger use-type: 'On'- enable/reset bubbles, 'Toggle'- toggle bubbles, 'Off'- disable bubbles. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "The env_bubbles entity will start off."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "Classname": "ammo_rpgclip",
+  "Description": "Provides 2 rockets for [weapon_rpg](../weapon_rpg) (Rocket-propelled grenade launcher). Maximum in supply: 5",
+	"KeyDescriptions": [
+	{
+      "keyName": "target",
+      "keyDescription": "Non-functional in {{ entname }}."
+    },
+	{
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}."
+    },
+	{
+      "keyName": "delay",
+      "keyDescription": "Non-functional in {{ entname }}."
+    },
+	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes item be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+	"As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+	"Ammo already loaded into weapon doesn't count to maximum ammo in supply (e.g. 6 in Revolver and 36 in supply gives total amount of 42 ammo).",
+	"If '\"Touch only\" and \"Use only\" flags are selected, the ammo can only be collected by trigger. When those flags are not selected, the ammo also can be collected by trigger, but only if player is the !activator."
+  ]
+}

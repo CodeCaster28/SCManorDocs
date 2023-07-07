@@ -1,0 +1,67 @@
+{
+  "Classname": "PortalBase",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Enables collision."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If selected, {{ entname }} need to be enabled."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Update display only every two frames instead of every frame, this improves performance."
+        }
+      ]
+    },
+    {
+      "keyName": "zoom",
+      "keyDescription": "Scales image the {{ entname }} is displaying.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fps",
+      "keyDescription": "Target frames per second rendered by this {{ entname }}. Decreasing improves performance.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mindist",
+      "keyDescription": "Minimum render distance in which {{ entname }} is rendering. Leave empty or set to 0 for no minimum distance threshold.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "maxdist",
+      "keyDescription": "Maximum render distance in which {{ entname }} is rendering. Leave empty or set to 0 for infinite.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "textureMode",
+      "keyDescription": "Set which textures on this brush are replaced by display.",
+      "keyChoices": [
+        {
+          "choiceValue": "0  ",
+          "choiceDescription": "Apply display on every surface."
+        },
+        {
+          "choiceValue": "1  ",
+          "choiceDescription": "All transparent textures, those which names starts with '{' character."
+        },
+        {
+          "choiceValue": "2  ",
+          "choiceDescription": "Textures with name specified in \"Texture Name\" keyvalue below."
+        }
+      ]
+    },
+    {
+      "keyName": "textureName",
+      "keyDescription": "Name of the texture to apply display on. Works only when \"Texture Mode\" is set to 'Named Texture'.",
+      "keyChoices": []
+    }
+  ]
+}

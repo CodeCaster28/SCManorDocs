@@ -1,0 +1,20 @@
+{
+  "Classname": "ExclusiveHold",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "exclusivehold",
+      "keyDescription": "If \"Yes\" is selected, the weapon must be picked up and cannot be switched to another weapon until dropped. This behaviour is invariably enabled for [weapon_minigun](../weapon_minigun) and [weapon_shockrifle](../weapon_shockrifle).",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

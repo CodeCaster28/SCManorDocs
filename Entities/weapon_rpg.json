@@ -1,0 +1,25 @@
+{
+  "Classname": "weapon_rpg",
+  "Description": "A Rocket-Propelled Grenade (RPG) launcher. Uses [ammo_rpgclip](../ammo_rpgclip). Primary fire fires a rocket, of which only one can be loaded at a time. Secondary fire toggles rocket laser guide on/off. You can carry 5 rockets as backpack ammunition. Underwater, the rocket will lose speed until, standing still. Rocket can fly into water without detonating, but not out of it. CVars:<ul><li>sk_plr_rpg# (Default: 150, 150, 180): Rocket explosion damage. Explosion damage values greater than 200 are known to occasionally cause damage to apply even through walls.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "Classname": "trigger_renameplayer",
+  "Description": "Sets a targetname on the triggering player (player must be an !activator in this trigger chain). You might as well use a [trigger_changevalue](../trigger_changevalue).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Set this if you want the trigger_renameplayer to be usable more than once- it will be removed from the game otherwise."
+        }
+      ]
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "New targetname to set onto the player.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to rename player. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "Classname": "light_environment",
+  "Description": "This entity will cause light to be emitted from all sky-textured surfaces in the map. Use this for sunlight, or pale blue moonlight, or whatever other light the environment in your map may have. The light and brightness emitted by this should fit your environment map to look right. Arrange target of light by using Pitch value and Yaw compass at object properties. Note that brushes using \"SKY\" texture cannot have mixed face content (whole sky brush need to be textured).",
+  "KeyDescriptions": [
+    {
+      "keyName": "pitch",
+      "keyDescription": "Determines position of the virtual sun. Pitch '0' for sun casting light from the ground level (minimal light, shadows simulates eclipse-like blackout), '90' for most top position (yaw value don't need to be set if pitch is 90 or -90). Negative values places sun beneath ground level, so in the basic sky configuration (sky textures above the ground) the map is full-lit (no shadows).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_light",
+      "keyDescription": "Red, green and blue amounts of the light color, from 0 to 255, followed by the brightness, which can have pretty much any value greater than 0. It is not limited to 200 or 255 and can be a decimal, although that level of precision is rarely required.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_diffuse_light",
+      "keyDescription": "Color and intensity of sky ambient color - light from sky itself, not directly from light source. E.g. ambient color for sunny cloudless day would be light blue. It will affect mostly shaded spots.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_spread",
+      "keyDescription": "You can control shadows of light_environment. It's useful when you want to add more realistic shadows depends on light type-for sunny day shadows will be sharper, when for cloudy or rainy weather more blurred:\n![](light_environment.jpg)",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Light and light_spot are ignored by models when light_environment is used, they will use lightning from sky only. Use light_spot with \"Is sky\" keyvalue set to \"Yes\" to fix this, but only if you need this (e.g. your map is dark and models not getting light from point lights)."
+  ]
+}

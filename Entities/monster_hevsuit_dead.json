@@ -1,0 +1,55 @@
+{
+  "Classname": "monster_hevsuit_dead",
+  "Description": "Non-solid hevsuit corpse.",
+  "KeyDescriptions": [
+    {
+      "keyName": "pose",
+      "keyDescription": "Pose to use in game.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model display sequence in editor by specifying it's number.",
+      "keyChoices": [
+        {
+          "choiceValue": "177 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "178 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "179 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "180 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "If set, this will overwrite the monster's default model. This needs to be precached using a [custom_precache](../custom_precache) entity.",
+      "keyChoices": []
+    }
+  ]
+}

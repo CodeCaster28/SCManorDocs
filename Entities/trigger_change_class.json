@@ -1,0 +1,105 @@
+{
+  "Classname": "trigger_change_class",
+  "Description": "Allows you to change the classification of an entity, e.g. a monster or a func_breakable. The classification of an entity is used by monsters to determine whether it shall be considered as an enemy, an ally, as neutral or as something to fear. Most classifications will consider themselves as allies.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to change class of entity specified in \"Target\". Only 'On' and 'Toggle' trigger use-types are accepted. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to change class."
+    },
+    {
+      "keyName": "classify",
+      "keyDescription": "Set the classification of target entity. For a complete table of how different classes react to each other, see [monster class relation table](https://wiki.svencoop.com/Class_Relationship_Table).",
+      "keyChoices": [
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Keep default classification."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "13 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "14 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "15 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "Use it to classify to custom team."
+        },
+        {
+          "choiceValue": "17 ",
+          "choiceDescription": "Use it to classify to custom team."
+        },
+        {
+          "choiceValue": "18 ",
+          "choiceDescription": "Use it to classify to custom team."
+        },
+        {
+          "choiceValue": "19 ",
+          "choiceDescription": "Use it to classify to custom team."
+        }
+      ]
+    }
+  ]
+}

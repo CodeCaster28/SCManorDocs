@@ -1,0 +1,378 @@
+{
+  "Classname": "monster_scientist",
+  "Description": "Scientist. May heal or even revive allies.<br>Class: Human Passive.",
+  "KeyDescriptions": [
+    {
+      "keyName": "body",
+      "keyDescription": "This will set which body to use. Body's are different submodels/appearances in model files. Think of the different scientists. Not all models do have multiple body's. '-1' means random.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model display sequence in editor by specifying it's number.",
+      "keyChoices": [
+        {
+          "choiceValue": "13 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "27 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "28 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "29 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "30 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "37 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "38 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "39 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "40 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "41 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "42 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "47 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "48 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "49 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "50 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "51 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "52 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "53 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "54 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "55 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "56 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "57 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "61 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "62 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "63 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "65 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "66 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "67 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "68 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "69 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "71 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "72 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "73 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "74 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "75 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "76 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "77 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "78 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "79 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "80 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "81 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "82 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "83 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "84 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "85 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "86 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "87 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "88 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "89 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "90 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "91 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "93 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "94 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "95 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "96 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "97 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "98 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "99 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "100 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "101 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "102 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "104 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "105 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "106 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "107 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "108 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "109 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "110 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "111 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "112 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "113 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "114 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "115 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "116 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "117 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "118 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "119 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "120 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "121 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "122 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "123 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "124 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "125 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "127 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

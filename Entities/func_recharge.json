@@ -1,0 +1,8 @@
+{
+  "Classname": "func_recharge",
+  "Description": "The func_recharge is a visible, solid entity which can be used just as a [func_button](../func_button) can and will refill 15 armor points per second while using it. Multiple players can use it at the same time, but the AP restored per second is distributed equally among them. Armorchargers refill themselves 15 seconds after being emptied. You can add targetname manually to this entity. CVars:<ul><li>sk_suitcharger # (Default: 100, 100, 100): Sets how many armor points suit chargers store.</li></ul>",
+  "KeyDescriptions": [],
+  "Notes": [
+    "Func_recharge supports to have a name (even if it is not listed in object properties). You can set it by adding \"targetname\" key with SmartEdit mode disabled. Now entity can be killed and triggered to charge a battery of activator by one point."
+  ]
+}

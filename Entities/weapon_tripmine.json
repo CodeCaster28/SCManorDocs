@@ -1,0 +1,25 @@
+{
+  "Classname": "weapon_tripmine",
+  "Description": "Gives one tripmine, of which you can carry 5 at a time. The tripmine can be placed on any solid, non-moving surface and will deploy 3 seconds after placement. When deployed, anything crossing its laser will cause it to detonate. It is best placed in narrow hallways to ensure the enemy triggering it is actually affected by the explosion. Unfortunately, tripmines are affected by the CVar 'mp_npckill', rendering them useless in most cases. CVars:<ul><li>sk_plr_tripmine# (Default: 150, 150, 225): Tripmine explosion damage. Explosion damage values greater than 200 are known to ocassionally cause damage to apply even through walls.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

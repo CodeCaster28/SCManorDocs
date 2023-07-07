@@ -1,0 +1,91 @@
+{
+  "Classname": "func_pushable",
+  "Description": "Similar to [func_breakable](../func_breakable), but this entity can also be pushed and carried by players.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Players can repair this entity with the wrench."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Monsters will ignore this entity."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "Whether or not to show the name and health of this entity when looking at it in-game."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "Can be broken."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "Can be broken in one hit by the weapon set in \"Instant Break Weapon\"."
+        },
+        {
+          "choiceValue": "512",
+          "choiceDescription": "Can only be broken with explosives."
+        },
+        {
+          "choiceValue": "1024",
+          "choiceDescription": "Players can lift this entity off of the ground. It's recommended to not using this feature, it's heavily bugged."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. By default pushables can be moved around when holding +use key and directional key. If button (like func_button) that can be pressed with +use input have pushable as it's target, the pushable can be moved in a same way as if player was using +use key on pushable itself. This allows to move pushables remotely by using +use and directional keys on button. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when {{ entname }} breaks. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when {{ entname }} breaks",
+      "keyChoices": []
+    },
+    {
+      "keyName": "minhullsize",
+      "keyDescription": "Obsolete.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "maxhullsize",
+      "keyDescription": "Obsolete.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "friction",
+      "keyDescription": "Friction of func_pushable, higher values makes it harder to move. Set it to 400 or values near to 400 to make it unmovable by pushing it (still func_pushable can be easily moved by using it and pressing left/right).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "buoyancy",
+      "keyDescription": "How well this entity will float in liquid.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "displayname",
+      "keyDescription": "Name you will see on the in-game HUD when looking at this entity. Requires \"Show HUD Info\" flag.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Liftable pushables shake when being held (and fly away when let go of).",
+    "Stacking liftable pushables on each other breaks them, making them fly infinitely up when attempting to be lifted again.",
+    "Pushables tend to get stuck in or go through complex geometry. Try to keep the area around this entity as square as possible.",
+    "Hull Size key is obsolete."
+  ]
+}

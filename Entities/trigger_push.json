@@ -1,0 +1,58 @@
+{
+  "Classname": "trigger_push",
+  "Description": "A simple brush entity for affecting entities inside it with acceleration towards a certain direction.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, this trigger_push will be active only for as long as the first affected entity entering it remains within it."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If set, this trigger_push will start disabled and requires activation per trigger."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "If set, players won't be affected."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If set, monsters won't be affected."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "Prevents players and monsters from moving in the opposite direction of the push."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }}. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Set the acceleration in units per second to the power of two. That's the same type of acceleration as done by gravity (the default gravity is '800'), just in another direction, which is specified by 'angle' (Pitch Yaw and Roll).",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "\"Target\", \"Kill Target\" and \"Delay Before Trigger\" keyvalues does not work on this entity. That means this trigger can't act like touch detectors (to fire it's target when touched)."
+  ],
+  "Issues": [
+    "Master keyvalue doesn't work for this entity."
+  ]
+}

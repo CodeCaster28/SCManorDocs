@@ -1,0 +1,5 @@
+{
+  "Classname": "trigger_transition",
+  "Description": "This entity controls which entities move to the next map in a level transition. It is not required in Sven Co-op.",
+  "KeyDescriptions": []
+}

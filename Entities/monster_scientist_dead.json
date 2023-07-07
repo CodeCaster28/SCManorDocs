@@ -1,0 +1,101 @@
+{
+  "Classname": "monster_scientist_dead",
+  "Description": "Non-solid corpse of [Scientist](../monster_scientist).",
+  "KeyDescriptions": [
+    {
+      "keyName": "body",
+      "keyDescription": "This will set which body to use. Body's are different submodels/appearances in model files. Think of the different scientists. Not all models do have multiple body's. '-1' means random.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "pose",
+      "keyDescription": "Pose to use in game.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Change model display sequence in editor by specifying it's number.",
+      "keyChoices": [
+        {
+          "choiceValue": "37 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "38 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "39 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "40 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "41 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "42 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "If set, this will overwrite the monster's default model. This needs to be precached using a [custom_precache](../custom_precache) entity.",
+      "keyChoices": []
+    }
+  ]
+}

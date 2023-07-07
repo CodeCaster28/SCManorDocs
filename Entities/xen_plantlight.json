@@ -1,0 +1,30 @@
+{
+  "Classname": "xen_plantlight",
+  "Description": "Plant that emits light and hides when enemies are nearby. To assign a light, place a light, customize it and then type it's name in \"Target\" keyvalue of this xen_plantlight. Also you can change \"Classification\" of this entity- plant only hides from enemies.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }}. Can't be triggered. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "[Light](../light) entity to be used by this xen_plantlight.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Self explanatory."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Spawn facing random direction."
+        }
+      ]
+    }
+  ]
+}

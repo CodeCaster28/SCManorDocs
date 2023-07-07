@@ -1,0 +1,23 @@
+{
+  "Classname": "item_airtank",
+  "Description": "The Air Tank is a non-collectible item which provides any player touching it with an additional 12 seconds worth of air when swimming underwater. It recharges 30 seconds after use and is destructible. It has 20 health points. Causes an explosion when destroyed and never respawns.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can kill-target it (can't be triggered).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when player touched it or air tank has been recharged (after 30 seconds cooldown). Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when air tank is touched by player."
+    }
+  ],
+  "Notes": [
+    "As opposed to other items entities, this cannot be triggered to collect/use."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "Classname": "trigger_relay",
+  "Description": "Point entity which relays a triggering action. You can choose trigger use-type. Can be useful when you do not want to trigger an entity directly for whatever reasons.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, trigger_relay will remove itself from the game after firing its targets, making it impossible to use it again."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "By default trigger_relay overrides activator with itself. With this flag selected trigger_relay will pass original activator to next entity in chain."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it so trigger_relay fire it's target. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when {{ entname }} is triggered.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever {{ entname }} is triggered. Trigger use-type is defined in \"Trigger State\" keyvalue.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "triggerstate",
+      "keyDescription": "Set the use-type with which the trigger_relay will trigger its targets. This is set to 'Off' by default, make sure to change this if you want it to be anything else.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "m_flDelayBeforeReset",
+      "keyDescription": "Time, in seconds, the trigger_relay can fire it's target again after being triggered. Flag \"Remove on fire\" must be disabled for this to work.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "If you change a trigger_relay's target while its delay is counting down, the old target will be fired.",
+    "If you killtarget a trigger_relay while its delay is counting down, it will still fire. Trigger_relay passes itself on as the activator when triggered unless 'Keep !activator' flag is selected."
+  ]
+}

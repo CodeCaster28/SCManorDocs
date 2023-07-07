@@ -1,0 +1,51 @@
+{
+  "Classname": "BaseCharger",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "soundlist",
+      "keyDescription": "Allows you to setup a sound replacement file {{ entname }} sounds. The path begins in 'svencoop/sound/mapname', whereas 'mapname' would be your map's name. You can go to the parent directory using '../'. A valid sound replacement file contains one or more lines with two sound-paths, which are separated by a space and wrapped into quotes. The first sound is the sound to be replaced. The second sound is the new sound. Sound-paths start in the sound directory. You cannot go to the parent directory using '../' in that case. These sounds do not need to be precached using a [custom_precache](../custom_precache) point entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "CustomJuice",
+      "keyDescription": "Custom max charges amount. '0' for default.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "CustomRechargeTime",
+      "keyDescription": "Time, in seconds, for {{ entname }} to replenish it's charges. '0' for default.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "TriggerOnEmpty",
+      "keyDescription": "Entity to trigger when charges are fully consumed. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "TriggerOnRecharged",
+      "keyDescription": "Entity to trigger when {{ entname }} recharge itself after depleting and waiting \"Custom Recharge Time\". Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "CustomDeniedSound",
+      "keyDescription": "Custom sound file override to play when {{ entname }} holds no more charges, but player is still attempting to drain more.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "CustomStartSound",
+      "keyDescription": "Custom sound file override to play when player starts using the {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "CustomLoopSound",
+      "keyDescription": "Sound file to play (in a loop) when charging is in progress, just after \"Custom Start Sound\".",
+      "keyChoices": []
+    }
+  ]
+}

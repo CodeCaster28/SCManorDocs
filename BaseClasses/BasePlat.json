@@ -1,0 +1,11 @@
+{
+  "Classname": "BasePlat",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "dmg",
+      "keyDescription": "Damage to deal when entity is blocked.",
+      "keyChoices": []
+    }
+  ]
+}

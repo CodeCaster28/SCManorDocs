@@ -1,0 +1,21 @@
+{
+  "Classname": "trigger_endsection",
+  "Description": "Used to end the game (not the map). Obsolete for Sven Co-op.",
+  "KeyDescriptions": [
+    {
+      "keyName": "section",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

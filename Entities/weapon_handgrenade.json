@@ -1,0 +1,25 @@
+{
+  "Classname": "weapon_handgrenade",
+  "Description": "A pack of 5 hand grenades, although visually only 1 is seen. You can carry 10. After activation, it will explode in 5 seconds. Bounces off of walls, enemies and allies without detonating, dealing 1 damage if the target is an enemy. You can throw banana bomb with secondary fire when 10 grenades are in backpack. CVars:<ul><li>mp_banana 1/0 (Default: 1): If set to 1, the player can use 10 grenades with secondary fire mode to throw a banana cluster bomb. Will also cause a familiar sound to play and print \"BANANA ATTACK!\" on the screen.</li><li>sk_plr_hand_grenade# (Default: 110, 120, 165): grenade explosion damage. Explosion damage values greater than 200 are known to occasionally cause damage to apply even through walls.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

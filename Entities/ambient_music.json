@@ -1,0 +1,42 @@
+{
+  "Classname": "ambient_music",
+  "Description": "Entity that allows to play sounds, designed to play music clips which volume can be adjusted in option menu (with 'Music Volume' slider), separately from normal game audio effects. Audio played with this entity are not affected by it's position.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to play music. Depending on trigger use-type: 'Off'- stop the music, 'Toggle'- play/stop music interchangeably, 'On'- start the music. Kill-targeting this entity will stop music from playing.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Name of the sound file to play. Supported formats are: AIFF, ASF, DLS, FLAC, IT, M3U, MID, MOD, MP2, MP3, OGG, S3M, VAG, WAV, WMA, XM. Hammer will only let you select WAV-files, but other formats do work as they are fully supported by the game's sound engine. Type the path in manually in that case. File Path starts in the 'sound'-folder, example: 'mymap/soundfile.ogg'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "volume",
+      "keyDescription": "Set how loud the sound shall be in a range from 0 (not audible) to 10 (normal).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Entity need to be triggered to start playing music."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "The sound will play looped when triggered."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Music will be heard only by player who is an activator of script (e.g. he pressed a button that triggers this entity)."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "Music will be playing even for players who just connected to the server, it will start playing on appropriate offset."
+  ]
+}

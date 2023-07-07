@@ -1,0 +1,219 @@
+{
+  "Classname": "Monster",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to activate or deactivate it. Works only with \"Start Inactive\" flag. Depending on trigger use-type: 'On'- enable monster, 'Off'- disable monster, 'Toggle'- toggles monster. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Some monsters can have [path_corner](../path_corner) specified as a target. On map start they will try to reach path_corner with walk animation.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Monster will have it's AI disabled until it sees player (even if something starts attacking monster)."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Monster's idle sounds are muted at map start (until woken up)."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Monster is affected by [func_monsterclip](../func_monsterclip)."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Causes the spawned monster to be an enemy regardless of the ally setting, but it won't attack or harm you in any way."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "If set, monster won't react to anything after being spawned until it enters a scripted sequence."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "Used for monster_scientist, monster_barneys e.t.c. Prevents player from using monster as his follower."
+        },
+        {
+          "choiceValue": "512",
+          "choiceDescription": "Prevents corpse from disappearing. Useful when we have essential (mostly friendly) NPC whose death would make map impossible to finish. If corpse never fades players can revive dead monster."
+        },
+        {
+          "choiceValue": "16384",
+          "choiceDescription": "Set whether the spawned monsters will appear solid to each other and the players or not."
+        }
+      ]
+    },
+    {
+      "keyName": "TriggerCondition",
+      "keyDescription": "Choose trigger condition for this monster. When condition is met, the entity specified in \"Trigger Condition Target\" is triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "When enemy player is seen by monster, or player became an enemy of this monster."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "When damage is taken, no matter if it's ally, enemy or trigger."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "When monster health drops to 50% or below."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "When monster dies."
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": "When monster hear environmental sounds like door opening/closing or glass breaking."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "When monster hear a player for the first time, his footsteps or weapons. Note that crouching makes player harder to hear, just like some quieter weapons are harder to heard by monsters. Allies might ignore hearing player when they are moving behind monster's back, but still this trigger will fire when monster saw player."
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": "When monster hear combat sounds like weapon shooting or explosions."
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": "When monster see a player for the first time."
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": "When monster see a player for the first time, but it's not in combat of any kind. When player attack a monster before monster even saw him, the trigger will fire."
+        }
+      ]
+    },
+    {
+      "keyName": "TriggerTarget",
+      "keyDescription": "Entity to trigger when condition in \"Trigger Condition Target\" is met. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "body",
+      "keyDescription": "This will set which body to use. Body's are different submodels/appearances in model files. Think of the different scientists. Not all models do have multiple body's. '-1' means random.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Default body."
+        }
+      ]
+    },
+    {
+      "keyName": "skin",
+      "keyDescription": "Monster's model skin to use, if model have multiple skins.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Default skin."
+        }
+      ]
+    },
+    {
+      "keyName": "is_player_ally",
+      "keyDescription": "Set whether the spawned monster is an ally or a foe of the players. Note that keyvalue name is misleading.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Keep game defaults."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Invert relationship, e.g. monster_barney becomes enemy because he is friendly by default; monster_zombie becomes friendly because he is an enemy by default e.t.c."
+        }
+      ]
+    },
+    {
+      "keyName": "displayname",
+      "keyDescription": "If set, this will overwrite the monster's default in-game name, which appears in the HUD monster info, which can be enabled/disabled using the CVar 'mp_allowmonsterinfo'. You can use '\n' here to perform a line-break.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bloodcolor",
+      "keyDescription": "Allows you to customize the monster's blood color (or disable it).",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "If set, this will overwrite the monster's default health value managed by the skill configuration.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "If set, this will overwrite the monster's default model. This needs to be precached using a [custom_precache](../custom_precache) entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "minhullsize",
+      "keyDescription": "If set, this will overwrite the monster's default minimum hullsize. Minimum and maximum hullsize form a solid cuboid which define the monster's collision hull. Think of them as two span-vectors originating from the monster's origin.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "maxhullsize",
+      "keyDescription": "If set, this will overwrite the monster's default maximum hullsize. Minimum and maximum hullsize form a solid cuboid which define the monster's collision hull. Think of them as two span-vectors originating from the monster's origin.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "soundlist",
+      "keyDescription": "Set the path to a sound replacement file for the spawned monsters. The path begins in 'svencoop/sound/mapname', whereas 'mapname' would be your map's name. You can go to the parent directory using '../'. A valid sound replacement file contains one or more lines with two sound-paths, which are separated by a space and wrapped into quotes. The first sound is the sound to be replaced. The second sound is the new sound. Sound-paths start in the sound directory. You cannot go to the parent directory using '../' in that case. These sounds do not need to be precached using a [custom_precache](../custom_precache) point entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "freeroam",
+      "keyDescription": "Set whether monsters spawned by this squadmaker use nodes to free roam and find their way or don't use nodes at all.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Keep game defaults."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Disable nodes roaming."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Enable nodes roaming."
+        }
+      ]
+    },
+    {
+      "keyName": "path_name",
+      "keyDescription": "Name of first [path_waypoint](../path_waypoint) to go to.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "guard_ent",
+      "keyDescription": "If set, the monster will try to follow and protect (attack its attackers) the given entity.",
+      "keyChoices": []
+    }
+  ]
+}

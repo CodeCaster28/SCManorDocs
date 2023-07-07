@@ -1,0 +1,103 @@
+{
+  "Classname": "info_monster_goal",
+  "Description": "Non-functional. Use [path_waypoint](../path_waypoint) for monster control.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "",
+      "keyChoices": [
+        {
+          "choiceValue": "8  ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "priority",
+      "keyDescription": "",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "movementtype",
+      "keyDescription": "",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "delay",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "radius",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "triggerradius",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "requiredradius",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "healthbonus",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "",
+      "keyChoices": []
+    },
+    {
+      "keyName": "enemy",
+      "keyDescription": "",
+      "keyChoices": []
+    }
+  ]
+}

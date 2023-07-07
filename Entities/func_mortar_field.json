@@ -1,0 +1,49 @@
+{
+  "Classname": "func_mortar_field",
+  "Description": "This entity serves as a spawnzone for mortars, which cause a sound effect, shortly followed by an explosion on the ground straight below where they were spawned. This entity can be hooked up to [momentary_rot_buttons](../momentary_rot_button) to do aimed mortar strikes.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to call a mortar strike. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flSpread",
+      "keyDescription": "Mortars spreading radius, bombs will spawn randomly within specified radius.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iCount",
+      "keyDescription": "Amount of mortars to spawn each airstrike call.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_fControl",
+      "keyDescription": "Controls area of airstrike.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Makes mortars spawn randomly within volume of func_mortar_field."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Option simply force mortars to strike at '!activator' (activator of the script) e.g. when player pushed a button which fires func_mortar_field, and the 'Activator' option is selected, the mortars spawns above the player. Note that bombs will be called at '!activator' location in a moment of firing func_mortar_field, what means the '!activator' have a time to escape from within airstrike area. Another think about 'Activator' option is that '!activator' location is not important- the bombs will strike '!activator' even if it's out of volume of the func_mortar_field- the location, placement and size of this entity does not matter."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "This variant seen in Half Life single player campaign- Gordon controls the airstrike area by two momentary button, first button controls X position of mortarts, and the second button controls it's Y position. This option enables \"X Controller\" and \"Y Controller\" keyvalues. When func_mortar_field is triggered, the entity picks percentage of X and Y position (from left/top to right/bottom) of func_rot_buttons hooked to it, and converts those to X and Y sizes of this entity volume, e.g. when the left/right momentary button (X Controller) is in the far left side, and the top/bottom momentary button (Y Controlled) is in the center of the whole movement distance, the airstrike will be called at 0% X and 50% Y position of func_mortar_field."
+        }
+      ]
+    },
+    {
+      "keyName": "m_iszXController",
+      "keyDescription": "The name of [momentary_rot_button](../momentary_rot_button) or [func_rot_button](../func_rot_button) to control X coordinates of mortar spawnpoint. Requires 'Table' value in \"Targeting\" key (see above).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszYController",
+      "keyDescription": "The name of [momentary_rot_button](../momentary_rot_button) or [func_rot_button](../func_rot_button) to control Y coordinates of mortar spawnpoint. Requires 'Table' value in \"Targeting\" key (see above).",
+      "keyChoices": []
+    }
+  ]
+}

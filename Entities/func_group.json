@@ -1,0 +1,25 @@
+{
+  "Classname": "func_group",
+  "Description": "A func_group is made into solid world brushes upon map compilation. It only exists to be able to group objects in old versions of the Hammer editor, when it was still called Worldcraft. Still, you can use func_group for Vluzacn's compile operations like editing cliphull but it's highly recommended to use [func_detail](../func_detail) for this.",
+  "KeyDescriptions": [
+    {
+      "keyName": "zhlt_coplanarpriority",
+      "keyDescription": "Prevents z-fighting. When two brushes have overlapping faces, this value controls which of those brushes faces have rendering priority.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "zhlt_noclip",
+      "keyDescription": "Enable or disable collision of entity.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Keep default collision."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "This makes entity non-solid- all collision info from this entity will be ignored."
+        }
+      ]
+    }
+  ]
+}

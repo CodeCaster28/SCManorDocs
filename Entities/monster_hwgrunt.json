@@ -1,0 +1,57 @@
+{
+  "Classname": "monster_hwgrunt",
+  "Description": "Extremely durable grunt that wield Minigun. Large amount of damage and deadly accuracy.<br>Class: Human Military.",
+  "KeyDescriptions": [
+    {
+      "keyName": "netname",
+      "keyDescription": "Name of a squad for this monster to be part of. Monsters which share the same squad name are in the same squad, will attempt to stay together and follow their squad's leader (monster with \"SquadLeader\" flag).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "Select this flag if you want this monster to become a leader of squad typed in \"Squad name\"."
+        }
+      ]
+    },
+    {
+      "keyName": "weapons",
+      "keyDescription": "You can choose which weapon the monster uses.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "disable_minigun_drop",
+      "keyDescription": "If set to 'Yes' the minigun won't be dropped so players can't use it after grunt death.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "Classname": "scripted_sentence",
+  "Description": "Allows any monster to speak a pre-assembled sentence or a custom audio file. Does automatic lip-syncing based on the file contents. If sentence have no given name, it will be activated on map start or when search radius is reached.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Can be activated only once."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Speak only if this monster is following player (by 'USE' follow command)."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Override current speech on affected monster (including default ones). Still some monsters interactions can break this sentence."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "This sentence cannot be played among other sentences (pick random sentence from those which are called at the moment). Also override any other sentences (like interrupt speech but works globally) except default sentences of other monsters."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to play a sentence. This will only work if \"Search Radius\" is set to '0'. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger on sentence play. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove on sentence play."
+    },
+    {
+      "keyName": "sentence",
+      "keyDescription": "Name of sentence from \"sentences.txt\" or sound file to play. Lip syncing is automatic when sound file is typed. To use sound file write '+' symbol and then filename with path (e.g. if you want to set file located in \"svencoop/sound/mymap/bell1.wav\", type '+mymap/bell1.wav'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "entity",
+      "keyDescription": "Name OR classname of monster who will \"speak\" this sentence. If classname is specified, the search radius is used (sentence is activated when monster with specified classname reach radius).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "duration",
+      "keyDescription": "Duration of monster speaking, in seconds. Best value is a sound file duration.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "radius",
+      "keyDescription": "Radius, in units, in which to search for a valid target monster. This will only work if you specified a monster classname for 'Speaker Type'. Disables direct triggering. Set to 0 to disable.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "refire",
+      "keyDescription": "Time interval between playing sentence. When sentence have a name this feature is disabled.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "listener",
+      "keyDescription": "The name of entity the monster will look at when \"speaking\" a sentence.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "volume",
+      "keyDescription": "Audibility of speaker.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "attenuation",
+      "keyDescription": "Custom sound radius (just like radius flags in [ambient_generic](../ambient_generic)).",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "About ~384 units."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "About ~768 units."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "About ~1536 units."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "The sound will play everywhere."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "Sound files are precached automatically (unlike sentences in monster classes)."
+  ]
+}

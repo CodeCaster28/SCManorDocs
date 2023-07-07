@@ -1,0 +1,29 @@
+{
+  "Classname": "ZHLTpoint",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "_fade",
+      "keyDescription": "Controls light travel distance. You can either make light shorter (higher values above 1.0) or longer (smaller values approaching 0.0). The default value is 1.0.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_falloff",
+      "keyDescription": "This option can change the normal inverse square falloff of lighting in the direct lighting layer with inverse falloff.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

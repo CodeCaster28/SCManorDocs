@@ -1,0 +1,34 @@
+{
+  "Classname": "trigger_respawn",
+  "Description": "This entity, by default, respawns all players when triggered. Alive players will only be relocated to active spawnpoints and have their health restored to their maximum health, unless special flag selected. They keep their equipment. You can also specify that only dead players get respawned by this entity.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, trigger_respawn will respawn only the player specified in \"Target\". If the target is not a player, the spawn-function of that entity will be called. This can sometimes help to process entity-specific keyvalues which are only read when the entity first spawns. However, it might cause unexpected entity behaviour or crashes in the worst case."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "If set, only players that are dead in a moment of triggering this entity are respawned."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "If set, living players won't be relocated to spawn points."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to respawn playr(s). Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Target player to respawn when \"Respawn target\" is set.",
+      "keyChoices": []
+    }
+  ]
+}

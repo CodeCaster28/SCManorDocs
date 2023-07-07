@@ -1,0 +1,17 @@
+{
+  "Classname": "Mandatory",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "ondestroyfn",
+      "keyDescription": "Name of the function to use from already parsed .as script files when entity is destroyed (killed) in any way. If the function belongs to namespace, you must use prefix with the namespace name (e.g. mynamespace::MyFunction) for the keyvalue.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Insert additional notes here"
+  ],
+  "Issues": [
+    "Insert known issues here"
+  ]
+}

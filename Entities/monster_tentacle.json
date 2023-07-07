@@ -1,0 +1,33 @@
+{
+  "Classname": "monster_tentacle",
+  "Description": "Agressive, huge tentacle that deal massive damage to enemies hit.<br>Class: Alien Monster.",
+  "KeyDescriptions": [
+    {
+      "keyName": "sweeparc",
+      "keyDescription": "Angle of enemy searching.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound",
+      "keyDescription": "Sound playing when the tentacle hits a ground.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

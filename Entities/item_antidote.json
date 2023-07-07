@@ -1,0 +1,24 @@
+{
+  "Classname": "item_antidote",
+  "Description": "This item is an antidote against poison damage. Unimplemented in Half-Life but is functional in Sven Co-op. The usefulness of this item is questionable, as there are no strong, long-lasting poison damage-effects in game.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes item be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when item is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },	
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}."
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"Touch only\" and \"Use only\" flags are selected, the item can only be collected by trigger. When those flags are not selected, item also can be collected by trigger, but only if player is the !activator."
+  ]
+}

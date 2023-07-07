@@ -1,0 +1,101 @@
+{
+  "Classname": "aiscripted_sequence",
+  "Description": "Same as [scripted_sequence](../scripted_sequence), except that this always overrides the AI and never allows any interruptions.",
+  "KeyDescriptions": [
+    {
+      "keyName": "m_iszEntity",
+      "keyDescription": "Name of the monster which shall do the sequence. When referencing multiple monsters, only one will react. If you want to make use of the search radius, you can also set a monster classname here.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszPlay",
+      "keyDescription": "Name of the animation to play when the monster arrives at the {{ entname }}'s location. Animation names and animations vary between monsters. A model viewer like Jed's Half-Life Model Viewer allows you to look at the animations of a Half-Life model file. The action animation is optional.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flRadius",
+      "keyDescription": "Radius, in units, in which to search for a valid target monster. This will only work if you specified a monster classname for 'Target monster'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flRepeat",
+      "keyDescription": "Delay, in milliseconds, between checks for whether a valid target monster is within search radius or not. Set this to a large value if not used, as the game even does the check when the 'Search radius' is zero. Setting zero here means that it will check every server frame.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_fMoveTo",
+      "keyDescription": "Here, you can set in which manner the monster will move to the {{ entname }}, or to not have it move there at all.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Don't move."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Walk to position. Requires move animation in monster model."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Run to position. Requires run animation in monster model."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "The monster will be teleported to the {{ entname }}'s position instantly."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Monster will end the sequence with looking in the same direction as the {{ entname }}"
+        }
+      ]
+    },
+    {
+      "keyName": "moveto_radius",
+      "keyDescription": "When the monster hits the supplied radius around the script, it'll stop moving and start its sequence. Useful when the area around the {{ entname }} is hard to navigate or you want your monster to stop in a distance from the {{ entname }} no matter from which direction the monster comes.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iFinishSchedule",
+      "keyDescription": "Allows you to have the monster's AI schedule change when the sequence is done.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Nothing changes."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Monster will be in an attentive state and encounter enemies more actively."
+        }
+      ]
+    },
+	{
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}."
+    },
+	{
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when animation ends. Trigger use-type is 'Toggle'."
+    },
+	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to play animation. Every trigger use-type works uniformly. Kill-targeting this entity will remove it from map but won't stop animation.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "The {{ entname }} won't be removed after finishing, allowing to use it again."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "If the action animation is a death animation, causing the monster to die, the corpse will not fade out."
+        }
+      ]
+    }
+  ],
+  "Issues": [
+    "If 'Move to position' is set to 'Instantaneous' and you have an action animation set, the monster may freeze up and no longer react."
+  ]
+}

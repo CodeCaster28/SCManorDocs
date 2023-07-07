@@ -1,0 +1,11 @@
+{
+  "Classname": "trigger_autosave",
+  "Description": "Used in Half-Life to create auto-save. Unusable in Sven Co-op.",
+  "KeyDescriptions": [
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) locks this {{ entname }}. If master is specified the {{ entname }} will be disabled and it will not save the game. When [multisource](../multisource) entity is triggered/being triggering by all possible inputs, the {{ entname }} will be unlocked. When [multisource](../multisource) lost at least one input signal, the entities becomes locked again.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "Classname": "func_door",
+  "Description": "Simple entity for objects moving in a straight line. Mostly used for plain sliding doors. Func_doors are triggered on touch, unless they have a name, in which's case they require to be triggered manually. The movement-direction is set by the angles keyvalue. The distance traveled is computed by the extents of the door's hull into the set direction. If your door is 64 units in width (X-axis) and set to move east, it will move 64 units east when triggered. If your door is 96 units in length (Y-axis) and set to move north, it will move 96 units north. If your angle is not a multiple of 90, it gets weird and complicated; couldn't figure out what's the maths behind that. When the door is blocked while moving, it will apply its damage and, by default, move back into the position it came from and idle without further action. An exception is when the door has already been opened and its movement is a result of automatic delayed closing; it will then attempt to close every time the delay runs out, till it closes without getting blocked. The door can be blocked multiple times as it moves forth/back, changing its direction and goal-position every time - also applying damage every time - till it reaches the goal-position.",
+  "KeyDescriptions": [
+    {
+      "keyName": "message",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever door completely opens or closes. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to open or close it. Behaviour, when triggered, depends on \"Obey Trigger Mode\" value. See \"Obey Trigger Mode\" for more details on how door behaves depending on selected mode. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when door opens.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "If the func_door kills something which blocked it, it will proceed instead of returning (behavior was changed to this in SC 4.5)."
+  ]
+}

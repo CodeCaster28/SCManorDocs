@@ -1,0 +1,244 @@
+{
+  "Classname": "trigger_copyvalue",
+  "Description": "Provides options for performing operations on an entity's keyvalue in relation to another keyvalue of another entity. This is a beefier version of [trigger_changevalue](../trigger_changevalue). Supports [custom keyvalues](../custom_keyvalues).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "When using vectors/arrays, this will ignore the first array. E.g., when setting render-color, specifying this flag would ignore the 'Red'-value."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "When using vectors/arrays, this will ignore the second array. E.g., when setting angles, specifying this flag would ignore the 'Yaw'-value."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "When using vectors/arrays, this will ignore the third array. E.g., when setting velocity, specifying this flag would ignore the vertical velocity."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Makes trigger_copyvalue toggleable, and perform the specified operation on the destination keyvalue on every update interval (See \"Copy-interval (seconds)\" below) while it is activated."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "Does not work. Supposed to cause this entity to be enabled from level load onward, this only makes sense in combination with \"Constant\". Use delayed trigger_auto instead."
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "The destination keyvalue will be multiplied with minus one before proceeding."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "The source-value will be multiplied with minus one before proceeding; this change is only temporary and this keyvalue is rather useless, as you can always prepend a minus-sign to the static source-value."
+        },
+        {
+          "choiceValue": "128 ",
+          "choiceDescription": "Causes trigger_copyvalue to affect all destination entities instead of only the first one found."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to apply value change (or enable constant copier when \"Constant\" flag is checked). With \"Constant\" flag enabled the behaviour is based on trigger use-type: 'On'- turn constant copier on, 'Off'- turn constant copier off, 'Toggle'- toggle constant copier. With \"Constant\" flag disabled all use-types are accepted to copy once. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "Name of an entity to provide a source keyvalue for the operation.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszSrcValueName",
+      "keyDescription": "Name of the source entity's keyvalue - the keyvalue which shall play the later part in the operation.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of the one entity to have a keyvalue altered.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszDstValueName",
+      "keyDescription": "Name of the keyvalue to be written on the destination entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszValueType",
+      "keyDescription": "This specifies how destination keyvalue and static source-value correlate. What exactly happens also depends on the types of the two.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Replace \"Destination Key\" value with \"Source value\"."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Add \"Source value\" to \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Multiply \"Destination Key\" value by \"Source value\"."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Subtract \"Source value\" from \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Divide \"Destination Key\" value by \"Source value\"."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "\"Source value\" to the power of \"Destination Key\" value. To keep things simple, zero to the power of zero magically equals one and taking a negative value to the power of a non-integer will cause the base to be treated as positive."
+        },
+        {
+          "choiceValue": "12 ",
+          "choiceDescription": "Short for \"Modulo\", this calculates the rest of a division. For example, 63 % 13 equals 11, because 63 - 13 = 50, 50 - 13 = 37, 37 - 13 = 24 and 24 - 13 = 11. Subtracting a fifth time would deliver a negative result and is henceforth omitted. The actual computation of this value uses a smarter, fast method; this is just for presentiveness. Usage example: You have a value in seconds, e.g. 285, and want to know how many minutes and seconds that are, so you divide by 60 and get 4.75. Omitting the 0.75 you're left with 4. For the remaining seconds, you'd calculate 285 % 60 = 45, which is the same as 60 * 0.75. Then you'd know that 285 seconds equals 4 minutes plus 45 seconds. Real numbers and negative values are supported."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" AND \"Source value\". The output of bitwise AND is 1 if the corresponding bits of two operands is 1. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" OR \"Source value\". The output of bitwise OR is 1 if at least one corresponding bit of two operands is 1. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "13 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" XOR \"Source value\". The output of bitwise XOR is 1 if corresponding bits of two operands are opposite. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" NAND \"Source value\". The output of bitwise NAND is 1 if at least one corresponding bit of two operands is 0. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" NOR \"Source value\". The output of bitwise NOR is 1 if the corresponding bits of two operands is 0. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "14 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" NXOR \"Source value\". The output of bitwise NXOR is 1 if the corresponding bits of two operands are the same. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "11 ",
+          "choiceDescription": "Appends your source value to the destination keyvalue. The later must be a string, otherwise this cannot work."
+        },
+        {
+          "choiceValue": "17 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "18 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "19 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "23 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "20 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "21 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "22 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "24 ",
+          "choiceDescription": ""
+        }
+      ]
+    },    
+    {
+      "keyName": "m_iFloatConversion",
+      "keyDescription": "Specify how floats should be written to strings or converted into integers.",
+      "keyChoices": [
+        {
+          "choiceValue": "0  ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1  ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4  ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7  ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "13 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "17 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "18 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "m_trigonometricBehaviour",
+      "keyDescription": "When using trigonometric or arc-functions, use this to specify what measure you are using as input, or which measure you expect as output (when using arc-functions).",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "m_iAppendSpaces",
+      "keyDescription": "When the destination keyvalue is a string and you are setting it or appending to it, this specifies how many spaces to append to the end of the new string. This was implemented because Valve Hammer Editor cuts trailing spaces in keyvalues.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Entity to trigger after the operation. This is very useful when you require a logic chain of operations to achieve a specific effect, e.g. assemble a message for a game_text entity to print. This will also be triggered for every interval in constant mode, when set. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "dmg",
+      "keyDescription": "When using constant mode, use this to specify the delay between intervals where the trigger_copyvalue performs its operation, in seconds. This defaults to 0.0 seconds, meaning once every server frame.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "When source keyvalue type is a vector and destination keyvalue type is a float or integer, the length of the vector will be used for operation. Any vector-extents excluded with spawnflags will not contribute to the length. If only one vector-extent is used, it will be transmitted directly, meaning the original value, not the length/absolute value of it.",
+    "The spawnflags to exclude vector-dimensions affect source and destination keyvalue. When you set the value of a float or integer to a vector, only those vector-extents not excluded will be set to the value of the float/integer.",
+    "\"Direction to Angles\" and \"Angles to Direction\" are useful if you want to move something in the direction it's facing or force players to look in the direction of a train they are on. It's also very useful when you want to glue one entity to another and have it rotate around it. Direction vector is outputted normalized, meaning with a total length of exactly 1 unit.",
+    "You cannot copy the model from one brush entity to another brush entity, because additional actions are required for that to work. Use [trigger_changemodel](../trigger_changemodel) for that instead."
+  ],
+  "Issues": [
+    "Writing to strings currently does continuously eat away at server memory because of how Valve did string-\"management\" in the Goldsource-engine; that means strings you have set remain in server memory unless it restarts, eventually causing memory to be full and the server to shut down. While this is rather obsolete (strings don't need much memory), try not to write them THAT often, e.g. not every server frame when in constant mode, but only every 0.3 seconds, at least when you assemble larger strings.",
+    "Constant mode with \"Start On\" doesn't work. Use delayed [trigger_auto](../trigger_auto) instead to activate this entity on map start."
+  ]
+}

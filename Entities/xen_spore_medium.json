@@ -1,0 +1,24 @@
+{
+  "Classname": "xen_spore_medium",
+  "Description": "Medium spore model.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Self explanatory."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Spawn facing random direction."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Disables collision box of entity."
+        }
+      ]
+    }
+  ]
+}

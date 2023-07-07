@@ -1,0 +1,41 @@
+{
+  "Classname": "GibShooterBase",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, the {{ entname }} can be used more than once."
+        }
+      ]
+    },
+    {
+      "keyName": "m_iGibs",
+      "keyDescription": "Set the amount of gibs to be shot when triggered.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "delay",
+      "keyDescription": "Set a delay between the individual gibs to be fired, in seconds.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flVelocity",
+      "keyDescription": "Firing-velocity of the gibs shot, in units per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flVariance",
+      "keyDescription": "This is multiplied with 3 random numbers from -1 to 1 to form a vector to be added to the normalized direction-vector of the gib-direction, per gib. A great value like 100 would make the gib-direction almost entirely random. You can think of this as a value between 0 and 1 resulting in a course-cone from 0 to 180 degrees size, though that's not exactly what it is, just an approximation.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flGibLife",
+      "keyDescription": "Time, in seconds, the gib will be visible till fading out of world and getting removed. This is actually randomly altered for every individual by minus to plus 5 per-cent.",
+      "keyChoices": []
+    }
+  ]
+}

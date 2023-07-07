@@ -1,0 +1,174 @@
+{
+  "Classname": "trigger_changevalue",
+  "Description": "Trigger_changevalue can perform arithmetic and logic operations on base-keyvalues of entities, as well as replace their private keyvalues. See [trigger_copyvalue](../trigger_copyvalue) for a variant of this with more options. Supports [custom keyvalues](../custom_keyvalues).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "When using vectors/arrays, this will ignore the first array. E.g., when setting render-color, specifying this flag would ignore the 'Red'-value."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "When using vectors/arrays, this will ignore the second array. E.g., when setting angles, specifying this flag would ignore the 'Yaw'-value."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "When using vectors/arrays, this will ignore the third array. E.g., when setting velocity, specifying this flag would ignore the vertical velocity."
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "The destination keyvalue will be multiplied with minus one before proceeding."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "The source-value will be multiplied with minus one before proceeding; this change is only temporary and this keyvalue is rather useless, as you can always prepend a minus-sign to the static source-value."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to apply value change. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of the entity which keyvalue is to change. This can refer to more than one.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszValueName",
+      "keyDescription": "Name of the key which's value is to be changed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszNewValue",
+      "keyDescription": "Value to be applied to the destination keyvalue.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszValueType",
+      "keyDescription": "This specifies how destination keyvalue and static source-value correlate. What exactly happens also depends on the types of the two.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Replace \"Destination Key\" value with \"Source value\"."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Add \"Source value\" to \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Multiply \"Destination Key\" value by \"Source value\"."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Subtract \"Source value\" from \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Divide \"Destination Key\" value by \"Source value\"."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "\"Source value\" to the power of \"Destination Key\" value. To keep things simple, zero to the power of zero magically equals one and taking a negative value to the power of a non-integer will cause the base to be treated as positive."
+        },
+        {
+          "choiceValue": "12 ",
+          "choiceDescription": "Short for \"Modulo\", this calculates the rest of a division. For example, 63 % 13 equals 11, because 63 - 13 = 50, 50 - 13 = 37, 37 - 13 = 24 and 24 - 13 = 11. Subtracting a fifth time would deliver a negative result and is henceforth omitted. The actual computation of this value uses a smarter, fast method; this is just for presentiveness. Usage example: You have a value in seconds, e.g. 285, and want to know how many minutes and seconds that are, so you divide by 60 and get 4.75. Omitting the 0.75 you're left with 4. For the remaining seconds, you'd calculate 285 % 60 = 45, which is the same as 60 * 0.75. Then you'd know that 285 seconds equals 4 minutes plus 45 seconds. Real numbers and negative values are supported."
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" AND \"Source value\". The output of bitwise AND is 1 if the corresponding bits of two operands is 1. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" OR \"Source value\". The output of bitwise OR is 1 if at least one corresponding bit of two operands is 1. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "13 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" XOR \"Source value\". The output of bitwise XOR is 1 if corresponding bits of two operands are opposite. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" NAND \"Source value\". The output of bitwise NAND is 1 if at least one corresponding bit of two operands is 0. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" NOR \"Source value\". The output of bitwise NOR is 1 if the corresponding bits of two operands is 0. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "14 ",
+          "choiceDescription": "Bitwise operation \"Destination Key\" NXOR \"Source value\". The output of bitwise NXOR is 1 if the corresponding bits of two operands are the same. Result is saved in \"Destination Key\" value."
+        },
+        {
+          "choiceValue": "11 ",
+          "choiceDescription": "Appends your source value to the destination keyvalue. The later must be a string, otherwise this cannot work."
+        },
+        {
+          "choiceValue": "17 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "18 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "19 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "23 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "20 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "21 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "22 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "24 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "m_trigonometricBehaviour",
+      "keyDescription": "When using trigonometric or arc-functions as per the \"Operation\"-keyvalue, this is used to determine what your input/desired output measure is. You'll usually want to stick to degrees.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "m_iAppendSpaces",
+      "keyDescription": "When the destination keyvalue is a string, this specifies how many spaces to append after the operations. You'll usually want to use this with either the \"Replace\"- or \"Append\"-operation. This was implemented because Valve Hammer Editor omits any trailing spaces in keyvalues (but not leading ones).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Entity to trigger after the trigger_changevalue has set the new keyvalue, by targetname as usual. This is very useful when you need a chain of operations to happen in a specific order and without any delay in between. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Trigger_changevalue supports the use of \"!activator\" and \"!caller\" in the \"Destination Entity\"-field.",
+    "Trying to write a vector to a float or integer will cause the vector's length to be written. This is in respect to any ignored dimensions as per spawnflags."
+  ]
+}

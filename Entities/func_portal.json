@@ -1,0 +1,39 @@
+{
+  "Classname": "func_portal",
+  "Description": "Entity that creates one-way \"portal\" on surfaces, rendering the image \"seen\" from target entity ([info_target](../info_target) or another portal), optionally allowing to travel through to it's target. Image can be also scaled making possible to create 3D skybox or miniatures from parts of the map. Origin brush is required for this entity. This entity can be freely triggered to enable/disable rendering.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Check this so portal will not only show destination image but also teleport to it."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Usually when a portal is renderer, everything between the player and the area that the portal shows is clipped away. Usually you want this enabled, but you might want to disable this feature when creating concave portals (e.g. for 3D skyboxes)."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "Allow shooting bullets and transporting projectiles through portal."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Specify name of info_target or another func_portal that player will be teleported to when walking through surface of this func_portal.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable it. Depending on trigger use-type: 'On'- enable portal, 'Toggle'- toggle portal, 'Off'- disable portal. Can be kill-targeted.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Portals can be moved an rotated by trigger_setorigin.",
+    "For two-way portals create two separate func_portals then let first portal target second one and vice versa.",
+    "If target is a portal and 'Teleport' flag is checked, the player will be teleported to the center of target's origin brush."
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "Classname": "target_cdaudio",
+  "Description": "Entity that, when triggered, play a music track chosen from predefined list of tracks.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to play audio track. Every trigger use-type works uniformly. Kill-targeting this entity will not stop audio from playing.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "Track to play. Pick 'Stop' to stop any currently playing track. Tracks are located in \"media\" folder, options starts from 'Track 2' (Half-Life0.mp3) and ends at 'Track 28' (Half-Life27.mp3). Tracks number 1, 29 and 30 are empty.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "13 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "14 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "15 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "17 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "18 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "19 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "20 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "21 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "22 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "23 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "24 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "25 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "26 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "27 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "28 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "29 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "30 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

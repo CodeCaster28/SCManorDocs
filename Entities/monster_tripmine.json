@@ -1,0 +1,16 @@
+{
+  "Classname": "monster_tripmine",
+  "Description": "Creates planted Tripmine that explodes when it's detection beam is touched.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Spawn with detection beam turned on."
+        }
+      ]
+    }
+  ]
+}

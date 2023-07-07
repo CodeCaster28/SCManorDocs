@@ -1,0 +1,65 @@
+{
+  "Classname": "info_bigmomma",
+  "Description": "Navigation points specially designed for [monster_bigmomma](../monster_bigmomma). It will travel through navigation points playing animations and regaining health if specified. Monster_bigmomma won't continue travel to new point until it lose regained health. In original Half Life campaign monster_bigmomma travel further after running out of health, then regenerating at another info_bigmomma, repeating the process after reaching final navigation point where Gonarch breaks the web and player can process. Gonarch can't die while in info_bigmomma path.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Run to this node instead of walking."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Disable monster AI at this point. Useful when waiting for player to change level."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other nodes can link to this. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "The name of next node to go after loosing all additional health from \"health on approach\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "radius",
+      "keyDescription": "Radius of where Gonarch can seek this node to go to it. Higher value increased chances of Gonarch to find this node. Player must goad the Gonarch to info_bigmomma if radius isn't high enough.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "reachdelay",
+      "keyDescription": "Number of seconds Gonarch will wait at this point before proceeding further.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity or entities to destroy when this node is reached.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "reachtarget",
+      "keyDescription": "Entity to trigger when Gonarch reach this point. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "reachsequence",
+      "keyDescription": "Name of monster_bigmomma sequence to play when it reaching this point.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "Health to set for Gonarch when it reaching this point. Gonarch won't advance until loosing specified health. Set it to 0 to make Gonarch proceed to next node. Leave it empty for default.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "presequence",
+      "keyDescription": "Name of monster_bigmomma sequence to play before it reaching this point.",
+      "keyChoices": []
+    }
+  ]
+}

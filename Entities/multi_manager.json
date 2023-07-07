@@ -1,0 +1,24 @@
+{
+  "Classname": "multi_manager",
+  "Description": "Entity that allows to trigger multiple targets when triggered (max 64), each having it's own time delay and triggering use-type (On, Off, Toggle or Kill). Useful when we need to trigger more than one target with different names. In order to do this, you will have to disable Valve Hammer Editor's smart edit mode while viewing a multi_manager entity properties. There, you may add custom keyvalues. The name of the key be the targetname of the entity/entities to be triggered. The value be the time, in seconds, till the target will be triggered after the multi_manager entity is triggered (E.g.: \"2.5\"). The default use-type is 'Toggle'. For other use-types, you must add a token to the value (without the quotes):<br>For 'Off', add \"#0\".<br>For 'On', add \"#1\".<br>For 'Kill', add \"#2\".<br>E.g. a value could be \"3.25#2\" to killtarget after 3.25 seconds. You may add the same targetnames/keys multiple times. Valve Hammer Editor will automatically add a hash ('#') followed by an ID to the key, as identical keys in the same entity aren't originally supported.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, a single multi_manager can have multiple instances. That means, it can be activated while already running, causing a temporary copy of it to be created and run on its own. It is worth remembering that if you have problems when attempting to trigger multi_manager again (in case all events were supposed to be completed before retriggering, but somehow multi_manager is still blocked), this key may help you fix an issue."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to fire targets. Can be kill-targeted in which case all already running actions are terminated.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Removing a multi_manager from the game while it is running results in it properly ceasing all of its triggering-actions. A running multi_manager entity cannot be stopped through other means than removing it."
+  ]
+}

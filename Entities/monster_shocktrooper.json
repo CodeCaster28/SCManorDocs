@@ -1,0 +1,25 @@
+{
+  "Classname": "monster_shocktrooper",
+  "Description": "Hard to defeat alien that shoots fast projectiles using Shockroach. Also quipped with acid grenade that poisons when explodes for a moderate amount of time. Drop [Shockroach](../monster_shockroach) after death.<br>Class: Race X Shock.",
+  "KeyDescriptions": [
+    {
+      "keyName": "netname",
+      "keyDescription": "Name of a squad for this monster to be part of. Monsters which share the same squad name are in the same squad, will attempt to stay together and follow their squad's leader (monster with \"SquadLeader\" flag).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "Select this flag if you want this monster to become a leader of squad typed in \"Squad name\"."
+        },
+        {
+          "choiceValue": "1024",
+          "choiceDescription": "Do not drop shockroach upon death."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "Classname": "func_tankmortar",
+  "Description": "Same as [func_tank](../func_tank) but produces instant explosions. Func_tankmortar is used to represent a mounted cannon which can be controlled by players as well as monsters, if allowed. For either to be able to use this, it must be hooked up to a single func_tankcontrols entity. If you want func_tankmortar to be controllable by player, you need to specify a name of func_tankmortar and use func_tankcontrols entity in addition of this entity. Automatic turret needs \"Active\" flag enabled. Entity requires origin brush tied to barrel, so it can rotate around it.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever a controlled {{ entname }} shot. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to take control, preferably [func_tankcontrols](../func_tankcontrols). Some others entities like [func_button](../func_button) works as well. Does not accept 'Off' use-type. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "iMagnitude",
+      "keyDescription": "The greater the magnitude, the more damage the explosion will cause. Note that explosion damage values above 200 are know to cause explosion damage to even go through walls.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Turret can be both controllable and automatic- attacks player until he gets control over this func_tank.",
+    "Entity must be facing east at x/y view of the editor, the angle of barrel must be customized with 'Yaw' compass in object properties."
+  ],
+  "Issues": [
+    "Max range of all func_tank entities cannot be set to higher that 2048."
+  ]
+}

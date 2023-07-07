@@ -1,0 +1,71 @@
+{
+  "Classname": "trigger_changelevel",
+  "Description": "Entity which causes a level-change when entered, without showing up a scoreboard. Scores are no transferred. Can be set to only react to triggering. You can add master keyvalue manually to this entity.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Unknown purpose."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Cause trigger_changelevel to work like point entity, which means it need to be triggered to perform map change."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Do not override CVARs of destination map."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to change level. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "map",
+      "keyDescription": "Name of the map to switch to.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "landmark",
+      "keyDescription": "Landmark used to work as an orientation point between two maps in a center of both trigger_changelevels of maps. It doesn't work in Sven Co-op, cause players starts at spawn points normally when new map loads.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "keep_inventory",
+      "keyDescription": "If set to \"Yes\", player's ammo, armor and weapons are carried to target map.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "changetarget",
+      "keyDescription": "Unknown purpose. Maybe it triggers a target in goal map.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "changedelay",
+      "keyDescription": "Delays \"Change Target\" action, whatever that action does.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "percent_of_players",
+      "keyDescription": "Percentage of total amount of players needed to reach this point in order for level change.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Trigger_changelevel supports to have a master (even if it is not listed in object properties). You can set it by adding \"targetname\" key with SmartEdit mode disabled."
+  ]
+}

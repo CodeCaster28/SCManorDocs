@@ -1,0 +1,131 @@
+{
+  "Classname": "env_beam",
+  "Description": "The env_beam entity is used to create a bolt between two entities.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable/disable beam. Depending on trigger use-type: 'On'- enable beam, 'Off'- disable beam, 'Toggle'- toggle beam. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "renderamt",
+      "keyDescription": "Set how bright/visible/transparent the beam shall be on a scale from '0' (invisible) to '255' (very bright).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rendercolor",
+      "keyDescription": "Set the beam's color. Note that, because of bolts being rendered additively, darker colors mean greater transparency.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "Radius",
+      "keyDescription": "Maximum distance from the start entity or {{ entname }}, depending on how you have set it up, to the destination of a random strike. Note that this kind of random strike has nothing to do with the flag 'Random strike', which only affects the timing.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "life",
+      "keyDescription": "Time, in seconds, the beam/bolt will be visible after being triggered. A value of '0' makes it last forever.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "BoltWidth",
+      "keyDescription": "Set the width of the bolt-/beam-texture in inches * 0.25. Note that one unit in Valve Hammer Editor equals one inch and the beam texture you are using possibly has entirely transparent sides, so the beam may appear a bit thinner than expected.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "NoiseAmplitude",
+      "keyDescription": "Set how much the bolt shivers on a scale from 0 (not at all) to 255 (very much).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "texture",
+      "keyDescription": "Set the sprite to use to display the bolt. Path starts in modification's folder.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "TextureScroll",
+      "keyDescription": "The texture of the beam is not supposed to be displayed statically. Setting a texture scroll rate gives a visual effect of an actual, moving electric current. The value you set here specifies how often the texture will scroll for the length of its own height per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "framerate",
+      "keyDescription": "Set how often the bolt texture should be updated within ten seconds. Now correctly supported.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "framestart",
+      "keyDescription": "Set the number of the frame of the sprite to start animating at. This is rarely ever useful, e.g. when you have two identical beams next to each other and need them to look slightly different. Setting '0' here is safe.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "StrikeTime",
+      "keyDescription": "Time, in seconds, the env_beam entity will be idle after a bolt has run out, before creating the next one, when the 'Toggle'-flag is set. Negative values allow you to have the next beam fire before the current one runs out. However, setting a negative value that causes the next beam to be created the instant a beam is created causes an infinite amount of beams to be created, eventually causing overflows.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "damage",
+      "keyDescription": "Average damage per second for beams with infinite lifetime. Damage in the moment of creation for temporary beams.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Causes the beam to be activated from map load onwards. Only makes sense in combination with the 'Toggle'-flag below."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Causes the env_beam entity to be toggleable instead of causing just one temporary beam when triggered."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": " If the 'Toggle'-flag is set along with this, this causes the env_beam's delay till striking again to be a random number between zero and the 'Strike again time'-value you specified."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Set it to form a circled beam which uses start and end point as the ring's intersection points, with the ring's center being in the middle between them. This requires start and end entity to be brush entities. Use of two func_trains with origin brushes is encouraged, as that is seen in the Half-Life single player! The ring always aligns itself to lie on the horizon of either of the two points looking at the other in respect to the z-axis."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If set, sparks will be emitted at the start entity."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "If set, sparks will be emitted at the end entity."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If set, a bullet hole decal will be created whenever the beam hits a surface."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "If set, the beam will fade invisible towards the start point."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "If set, the beam will fade invisible towards the end point."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "In case multiple entities match the name specified under start- and/or end-entity, the env_beam entity will pick one randomly each for every beam created.",
+    "Of the 'Shade start'- and 'Shade end'-flag, you may select one or neither. Using both makes only one function.",
+    "Ring-beams cannot have 'Shade start' nor 'Shade end' by design.",
+    "Contrary to what you may have read elsewhere, it is not possible to alter how fine a beam will be, as in, of how many segments it will consist.",
+    "The noise-value does not affect the area in which damage will be applied. The damage area only depends on startpoint, endpoint and beam-width.",
+    "When turning off a toggleable env_beam entity, its bolts will remain active until they run out of the specified lifetime, unless they are infinite. When reactivated, the next new beam will be created immediately, regardless of when the last one was created.",
+    "Setting \"Sprite name\" to 'sprite_01.spr' with moderate \"Amount of Noise\" makes it look like magical (but not too pretty) fairy."
+  ],
+  "Issues": [
+    "Ring-beams with infinite lifetime do not react to getting triggered off.",
+    "If the 'Ring'-flag is set, damage will be applied as if the beam still was linear. (Only on a line between start and end point)",
+    "Non-moving ring-beams with infinite lifetime occasionally disappear for specific clients completely. Set a lifetime of e.g. one second and a 'Strike again time'-value of '0' to encounter this issue.",
+    "Ring-beams always apply damage as if they were temporary beams. (In moment of creation)",
+    "Beams with limited lifetime cannot have 'Shade start' nor 'Shade end'.",
+    "Non-toggleable env_beams act as toggleable env_beams do, except that they can never be turned off again.",
+    "Setting a Render FX makes no change whatsoever."
+  ]
+}

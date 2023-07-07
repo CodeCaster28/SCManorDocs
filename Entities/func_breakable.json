@@ -1,0 +1,69 @@
+{
+  "Classname": "func_breakable",
+  "Description": "A brush entity, which receives damage from all normal damage sources, such as weapon fire, and can, eventually, break from it, spilling some debris/gibs in its place.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, this func_breakable will only break when triggered, even if its health value is set to '1'."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "If set, this func_breakable will break as soon as a player touches it. If a delay before fire is set, the func_breakable will wait for that to run out before breaking after a touch."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "If set, the func_breakable can be destroyed from pressure, as is e.g. inflicted by a func_train, regardless of the train's damage."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "If set, this func_breakable can be repaired, as in, have its health restored, by a player 'attacking' it with [weapon_pipewrenches'](../weapon_pipewrench) primary attack, for the amount of that weapon's primary damage value."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "If set, the func_breakable will show HUD info for players looking at it. This is not affected by CVar 'mp_allowmonsterinfo'."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If set, the func_breakable will be immune to player attacks."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "If set, this func_breakable will break instantly if hit with a crowbar."
+        },
+        {
+          "choiceValue": "512",
+          "choiceDescription": "If set, this func_breakable can be damaged by explosives only."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when func_breakable breaks. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to break it. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when func_breakable breaks.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "displayname",
+      "keyDescription": "Name to display when player is looking at this func_breakable. Requires \"Show HUD Info\" flag selected",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ]
+}

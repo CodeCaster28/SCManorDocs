@@ -1,0 +1,266 @@
+{
+  "Classname": "Breakable",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "health",
+      "keyDescription": "Set how many hit points the {{ entname }} has.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "material",
+      "keyDescription": "Choose the material which matches what your {{ entname }} is supposed to be the most. The material type affects the {{ entname }}'s sounds emitted when it takes damage, as well as which gibs are created when it is destroyed. If the material is set to 'Unbreakable glass', the {{ entname }} is, regardless of how funny that is, in fact, unbreakable.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "weapon",
+      "keyDescription": "Allows you to specify an instant-break weapon other than the crowbar. Requires \"Instant Break\" flag selected.",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "19",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "20",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "explosion",
+      "keyDescription": "Set whether the gibs fly relative to where the attack came from, damage received and material (e.g. concrete gibs fly with less velocity) or randomly. This has no effect on the {{ entname }} destroyed via a trigger. Note: Blowing up stuff is much more fun when shit goes flying instead of just falling to the ground as if nothing happened.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "gibmodel",
+      "keyDescription": "Custom model of broken entity parts. Models with multiple 'Submodels' uses all of sub-models for gibs. If \"Material Type\" is set to 'Glass' then spawned gibs are transparent.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnobject",
+      "keyDescription": "If the {{ entname }} is broken, the specified item will drop. It does respawn as standard item.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "12",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "13",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "14",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "15",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "17",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "18",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "19",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "20",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "21",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "22",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "23",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "24",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "25",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "26",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "27",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "28",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "29",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "30",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "31",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "33",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "34",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "35",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "36",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "37",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "38",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "39",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "explodemagnitude",
+      "keyDescription": "If greater than zero, the {{ entname }} will cause an explosion at its position when it breaks. The greater the magnitude, the more damage the explosion will cause. Note that explosion damage values above 200 are know to cause explosion damage to even go through walls.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "soundlist",
+      "keyDescription": "Allows you to setup a sound replacement file for the {{ entname }} sounds. The path begins in 'svencoop/sound/mapname', whereas 'mapname' would be your map's name. You can go to the parent directory using '../'. A valid sound replacement file contains one or more lines with two sound-paths, which are separated by a space and wrapped into quotes. The first sound is the sound to be replaced. The second sound is the new sound. Sound-paths start in the sound directory. You cannot go to the parent directory using '../' in that case. These sounds do not need to be precached using a [custom_precache](../custom_precache) point entity.",
+      "keyChoices": []
+    }
+  ]
+}

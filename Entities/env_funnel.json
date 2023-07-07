@@ -1,0 +1,30 @@
+{
+  "Classname": "env_funnel",
+  "Description": "When triggered, this creates a large portal funnel particle effect of green particles being sucked into one point as can be seen in Half-Life's single player mode in the Black Mesa experiment accident scene. This creates many temporary entities and the entity is removed after use. The particles will appear in a large area above the env_funnel and be sucked into it. You can adjust the effect's rotation by changing the env_funnel's angles. This effect is purely visual.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to create funnel effect. Every trigger use-type works uniformly. Triggering fade that is in progress restarts fade. Can be kill-targeted but funnel will emmit it's end.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sprite",
+      "keyDescription": "Allows you to set a custom sprite.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, instead of particles appearing to be sucked into one point, they will be blown out of this point, like particle-explosion."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "If set, the env_funnel can be triggered multiple times."
+        }
+      ]
+    }
+  ]
+}

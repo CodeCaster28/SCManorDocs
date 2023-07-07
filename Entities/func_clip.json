@@ -1,0 +1,50 @@
+{
+  "Classname": "func_clip",
+  "Description": "Allows you to set up a fake clipping object. It's fake in that sense, that it only operates server-side, thus might be laggy, and allows more object filtering than the default collision hulls. For clip brushes that block players, but not monsters, try making a func_wall with clip brushes and add a null-textured brush to it so the compile tools allow it.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, the func_clip starts disabled and won't block anything. Turning it on while something is inside might stuck it, depending on whether it is affected by this func_clip and how the directional settings of the func_clip are setup."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "If ticked, the func_clip will block only in the direction specified by the angles-keyvalue, using a tolerance of \"Direction tolerance\" keyvalue."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "If set, players can pass the func_clip seamlessly."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "If set, monsters cannot pass."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "If set, pushables cannot pass."
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "If set, all other entities not governed by the above three flags cannot pass."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "If set, all other entities not governed by the above three flags cannot pass."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to turn clip on and off. Depending on trigger use-type: 'On' or 'Toggle'- enable clipping, 'Off'- disable clipping. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "frags",
+      "keyDescription": "If the \"Directional (Angles)\" flag is set, this value specifies the minimum required (smaller) angle between an entity's movement vector and the func_clip's negated blocking vector to still be allowed to pass. E.g., when the func_clip's yaw was 90 degrees (pointing north/up) and direction tolerance was set to 179, you'd only be able to pass the func_clip when walking towards it from south in a straight line pointing quite exactly towards north.",
+      "keyChoices": []
+    }
+  ]
+}

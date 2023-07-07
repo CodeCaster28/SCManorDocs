@@ -1,0 +1,54 @@
+{
+  "Classname": "trigger_vote",
+  "Description": "The trigger_vote entity, when triggered, throws a vote window at the players where they can select either 'Yes' or 'No'. The question of the vote and the time till it will be evaluated can be customized.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start vote. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Specify the question/message to vote on. You have to do line breaks ('\\n') manually!",
+      "keyChoices": []
+    },
+    {
+      "keyName": "frags",
+      "keyDescription": "Time, in seconds, till the vote result will be evaluated and the result's according target is triggered. This time is not skipped if the result is already certain for the amount of players currently on the server.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "Specify the percentage of players who have to vote 'Yes' in order for its according target to be fired. Players who do not vote are ignored, meaning their voice counts as neither a 'No' nor a 'Yes' vote.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when the vote's result is 'Yes'. Trigger use-type is 'On'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "Entity to trigger when the vote's result is 'No'. Trigger use-type is 'On'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "noise",
+      "keyDescription": "Entity to trigger when nobody voted on anything. Trigger use-type is 'On'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszYesString",
+      "keyDescription": "If specified, overrides default 'Yes' button text to the one typed here.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszNoString",
+      "keyDescription": "If specified, overrides default 'No' button text to the one typed here.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Unlike other entities, trigger_vote sends 'On' output instead of 'Toggle'."
+  ]
+}

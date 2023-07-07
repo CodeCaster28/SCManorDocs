@@ -1,0 +1,11 @@
+{
+  "Classname": "info_null",
+  "Description": "The info_null entity is commonly used as a target for [light_spot](../light_spot) entities. The compile tools will make any light_spot entity with a target 'look at' their targets. This is useful if the hierarchical Euler angles principle is too much for your brain to grasp properly, which doesn't appear to be rare. All info_null entities are removed when the map is loaded.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set the name so other entity can point to this entity as a target, preferably [light_spot](../light_spot).",
+      "keyChoices": []
+    }
+  ]
+}

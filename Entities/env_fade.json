@@ -1,0 +1,52 @@
+{
+  "Classname": "env_fade",
+  "Description": "Point entity which, when triggered, causes the players' screens to have an in- or out-fading color to be drawn over them. It's possible to create static screen color modulation by retriggering this entity in a loop.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start fade effect. Every trigger use-type works uniformly. Triggering fade that is in progress restarts fade. Can be kill-targeted but fade effect will play to it's end.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, instead of fading to the color specified, the screen will fade out from it, meaning the color will apply suddenly. Good for a flashbang effect."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If set, instead of drawing the color layer over the screen, the color you set will be used as a color filter. E.g., when you set the color to pure green, any red and blue will be removed from the player's screen."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "If set, only the player who activated this entity will be affected by it."
+        }
+      ]
+    },
+    {
+      "keyName": "duration",
+      "keyDescription": "Time, in seconds, the effect will fade in/out.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "holdtime",
+      "keyDescription": "Time, in seconds, the fully faded-in/not yet faded-out state will stay.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "renderamt",
+      "keyDescription": "Set how transparent/opaque the effect is at its peak (Hold fade). 0 means transparent. 255 means opaque.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rendercolor",
+      "keyDescription": "The color to use.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Sum of \"Duration\" and \"Hold Fade\" time can be maximum ~18 seconds long, then env_fade ends. Trigger it multiple times to keep it for longer time, use more than one env_fade if you need first one for color transition, and second one for still target color."
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "Classname": "trigger_hurt",
+  "Description": "This brush entity applies damage to anything inside it. It will also fire it's target each time entities inside of it gets hurt (by this entity). You can also heal entities by setting negative damage value. You can add killtarget keyvalue manually to this entity.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, the damage will apply on one time for the first affected entity to enter the trigger_hurt."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If set, the trigger_hurt will start disabled."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "If set, players won't take damage."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If set, only players will cause this trigger to trigger its target."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "If set, only players will take damage here."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If set, monster are properly affected by trigger_hurt. If this item is not selected, monsters are damaged only when moving inside brush of this entity."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever a damage is dealt. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it enable or disable it. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) disables this {{ entname }}. If master is specified the {{ entname }} will be disabled and will not hurt anyone. When [multisource](../multisource) entity is triggered/being triggering by all possible inputs, the {{ entname }} will work again. When [multisource](../multisource) lost at least one input signal, the entities becomes disabled again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "dmg",
+      "keyDescription": "Regularly applied damage. Can be negative for a healing-effect.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "delay",
+      "keyDescription": "Delay before the trigger_hurt triggers its target after being activated by an entering player or monster.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "damagetype",
+      "keyDescription": "Used for HUD info icon, determines which damage icon appears when player is taking damage from trigger.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "128 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "256 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "512 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1024 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "16384 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "32768 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "65536 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "131072 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "262144 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "524288 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1048576 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2097152 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4194304 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "Monsters gets hurt only while moving inside of trigger_hurt- use \"Affect non-moving NPC's\" flag to fix it.",
+    "Trigger_hurt supports to have a killtarget (even if it is not listed in object properties). You can set it by adding \"killtarget\" key with SmartEdit mode disabled. When damage is dealt to anyone the specified target is removed."
+  ]
+}

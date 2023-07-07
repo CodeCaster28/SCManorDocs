@@ -1,0 +1,72 @@
+{
+  "Classname": "path_track",
+  "Description": "Entity used to define a path for [func_tracktrain](../func_tracktrain). To make it works, create a set of a path_tracks entity, and in each path_track's \"Next Stop Target\" specify a name of next path_track to go to from this path_track. If last path_track targeting first path_track, the path movement is looped.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Start disabled. Trigger path to enable it. Branch Path cannot be used with this flag, even with selected Branch Reverse."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Entity triggers it's \"Fire on Pass\" target once."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Swap the branch path and next target on start."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "When selected, disables func_tracktrain controlling when reaching this point."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable it or branch path. Depending on trigger use-type: 'On'- enable this path, 'Off'- disable this path, 'Toggle'- toggle this path. If \"Branch Path\" is specified: every time this path_track is disabled the one specified in branch path is used. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of the next path_track to go after entity reach this path_track. Can be kill-targeted, any object heading this path_track will move toward map center coordinates.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Entity to trigger when track train reach this path_track. It won't trigger when train just stops at this point. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "altpath",
+      "keyDescription": "The name of alternative path_track to go. If path_track is triggered, it's change it's next stop target to the name of \"Branch Path\" path_track. If no \"Branch Path\" specified, and this path_track is triggered, the train stops at this point instead of going further, and vice-versa- if \"Next stop Target\" isn't specified, but the \"Branch Path\" is, the train will treat this point as a dead end, but after triggering this path_track the train will take path_track name specified in a \"Branch Path\" as a new target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "Entity to trigger when func_tracktrain reaches this path_track as a last path_track in a chain. This may happen in few cases:<ul><li>There is no next stop target specified.</li><li>Next stop target has been disabled and train reaches this point.</li><li>Train is travelling from point \"A\" (this path_track) to point \"B\" (next path_track), and path_track \"B\" has been disabled when train was on it's way to point \"B\" (between \"A\" and \"B\"). The train won't reach point \"B\", and this path_track (point \"A\") is considered as a dead end, so the trigger is fired.</li></ul>",
+      "keyChoices": []
+    },
+    {
+      "keyName": "newspeed",
+      "keyDescription": "Overrides train speed after reaching this point. Affects both controllable and non-controllable trains.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "maxspeed",
+      "keyDescription": "Sets train speed once to this value if it's moving faster than that.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Overrides train speed after reaching this point. Legacy, works only for non-controllable trains.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "If branch path is not defined, and the track was triggered (with Disabled flag not selected) the train won't reach this point- it will stop at the last enabled path_track.",
+    "When deactivating path (by killing it, disabling or branch switching with missing Branch Path) the train won't travel to that point, so it will end it's route at previous path_track (which is now considered dead end)"
+  ]
+}

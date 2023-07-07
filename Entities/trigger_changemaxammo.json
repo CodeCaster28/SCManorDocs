@@ -1,0 +1,135 @@
+{
+  "Classname": "trigger_changemaxammo",
+  "Description": "This entity, when triggered, changes maximum ammo amount of selected ammo type, also allows to replenish ammo to maximum.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever {{ entname }} is triggered. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to change max ammo. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Apply new ammo limit rules to all players (normally, the amount affects only '!activator')."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Remove ammo limit completely."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "Replenishes player(s) ammo to maximum."
+        }
+      ]
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Choose ammo type to change ammo limit from drop-down menu.",
+      "keyChoices": [
+        {
+          "choiceValue": "\"9mm\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"bolts\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"357\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"uranium\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"Hand Grenade\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"Hornets\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"556\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"ARgrenades\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"health\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"rockets\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"Satchel Charge\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"shock charges\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"buckshot\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"m40a1\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"sporeclip\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"Snarks\" ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "\"Trip Mine\" ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "m_iMaxAmmo",
+      "keyDescription": "Value to use along with \"Change max ammo mode\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_Mode",
+      "keyDescription": "Set up the way the new ammo limit is modified.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "\"Value to use\" is now maximum ammo amount."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "\"Value to use\" is added to the current maximum ammo amount."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "\"Value to use\" is subtracted from the current maximum ammo amount."
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "Maximum ammo amount is reverted to it's default value."
+        }
+      ]
+    }
+  ]
+}

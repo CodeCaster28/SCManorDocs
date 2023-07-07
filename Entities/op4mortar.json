@@ -1,0 +1,78 @@
+{
+  "Classname": "op4mortar",
+  "Description": "A big static mortar which has the mechanical means to turn left/right and change its pitch in order to acquire its target. Can be set to aim and fire automatically or be controllable by players through [func_op4mortarcontroller](../func_op4mortarcontroller). The op4mortar is not solid; you might want to wrap it in a clip brush. It also is indestructible and thus not targeted by its enemies. It shows no HUD information. Its maximum rotation speed is 40 degrees per second for each, pitch and yaw.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1  ",
+          "choiceDescription": "If set, the mortar will start active and aim and fire automatically. If not set, the op4mortar needs a targetname in order to start off."
+        },
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "If set, the op4mortar will only fire if its target is in direct line of sight. Otherwise, it will fire whenever a target is within range, regardless of whether there is a wall blocking the line ('curve') of fire or not."
+        },
+        {
+          "choiceValue": "32 ",
+          "choiceDescription": "If set, this op4mortar can be controlled through a [func_op4mortarcontroller](../func_op4mortarcontroller). Obsoletes the \"Active\" flag. Triggering op4mortar will cause it to fire, with respect to its delay between shots."
+        }
+      ]
+    },
+    {
+      "keyName": "angles",
+      "keyDescription": "Rotation of the op4mortar. What matters here is the yaw-value. The yaw-value plus 180 defines the default firing direction, but in the editor, it's the same direction when the model is facing.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mortar_velocity",
+      "keyDescription": "Speed of the explosive projectile shot by the mortar in units per second. A mortar with high velocity needs to aim higher at the sky than mortars with lower velocity to hit close targets. The mortar won't try using a pitch of less than 45 degrees. A firing angle of 45 degrees provides the greatest distance, under the condition, that there is no air drag and the height at which the object is fired is the same as the height at which the object hits the ground.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "h_min",
+      "keyDescription": "Maximum rotation to the left from the given yaw-angle.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "h_max",
+      "keyDescription": "Maximum rotation to the right from the given yaw-angle.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mindist",
+      "keyDescription": "Minimum distance projectile can travel.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "maxdist",
+      "keyDescription": "Maximum distance projectile can travel.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "firedelay",
+      "keyDescription": "The delay between shots, in seconds. Minimum accepted by the game is one second, to avoid spamming.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to shoot. Only 'On' trigger use-type is accepted. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "is_player_ally",
+      "keyDescription": "If this op4mortar is set to fire automatically with \"Active\" flag enabled, this defines whether it will handle players as enemies or not. Furthermore, this defines whether players can be damaged by the projectile's explosion in the first place. The firing player can always get hurt.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

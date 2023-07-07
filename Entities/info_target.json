@@ -1,0 +1,11 @@
+{
+  "Classname": "info_target",
+  "Description": "Similar to [info_null](../info_null) but serves as a target for [trigger_camera](../trigger_camera), [env_laser](../env_laser) or [func_portal](../func_portal).",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set the name so other entity can point to this entity as a target.",
+      "keyChoices": []
+    }
+  ]
+}

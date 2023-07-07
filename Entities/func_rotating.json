@@ -1,0 +1,145 @@
+{
+  "Classname": "func_rotating",
+  "Description": "A brush entity, which rotates constantly. Can be disabled and enabled, at which it may accelerate/decelerate. Requires origin brush around which entity rotates.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start or stop it. Behaviour, when triggered, depends on \"Obey Trigger Mode\" value. See \"Obey Trigger Mode\" for more details on how {{ entname }} behaves depending on selected mode. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Rotation speed in degrees per second. E.g., '360' would make it do one whole turn per second, regardless of its size.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "volume",
+      "keyDescription": "Set the volume of the sound emitted by the func_rotating. Volume value ranges from 0 to 10.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fanfriction",
+      "keyDescription": "Set the friction to be used when the \"Acc/Dcc\" flag is set. Ranges from 0 to 100. Avoid 0 and 100. Theoretically, greater friction means longer spin-up time and shorter spin-down time. However, in game, greater friction means faster spin-up time and faster spin-down time.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sounds",
+      "keyDescription": "Set the sound to be played while the func_rotating is activated.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "",
+          "media": "../audio/fan1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "",
+          "media": "../audio/fan2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": "",
+          "media": "../audio/fan3.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "",
+          "media": "../audio/fan4.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": "",
+          "media": "../audio/fan5.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        }
+      ]
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Allows you to specify a custom rotation-sound.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, this func_rotating starts enabled."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "If set, this inverts the rotation direction."
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": "If set, this will rotate around the x-axis."
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "If set, this will rotate around the y-axis."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If set, the func_rotating will smoothly accelerate and decelerate when turned on/off, based on the friction value."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "If set, the func_rotating will inflict damage when touched, instead of only when blocked by something."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "Removes solidity from this func_rotating, making it harmless."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "Small sound radius, about ~384 units. Can be combined with \"Medium radius\" and \"Large radius\"."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "Medium sound radius, about ~768 units. Can be combined with \"Small radius\" and \"Large radius\"."
+        },
+        {
+          "choiceValue": "512",
+          "choiceDescription": "Large sound radius, about ~1536 units. Can be combined with \"Small radius\" and \"Medium radius\"."
+        }
+      ]
+    },
+    {
+      "keyName": "m_iObeyTriggerMode",
+      "keyDescription": "Controls how {{ entname }} behave when triggered with different use-types.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "'Off', 'On' and 'Toggle'- toggle rotating."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "'On'- start rotating, 'Off'- stop rotating, 'Toggle'- toggle rotating."
+        }
+      ]
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnorigin",
+      "keyDescription": "This will move {{ entname }} to specified position on map start, preserving the lightning from original position.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "dmg",
+      "keyDescription": "Set the amount of damage to inflict on the object blocking the func_rotation's rotation.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Func_rotating won't react to frequent triggering properly. It might stay in whatever state it is when triggered consecutively.",
+    "The entity might start to behave unexpectedly after many rotations. You can fix this by performing a modulo 360.0 operation on it's angles using a trigger_copyvalue."
+  ]
+}

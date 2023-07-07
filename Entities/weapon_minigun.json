@@ -1,0 +1,25 @@
+{
+  "Classname": "weapon_minigun",
+  "Description": "The minigun consumes ammunition directly. Uses [ammo_556](../ammo_556)/[ammo_556clip](../ammo_556clip). Primary fire winds up the minigun barrel and starts fire shortly after. Secondary fire only winds it up. It is a heavy weapon which reduces the carrying player's speed and disables his ability to jump. It will only be picked up when the player issues his 'Use'-command on it. While holding the weapon, no other weapon can be selected. The minigun has to be dropped first. CVars:<ul><li>sk_556_bullet# (Default: 15, 15, 25): Minigun damage per bullet.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

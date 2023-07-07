@@ -1,0 +1,99 @@
+{
+  "Classname": "weapon_displacer",
+  "Description": "Displacer uses gaussclip, no reload. Uses [ammo_gaussclip](../ammo_gaussclip). You can carry 100 rounds at a time. Primary fire consumes 20 rounds and secondary fire (teleporter) 60 rounds. Tertiary mode is available for this weapon (crowbar throw key) that shoot even more powerful and faster projectiles but consumes 50 rounds. CVars:<ul><li>sk_plr_displacer_other# (Default: 250, 250, 250): Portal projectile damage.</li><li>sk_plr_displacer_radius# (Default: 300, 300, 300): Teleportation radius damage.</li><li>weaponmode_displacer# (Default: 0): Determines if tertiary mode is enabled.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If multiple destinations are set, one will be chosen randomly."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "Add the angles of the trigger_teleport's destination onto the player's angles."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "Instead of copying the destination entity's angles onto the player as part of the teleportation, let the player keep his angles as they are."
+        },
+        {
+          "choiceValue": "512",
+          "choiceDescription": "Do not set the players velocity to 0 as he uses secondary mode, and keep his current velocity instead."
+        },
+        {
+          "choiceValue": "4096 ",
+          "choiceDescription": "If selected, all teleport delays will be removed."
+        }
+      ]
+    },
+    {
+      "keyName": "m_TertiaryMode",
+      "keyDescription": "Deteremines if tertiary mode can be used on that weapon, or if map setting should be used.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "m_flPortalSpeed",
+      "keyDescription": "Overrides default portal projectile speed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flPortalRadius",
+      "keyDescription": "Overrides default portal Area of Effect radius.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszTeleportDestination",
+      "keyDescription": "Name of teleport destination of secondary fire mode ([info_teleport_destination](../info_teleport_destination)).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flPrimaryAmmoNeeded",
+      "keyDescription": "Ammo cost of primary fire.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flSecondaryAmmoNeeded",
+      "keyDescription": "Ammo cost of secondary (teleportation) fire.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flTertiaryAmmoNeeded",
+      "keyDescription": "Ammo cost of tertiary fire.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

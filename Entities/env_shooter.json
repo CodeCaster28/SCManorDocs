@@ -1,0 +1,66 @@
+{
+  "Classname": "env_shooter",
+  "Description": "The env_shooter entity allows to emit a model or sprite of your choice and shoot it into a certain direction (Pitch Yaw Roll), at a certain velocity. Sprites aren't specifically supported, though.",
+  "KeyDescriptions": [
+    {
+      "keyName": "shootmodel",
+      "keyDescription": "Set a model or sprite to shoot, preferably model. Path starts at modification's directory e.g. 'models/gib_skull.mdl' for models or 'sprites/glow03.spr' for sprites. Sprites path must be specified by hand or copied from elsewhere e.g. env_sprite.",
+      "keyChoices": []
+    },
+	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start shooting sprites or models. Every trigger use-type works uniformly. Can't be triggered when model/sprite shooting is in progress. Can be kill-targeted but gibs stay.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "shootsounds",
+      "keyDescription": "Sound-set to be used for when gibs collide with stuff.",
+      "keyChoices": [
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "scale",
+      "keyDescription": "Scaling-factor for the models and sprites shot.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "skin",
+      "keyDescription": "Model sub-skin to be used. Leave at 0 if there are none.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "If your delay between shots is 0, the game will increase it notably; 0.01 works, though.",
+	"The gibs also bounce off players.",
+	"Gibs do not get stuck in each other.",
+	"Render-modes and -amount can be used to be applied to the gibs."
+  ],
+  "Issues": [
+    "When shooting sprites, they often appear at the origin of the world.",
+	"Animated sprites won't animate. Model animations don't play, either."
+  ]
+}

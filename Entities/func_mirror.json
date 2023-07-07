@@ -1,0 +1,19 @@
+{
+  "Classname": "func_mirror",
+  "Description": "Func_mirror is experimental entity that simulates mirror on a brush surfaces with textures of your choice. This entity can be freely triggered to enable/disable rendering. Mirror also supports any movement type (by [trigger_setorigin](../trigger_setorigin)).",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable it. Depending on trigger use-type: 'On'- enable mirror, 'Toggle'- toggle mirror, 'Off'- disable mirror. Can be kill-targeted.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Mirrors can be moved an rotated by [trigger_setorigin](../trigger_setorigin). In that case remember to tie origin brush to func_mirror."
+  ]
+}

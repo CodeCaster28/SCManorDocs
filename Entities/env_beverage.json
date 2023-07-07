@@ -1,0 +1,64 @@
+{
+  "Classname": "env_beverage",
+  "Description": "Spawns you a delicious Coca-Cola when triggered. No, I am not shitting you there.",
+  "KeyDescriptions": [
+     {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to spawn beverage (if no other is spawned at the moment). Every trigger use-type works uniformly. Can be kill-targeted, already spawned models are not removed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "health",
+      "keyDescription": "Set how many beverages can be spawned here. You cannot set this to be infinite, though you can set this to a large value.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "skin",
+      "keyDescription": "Choose from one of six delicious flavours, or get a random one! This sets which submodel to use and may only affect the appearance of the beverage.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "model",
+      "keyDescription": "Allows you to provide your own beverage model, though, technically you may provide anything here. You can access the various submodels through beverage type.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "weapons",
+      "keyDescription": "Set how many health points will be recovered when using the beverage.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+	"This entity was used to create the usable vending machines in the Half-Life single player.",
+	"Triggering this while a beverage is still in the env_beverage's location causes nothing to happen. Spawn must be clear of beverages."
+  ]
+}

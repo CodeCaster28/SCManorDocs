@@ -1,0 +1,47 @@
+{
+  "Classname": "info_hullshape",
+  "Description": "Allows to modify player behavior when standing on spiked ramps by replacing the default cuboid shape of the player when generating collision hulls for certain brushes. You can use brush shape of this info_hullshape as player hull. This is used mostly for \"surf\" maps to prevent player standing on top of curved brushes. You can set this shape globally or use it only on certain brushes. For global hull shape use \"Set as default shape\" keyvalue. To apply hull shapes into desired brushes do the following: firstly, there have to be two 'info_hullshape' entities, one with the shape of a standing player and the other with the shape of a crouching player. Secondly, the ramp should be tied to a brush entity or func_detail or func_group, and then you set the 'zhlt_hull1' and 'zhlt_hull3' keys in that entity to specify the player's shape for the entity's standing hull and crouching hull. Note that the crouching player must not be bigger than the standing player, otherwise the player will get stuck when he presses the crouch key. If the shape is too complex, the brushes that use this shape will consume much more clipnodes than normal brushes.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Name of this info_hullshape. This name need to be specified in [func_detail](../func_detail) or [func_group](../func_group).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "defaulthulls",
+      "keyDescription": "If set, this brush will replace player hull shape globally.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Set this brush as a player standing hull shape."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Set this brush as big monster's hull but ask yourself- do you really need to change this?."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Set this brush as a player crouching hull shape."
+        }
+      ]
+    },
+    {
+      "keyName": "disabled",
+      "keyDescription": "You can temporarily disable this entity.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

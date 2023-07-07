@@ -1,0 +1,24 @@
+{
+  "Classname": "trigger_once",
+  "Description": "A simple brush-based trigger which triggers its target once when a players enters it - never a second time. The entity deletes itself from the game regardless if it successfully fires it's target or not. For reusable version, use [trigger_multiple](../trigger_multiple).",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }}. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when {{ entname }} is touched (or when stop touched if \"Fire On Exit\" flag is selected).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when {{ entname }} is touched (or when stop touched if \"Fire On Exit\" flag is selected).",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Monsters are only able to trigger brush trigger entities while moving inside of them."
+  ]
+}

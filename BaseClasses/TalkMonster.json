@@ -1,0 +1,30 @@
+{
+  "Classname": "TalkMonster",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "UseSentence",
+      "keyDescription": "Name of audio or sentence to play when {{ entname }} is used by player to follow. Doesn't work when \"Pre-Disaster\" flag is selected. Use sentence name from \"default_sentences.txt\" or custom sentences file (which can be added in map properties). Sound file of sentence name from default_sentences.txt. To use sound file write '+' symbol and then filename with path (e.g. if you want to set file located in \"svencoop/sound/mymap/bell1.wav\", type '+mymap/bell1.wav'. Remember that you need to precache this sound! To do this, place [custom_precache](../custom_precache), and in the any \"sound\" keyvalue write 'mymap/bell1.wav'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "UnUseSentence",
+      "keyDescription": "Name of audio or sentence to play when {{ entname }} is used by player to stop following. Doesn't work when \"Pre-Disaster\" flag is selected. Use sentence name from \"default_sentences.txt\" or custom sentences file (which can be added in map properties). Sound file of sentence name from default_sentences.txt. To use sound file write '+' symbol and then filename with path (e.g. if you want to set file located in \"svencoop/sound/mymap/bell1.wav\", type '+mymap/bell1.wav'. Remember that you need to precache this sound! To do this, place [custom_precache](../custom_precache), and in the any \"sound\" keyvalue write 'mymap/bell1.wav'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "is_player_ally",
+      "keyDescription": "Set whether the spawned monster is an ally or a foe of the players. Note that keyvalue name is misleading.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Keep game defaults."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Invert relationship, e.g. monster_barney becomes enemy because he is friendly by default; monster_zombie becomes friendly because he is an enemy by default e.t.c."
+        }
+      ]
+    }
+  ]
+}

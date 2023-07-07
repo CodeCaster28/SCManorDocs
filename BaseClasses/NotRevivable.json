@@ -1,0 +1,20 @@
+{
+  "Classname": "NotRevivable",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "is_not_revivable",
+      "keyDescription": "If set to 'Yes', the monster cannot be revived by player's weapon_medkit or other allied monsters.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

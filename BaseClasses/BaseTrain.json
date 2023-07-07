@@ -1,0 +1,30 @@
+{
+  "Classname": "BaseTrain",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "The name of the first [path_corner](../path_corner) (where the train starts). The {{ entname }} is teleported to this position on map start, no matter where it's placed.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Movement-speed in units per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iObeyTriggerMode",
+      "keyDescription": "Controls how {{ entname }} behave when triggered with different use-types.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "'Off', 'On' and 'Toggle'- toggle {{ entname }} movement."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "'On'- start moving, 'Off'- stop moving, 'Toggle'- toggle moving."
+        }
+      ]
+    }
+  ]
+}

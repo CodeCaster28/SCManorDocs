@@ -1,0 +1,44 @@
+{
+  "Classname": "game_zone_player",
+  "Description": "This brush entity, when triggered, allows to trigger different entities for players, depending on whether they are inside or outside of this entity and to set the value of two different [game_counter](../game_counter) entities to the amount of players within this zone and to the amount of players outside of this zone. All targets receive same trigger state as game_zone_player received, and passes players as an '!activator'.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, dead players are skipped entirely, as if they weren't on the server in the first place."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to check players presence and trigger the targets. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "intarget",
+      "keyDescription": "Target to trigger for every player who is within the game_zone_player entity when triggered, individually. Sends same trigger state signal as received and passes all players inside {{ entname }}'s volume as !activator's.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "outtarget",
+      "keyDescription": "Target to trigger for every player who is outside of the game_zone_player entity when triggered, individually. Sends same trigger state signal as received and passes all players outside {{ entname }}'s volume as !activator's.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "incount",
+      "keyDescription": "Name of one or more [game_counter](../game_counter) entities whose count values are to be set to the amount of players within the zone.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "outcount",
+      "keyDescription": "Name of one or more [game_counter](../game_counter) entities whose count values are to be set to the amount of players outside of the zone.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Gibbed players are always being ignored."
+  ]
+}

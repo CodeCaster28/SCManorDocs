@@ -1,0 +1,20 @@
+{
+  "Classname": "item_generic",
+  "Description": "Widely used as a reliable way to display prop models in the map. This item ignores all player touch (even if flag selected) and can be only triggered by use when appropriate flag is selected. For custom items that recognizes collision use [item_security](../item_security) with custom model. For item that can be also stored in inventory and add additional effects to carrier use [item_inventory](../item_inventory).",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "Classname": "monster_flyer_flock",
+  "Description": "Part of passive Xen fauna.",
+  "KeyDescriptions": [
+    {
+      "keyName": "iFlockSize",
+      "keyDescription": "Number of creatures in this flock.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "flFlockRadius",
+      "keyDescription": "The flock radius, the higher the value is, the more distance will be kept between flyers.",
+      "keyChoices": []
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "Classname": "custom_precache",
+  "Description": "Allows you to set 9 custom models, 9 custom sounds and 9 custom skies to be precached. Note that model and sound replacements done through model and/or sound replacement file are already precached automatically. In case 9 of either sort do not suffice for your case, create another custom_precache entity. Model path starts in Sven Co-op's directory. You should put your models into the 'models'-folder. Sound path starts in the 'sound'-folder. Creating subfolders by your map's name is advised. As for skies, it allows to additional envmaps in cause you use trigger_changevalue or trigger_copyvalue towards trigger_changesky (as default target sky in trigger_changesky is precached automatically)",
+  "KeyDescriptions": [
+    {
+      "keyName": "model_1",
+      "keyDescription": "Model #1 to precache. Example path: models/myMap/myModel.mdl.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_2",
+      "keyDescription": "Model #2 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_3",
+      "keyDescription": "Model #3 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_4",
+      "keyDescription": "Model #4 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_5",
+      "keyDescription": "Model #5 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_6",
+      "keyDescription": "Model #6 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_7",
+      "keyDescription": "Model #7 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_8",
+      "keyDescription": "Model #8 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "model_9",
+      "keyDescription": "Model #9 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_1",
+      "keyDescription": "Sound #1 to precache. Example path (starts at /sounds folder): myMap/mySound.ogg.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_2",
+      "keyDescription": "Sound #2 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_3",
+      "keyDescription": "Sound #3 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_4",
+      "keyDescription": "Sound #4 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_5",
+      "keyDescription": "Sound #5 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_6",
+      "keyDescription": "Sound #6 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_7",
+      "keyDescription": "Sound #7 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_8",
+      "keyDescription": "Sound #8 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sound_9",
+      "keyDescription": "Sound #9 to precache.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_1",
+      "keyDescription": "Sky #1. Not needed when using trigger_changesky.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_2",
+      "keyDescription": "Sky #2.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_3",
+      "keyDescription": "Sky #3",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_4",
+      "keyDescription": "Sky #4",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_5",
+      "keyDescription": "Sky #5",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_6",
+      "keyDescription": "Sky #6",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_7",
+      "keyDescription": "Sky #7",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_8",
+      "keyDescription": "Sky #8",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sky_9",
+      "keyDescription": "Sky #9",
+      "keyChoices": []
+    }
+  ]
+}

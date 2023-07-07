@@ -1,0 +1,20 @@
+{
+  "Classname": "info_overview_point",
+  "Description": "You can make all visleafs be visible from vis leaf where this entity is created. Also you can make a specified leaf visible from all other visleafs. Just place entity in a place where you want overview point. If reversed, place it at the center of a model/entity enclosed in a hollowed area (that are not always visible despite to player's position in the world) you wish to be visible from within the whole map.",
+  "KeyDescriptions": [
+    {
+      "keyName": "reverse",
+      "keyDescription": "If set to yes, instead of making this leaf an overview point for all other leafs, make this leaf visible from every place of the map.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

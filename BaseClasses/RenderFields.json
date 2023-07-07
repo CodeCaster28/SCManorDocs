@@ -1,0 +1,46 @@
+{
+  "Classname": "RenderFields",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "rendermode",
+      "keyDescription": "Render mode determines how this entity is rendered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": "Normal rendering. Entity will receive light, except if it is a sprite. \"FX Amount\" is obsolete when this is used."
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Brush entities only: Instead of rendering the texture, the whole entity will appear in one color, set by \"FX Color\". \"FX Amount\" sets the transparency. 0 means invisible. 255 means fully opaque."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Texture-only rendering. Entity will not receive light. Instead, only the texture will be rendered as is. \"FX Amount\" sets the transparency. 0 means invisible. 255 means fully opaque. This is used for transparent things such as windows. Tip: If you have a window separating a dark and a bright room using only one entity, you can apply a brighter glass texture to the side of the window seen from within the dark room than to the side seen from the bright room. That way, the window's brightness will look realistic from both sides, instead of from just one. Generally, darker rooms require the render amount to be lower, making the glass more transparent, or it would look illogically bright."
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "Sprites only. The sprite will appear in the same size regardless of your distance to it. In addition to that, the further away you are from it, the less visible it will be. (It's only barely visible at about 500 units far away) Good for light coronas. This renders the sprite in additive mode."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Brush entities only. All textures of the brush entity starting with '{' will have the last color of their palette (usually blue, black or purple) be rendered fully transparent. This is used for textures with see-through parts, such as grates and railings. Requires \"FX Amount\" to be set to a value greater than 0, commonly 255."
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "Works just as the \"Render Mode\" 'Texture', except that the entity's appearance will be added to the background instead of forming a mean. This means, black pixels of textures will be fully transparent, while full-bright pixels are added with a factor of \"FX Amount\" divided by 255. This is often used for sprites indicating a glowing light, as well as for overlay func_illusionaries to give a computer texture the appearance of having many small, glowing lights, screens and whatever other elements. Render-amount of 255 makes it bright. 0 makes it invisible."
+        }
+      ]
+    },
+    {
+      "keyName": "renderamt",
+      "keyDescription": "Render amount to use when other than \"Render Mode\" 'Normal' is used.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rendercolor",
+      "keyDescription": "Used with \"Render Mode\" 'Color' and 'Glow' to set color. Also sets color of 'Glow Shell' \"Render Mode\".",
+      "keyChoices": []
+    }
+  ]
+}

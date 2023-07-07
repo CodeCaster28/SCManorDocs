@@ -1,0 +1,28 @@
+{
+  "Classname": "func_op4mortarcontroller",
+  "Description": "A button to control an op4mortar with the 'Can control'-flag set. Holding your 'Use'-key on this button makes the target op4mortar either rotate on its horizontal or vertical axis (depending on your setup) in a direction at 40 degrees per second and change the rotation direction when the rotation limit for that direction has been reached (pitch always ranges from 0 to 90 degrees). Using this controller consecutively gives more control over the op4mortar's angle as it will rotate slower. When not using the controller for a half second, the direction into which it will make the op4mortar turn the next time you use the func_op4mortarcontroller is reversed for convenience, so players don't have to turn the op4mortar all the way to its rotation limit in order to adjust into the other direction. You can add targetname manually to this entity.",
+  "KeyDescriptions": [
+    {
+      "keyName": "target",
+      "keyDescription": "Name of an op4mortar entity to control. If bad value specified, the game crashes.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "mortar_axis",
+      "keyDescription": "Set which axis of the targeted op4mortar to control.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": "Yaw (left and right)."
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Pitch (up and down)."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "Func_op4mortarcontroller supports to have a name (even if it is not listed in object properties). You can set it by adding \"targetname\" key with SmartEdit mode disabled. It can be kill-targeted."
+  ]
+}

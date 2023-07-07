@@ -1,0 +1,92 @@
+{
+  "Classname": "env_laser",
+  "Description": "A less advanced version of [env_beam](../env_beam). Creates a toggleable laser between itself and its target.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable/disable laser. Depending on trigger use-type: 'On'- enable laser, 'Off'- disable laser, 'Toggle'- toggle laser. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "LaserTarget",
+      "keyDescription": "Entity at which the beam ends.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "renderamt",
+      "keyDescription": "Set how bright/visible/transparent the beam shall be on a scale from '0' (invisible) to '255' (very bright).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rendercolor",
+      "keyDescription": "Set the beam's color. Note that, because of bolts being rendered additively, darker colors mean greater transparency.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "width",
+      "keyDescription": "Set the width of the bolt-/beam-texture in inches * 0.25. Note that one unit in Valve Hammer Editor equals one inch and the beam texture you are using possibly has entirely transparent sides, so the beam may appear a bit thinner than expected.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "NoiseAmplitude",
+      "keyDescription": "Set how much the bolt shivers on a scale from 0 (not at all) to 255 (very much).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "texture",
+      "keyDescription": "Set the sprite to use to display the bolt. Path starts in mod-folder.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "EndSprite",
+      "keyDescription": "This sprite is placed where the laser beam ends.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "TextureScroll",
+      "keyDescription": "The texture of the laser is not supposed to be displayed statically. Setting a texture scroll rate gives a visual effect of an actual, moving electric current. The value you set here specifies how often the texture will scroll for the length of its own height per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "framestart",
+      "keyDescription": "Set the number of the frame of the sprite to start animating at. This is rarely ever useful, e.g. when you have two identical beams next to each other and need them to look slightly different. Setting '0' here is safe.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "damage",
+      "keyDescription": "Average damage per second for the laser.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Causes the laser to be activated from map load onwards."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If set, sparks will be emitted at the env_laser."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "If set, sparks will be emitted at the target of the laser."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If set, a bullethole decal will be created whenever the beam hits a surface."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "The only thing this entity has that the env_beam doesn't is \"End Sprite\". Unless you need this, it's probably best to use env_beam instead.",
+    "In case multiple entities match the name specified under \"Target of Laser\", the env_laser entity will pick one randomly.",
+    "Contrary to what you may have read elsewhere, it is not possible to alter how fine a laser will be, as in, of how many segments it will consist.",
+    "The noise-value does not affect the area in which damage will be applied. The damage area only depends on starting point, ending point and the laser's width."
+  ],
+  "Issues": [
+    "Setting a \"Render FX\" makes no change whatsoever."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "Classname": "weaponbox",
+  "Description": "The weaponbox originates from Half-Life, where it would be dropped by dead players, containing the weapon they held in the moment of their deaths as well as all their ammunition. In Sven Co-op, the weaponbox can only be explicitly placed into the map by the mapper.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }}. Can't be triggered. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bullet9mm",
+      "keyDescription": "Amount of 9mm ammo.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bullet357",
+      "keyDescription": "Amount of 357 ammo.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "buckshot",
+      "keyDescription": "Amount of buckshot ammo",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bolts",
+      "keyDescription": "Amount of crossbow bolts ammo.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bullet556",
+      "keyDescription": "Amount of 556 ammo.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "ARgrenades",
+      "keyDescription": "Amount of grenades for 9mmAR.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rockets",
+      "keyDescription": "Amount of RPG rockets.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "uranium",
+      "keyDescription": "Amount of gaussclip ammp.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "handgrenade",
+      "keyDescription": "Amount of hand grenades.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "satchelcharge",
+      "keyDescription": "Amount of satchels.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "tripmine",
+      "keyDescription": "Amount of tripmines.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "Snarks",
+      "keyDescription": "Amount of snarks.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m40a1",
+      "keyDescription": "Amount of 762 ammo.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sporeclip",
+      "keyDescription": "Amount of spores.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "If either 'TOUCH only' and 'USE only' flags are selected, the item can only be collected via trigger, but only if player is the !activator.",
+    "Item can be collected on trigger, touch and use when none of flags above are selected."
+  ]
+}

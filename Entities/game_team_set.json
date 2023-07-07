@@ -1,0 +1,21 @@
+{
+  "Classname": "game_team_set",
+  "Description": "Originally created by Valve, doesn't work in Sven Co-op, where there is only one team. You can still make teams by using [trigger_changevalue](../trigger_changevalue) and change !activator's \"classify\" key.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "",
+      "keyChoices": []
+    }
+  ]
+}

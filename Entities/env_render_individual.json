@@ -1,0 +1,64 @@
+{
+  "Classname": "env_render_individual",
+  "Description": "Entity that acts like [env_render](../env_render) but applied render settings will be seen only by certain players. This allows you to make entities be seen by players differently (e.g. visible only for some players).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If set, the env_render won't change its targets render-fx."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "If set, the env_render won't change its targets render-amt."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "If set, the env_render won't change its targets render-mode."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "If set, the env_render won't change its targets render-color."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Does not work."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "Apply settings at the map start."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "Instead of affecting players with targetnames specified in 'target' field, affect the player who activated the script (e.g. through button or trigger)."
+        },
+        {
+          "choiceValue": "128 ",
+          "choiceDescription": "Make use of 'Entity to copy from' keyvalue, ignoring manually typed render values."
+        }
+      ]
+    },
+	{
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to apply render mode. Depending on trigger use-type: 'On' or 'Toggle'- apply render settings, 'Off'- revert render settings. Can be kill-targeted and already applied render settings are reverted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to change appearance of.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "netname",
+      "keyDescription": "Player's targetname that will see the effect of this entity.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Entity to copy render values which will be applied to target entity. 'Use Entity to copy from' flag must be selected for this to take effect.",
+      "keyChoices": []
+    }
+  ]
+}

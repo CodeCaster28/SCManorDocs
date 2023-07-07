@@ -1,0 +1,11 @@
+{
+  "Classname": "func_monsterclip",
+  "Description": "This is an invisible entity which will block all monsters who have the \"MonsterClip\"-spawnflag enabled. Starts enabled.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable or disable monster clipping. Depending on trigger use-type: 'On'- enable clip, 'Toggle'- toggle clip, 'Off'- disable clip. Can be kill-targeted.",
+      "keyChoices": []
+    }
+  ]
+}

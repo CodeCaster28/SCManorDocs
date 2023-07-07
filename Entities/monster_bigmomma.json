@@ -1,0 +1,21 @@
+{
+  "Classname": "monster_bigmomma",
+  "Description": "Big four-legged monstrous creature Gonarch. Spawn [baby headcrabs](../monster_babycrab), split spores and uses his legs in closer combat.<br>Class: Alien Monster.",
+  "KeyDescriptions": [
+    {
+      "keyName": "netname",
+      "keyDescription": "Name of the first [info_bigmomma](../info_bigmomma) entity to control scripted sequence of this gonarch.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1024",
+          "choiceDescription": "Do not split babycrabs."
+        }
+      ]
+    }
+  ]
+}

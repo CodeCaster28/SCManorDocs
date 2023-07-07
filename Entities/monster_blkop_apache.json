@@ -1,0 +1,20 @@
+{
+  "Classname": "monster_blkop_apache",
+  "Description": "Apache that uses chain gun, as well as destructive missiles. Explodes after destroyed so stay clear.<br>Class: Human Military.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Do not produce gibs after destroyed."
+        },
+        {
+          "choiceValue": "64 ",
+          "choiceDescription": "Start disabled, ignore environment until triggered."
+        }
+      ]
+    }
+  ]
+}

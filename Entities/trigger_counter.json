@@ -1,0 +1,59 @@
+{
+  "Classname": "trigger_counter",
+  "Description": "Obsolete counter entity. You might prefer to use [game_counter](../game_counter). Counts how many times trigger_counter is triggered and displays message how many inputs are to go \"Only X more to go...\". After being triggered \"count\" times, it triggers it's target. Placement/shape/texturing of this entity does not matter as it behaves like point entity.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": " If set, message of how many inputs are to go won't be displayed."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Non-functional in {{ entname }}."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Non-functional in {{ entname }}."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": " Non-functional in {{ entname }}."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Non-functional in {{ entname }}."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "Non-functional in {{ entname }}."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when the counter hits \"count\" value. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when counter hits \"count\" value.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) locks this {{ entname }}. If master is specified the {{ entname }} will be disabled and won't work. When [multisource](../multisource) entity is triggered/being triggering by all possible inputs, the {{ entname }} will work again and can be triggered again to use counter. When [multisource](../multisource) lost at least one input signal, the entities becomes locked again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "count",
+      "keyDescription": "How many times this entity need to be triggered to trigger it's \"Target\".",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Most keyvalues won't work, those are inherited from volume triggers even if it's not behaving like brush entity. Don't ask me why, told you it's an obsolete entity."
+  ]
+}

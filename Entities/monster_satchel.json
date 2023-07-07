@@ -1,0 +1,11 @@
+{
+  "Classname": "monster_satchel",
+  "Description": "Pushable Satchel that explodes after triggered.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to detonate. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    }
+  ]
+}

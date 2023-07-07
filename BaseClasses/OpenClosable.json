@@ -1,0 +1,98 @@
+{
+  "Classname": "OpenClosable",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "fireonopening",
+      "keyDescription": "Entity to trigger when {{ entname }} starts opening. Trigger use-type can be specified below.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fireonopening_triggerstate",
+      "keyDescription": "Set the use-type with which the entity specified above will be triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "fireonclosing",
+      "keyDescription": "Entity to trigger when door starts closing. Trigger use-type can be specified below.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fireonclosing_triggerstate",
+      "keyDescription": "Set the use-type with which the entity specified above will be triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "fireonopened",
+      "keyDescription": "Entity to trigger when door ends opening. Trigger use-type can be specified below.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fireonopened_triggerstate",
+      "keyDescription": "Set the use-type with which the entity specified above will be triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "fireonclosed",
+      "keyDescription": "Entity to trigger when door end closing. Trigger use-type can be specified below.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "fireonclosed_triggerstate",
+      "keyDescription": "Set the use-type with which the entity specified above will be triggered.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

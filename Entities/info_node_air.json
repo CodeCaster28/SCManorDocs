@@ -1,0 +1,5 @@
+{
+  "Classname": "info_node_air",
+  "Description": "Equivalent of [info_node](../info_node) for flying monsters like [monster_alien_controller](../monster_alien_controller) and [monster_stukabat](../monster_stukabat).",
+  "KeyDescriptions": []
+}

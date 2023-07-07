@@ -1,0 +1,39 @@
+{
+  "Classname": "path_condition_controller",
+  "Description": "Path_condition_controller is non-functional entity that awaits future implementation.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If selected, this entity is disabled at map start, which means it need to be triggered in order to be enabled."
+        }
+      ]
+    },
+    {
+      "keyName": "pathcondition_list",
+      "keyDescription": "Keyvalue_Description_here",
+      "keyChoices": []
+    },
+    {
+      "keyName": "selecttype",
+      "keyDescription": "Keyvalue_Description_here",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

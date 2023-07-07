@@ -1,0 +1,608 @@
+{
+  "Classname": "BaseTank",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Makes this {{ entname }} active on start, which means it will try to kill every enemies in it's view distance."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If selected, the automatic {{ entname }} will trigger it's target only when they are in it's line of sight."
+        },
+        {
+          "choiceValue": "32",
+          "choiceDescription": "If selected, player can control this turret. Keep in mind that [func_tankcontrols](../func_tankcontrols) is required for this."
+        },
+        {
+          "choiceValue": "512",
+          "choiceDescription": "Enables usage of relation keyvalues (may be glitched)."
+        },
+        {
+          "choiceValue": "1024",
+          "choiceDescription": "Prevent player from shooting (player might still mount the tank)."
+        }
+      ]
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Currently unsupported.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "yawrate",
+      "keyDescription": "How fast the barrel rotates horizontally, in degrees per seconds.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "yawrange",
+      "keyDescription": "The range, in degrees, of the barrel horizontal rotation in each side- left and right. This value is doubled for the whole barrel range e.g. when it's set to 90, the barrel can rotate left by 90 degrees and right by 90 degrees, what gives the total of 180.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "yawtolerance",
+      "keyDescription": "Additional left-right range. If the gun tries to turn beyond yaw range + yaw tolerance, the gun will snap back to the maximum yaw range.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pitchrate",
+      "keyDescription": "Vertical barrel rotating speed, in degrees per seconds.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pitchrange",
+      "keyDescription": "Vertical range of the barrel rotation, up and down. This value is doubled for the whole barrel range e.g. when it's set to 10, the barrel can rotate up by 10 degrees and down by 10 degrees, what gives the total of 20.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pitchtolerance",
+      "keyDescription": "Additional up-down range. If the gun tries to turn beyond pitch range + pitch tolerance, the gun will snap back to the maximum pitch range.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "barrel",
+      "keyDescription": "Determines where bullets comes from. Distance is counted from origin brush to barrel end.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "barrely",
+      "keyDescription": "How wide the barrel is, horizontally (x axis).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "barrelz",
+      "keyDescription": "How wide the barrel is, vetically (z axis).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spritesmoke",
+      "keyDescription": "Name of the sprite to show whenever bullet is shoot. Starts with 'sprites/' folder.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spriteflash",
+      "keyDescription": "Name of the sprite to show as a muzzle flash of the barrel. Starts with 'sprites/' folder.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spritescale",
+      "keyDescription": "Scale of smoke and flash sprites.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "rotatesound",
+      "keyDescription": "Sound file to play in a loop while barrel is rotating.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "firerate",
+      "keyDescription": "Number of bullets per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "bullet_damage",
+      "keyDescription": "Damage to deal each shot.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "persistence",
+      "keyDescription": "How many seconds this entity will continue shooting after losing player from field of view. Works only for automatic turrets.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "firespread",
+      "keyDescription": "Allows to customize bullet spreading, from perfect shot to Star Wars Stormtrooper accuracy.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "minRange",
+      "keyDescription": "Minimum view distance to shoot target, used for automatic turrets only.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "maxRange",
+      "keyDescription": "Maximum view distance to shoot target, used for automatic turrets only. Values above 2048 doesn't work.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "relation_player",
+      "keyDescription": "Set relationship towards player.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_none",
+      "keyDescription": "Set relationship towards entities classified as \"unknown\".",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_machine",
+      "keyDescription": "Set relationship towards machines.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_human_passive",
+      "keyDescription": "Set relationship towards humans (passive).",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_human_militar",
+      "keyDescription": "Set relationship towards military humans.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_alien_militar",
+      "keyDescription": "Set relationship towards military aliens.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_alien_passive",
+      "keyDescription": "Set relationship towards passive aliens.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_alien_monster",
+      "keyDescription": "Set relationship towards alien monsters.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_alien_prey",
+      "keyDescription": "Set relationship towards alien preys.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_alien_predator",
+      "keyDescription": "Set relationship towards alien predators.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_insect",
+      "keyDescription": "Set relationship towards insect.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_player_ally",
+      "keyDescription": "Set relationship towards player allies.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_player_bioweapon",
+      "keyDescription": "Set relationship towards player's bioweapon (e.g. snarks thrown by player).",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_monster_bioweapon",
+      "keyDescription": "Set relationship towards monster's bioweapons (e.g. shockroach dropped by shocktroopers).",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "relation_machine",
+      "keyDescription": "Set relationship towards alien predators.",
+      "keyChoices": [
+        {
+          "choiceValue": "-2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "-1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

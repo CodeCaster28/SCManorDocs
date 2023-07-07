@@ -1,0 +1,10 @@
+{
+  "Classname": "func_healthcharger",
+  "Description": "The func_healthcharger is a visible, solid entity which can be used just as a [func_button](../func_button) can, and will refill 15 health points per second while using it. Multiple players can use it at the same time, but the HP restored per second is distributed equally among them. Healthchargers refill themselves 30 seconds after being emptied. You can add targetname manually to this entity. CVars: <ul><li>sk_healthcharger # (Default: 80, 80, 80): Sets how many health points health chargers store.</li></ul>",
+  "KeyDescriptions": [],
+  "Notes": [
+	"The medkit will refill once the player has recharged his health to his maximum health; the healthcharger still needs to have health remaining for that to work.",
+	"Charging the medkit won't drain the healthcharger.",
+	"Func_healthcharger supports to have a name (even if it is not listed in object properties). You can set it by adding \"targetname\" key with SmartEdit mode disabled. Now entity can be killed and triggered to heal an activator by one point."
+  ]
+}

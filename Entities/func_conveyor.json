@@ -1,0 +1,35 @@
+{
+  "Classname": "func_conveyor",
+  "Description": "The func_conveyor entity is a visible and by default also solid entity used to represent conveyor bands in appearance and function, but can also be used for different purposes, e.g. a water-stream/river. The yaw of the angles-keyvalue specifies the direction of texture moving. Any textures with names beginning with \"SCROLL\" (case-insensitive) will then scroll into that direction. However, notice that any texture rotation and mirroring will also affect its scroll-direction; not the push-direction, though. Scaling a texture on a face will also affect its scroll-speed - not the push-speed - in dependence on the scale-axis' relations to the relative scroll- direction.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, the func_conveyor won't push anything nor anyone standing on it."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "If set, the func_conveyor is entirely non-solid. It also won't push then."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to revert conveyor direction. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Push-speed and base-texture-scroll-speed in units per second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ]
+}

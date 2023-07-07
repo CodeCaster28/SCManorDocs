@@ -1,0 +1,20 @@
+{
+  "Classname": "info_player_deathmatch",
+  "Description": "Common Sven Co-op player start position. Can be toggled on and off. It's possible to make players rappelling to ground on spawn. The player spawned is passed as !activator to the target.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to enable/disable this spawn point. Depending on trigger use-type: 'On'- enable spawn point, 'Off'- disable spawn point, 'Toggle'- toggle spawn point. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when player is spawned at this point, requires \"Trigger on spawn\" flag enabled. Trigger use-type is defined in \"Trigger State\" keyvalue.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "When there is no active or not obstructed spawnpoints, the players are forced to wait until at least one of the spawnpoints become available again- the message will be displayed: \"No respawn points available. Please wait...\".",
+    "Remember that even when you disabled all {{ entname }} entities, the info_player_dm2, then if no info_player_dm2, info_player_coop and info_player_start entities will be used instead."
+  ]
+}

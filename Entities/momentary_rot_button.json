@@ -1,0 +1,174 @@
+{
+  "Classname": "momentary_rot_button",
+  "Description": "Similar to [func_rot_button](../func_rot_button) except that this is a special button-type entity which will only turn while you use it. It is applicable on entities which change states gradually, as a [momentary_door](../momentary_door) does. The origin brush is required for this entity, around which this entity rotates.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to press it. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of [momentary_door](../momentary_door) to bind to this button. It's not intended to use it for triggering, however, triggers target repeatedly on turning. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Speed at which the button rotates (around z axis by default) when pressed. The button rotates counter-clockwise.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) disables this {{ entname }}. If master is specified the {{ entname }} won't work. When multisource entity is triggered/being triggering by all possible inputs, the {{ entname }} will be enabled and ready to be pressed. When multisource lost at least one input signal, the entities becomes disabled again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sounds",
+      "keyDescription": "Set the sound to be played when the button is pressed. It will play when the button is locked, too.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": "",
+          "media": "../audio/button1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "",
+          "media": "../audio/button2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": "",
+          "media": "../audio/button3.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "",
+          "media": "../audio/button4.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "5",
+          "choiceDescription": "",
+          "media": "../audio/button5.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "6",
+          "choiceDescription": "",
+          "media": "../audio/button6.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "7",
+          "choiceDescription": "",
+          "media": "../audio/button7.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "",
+          "media": "../audio/button8.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "9",
+          "choiceDescription": "",
+          "media": "../audio/button9.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "21",
+          "choiceDescription": "",
+          "media": "../audio/lever1.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "22",
+          "choiceDescription": "",
+          "media": "../audio/lever2.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "23",
+          "choiceDescription": "",
+          "media": "../audio/lever3.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "24",
+          "choiceDescription": "",
+          "media": "../audio/lever4.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        },
+        {
+          "choiceValue": "25",
+          "choiceDescription": "",
+          "media": "../audio/lever5.wav?controlsList=nodownload-nofullscreen-noremoteplayback"
+        }
+      ]
+    },
+    {
+      "keyName": "noise",
+      "keyDescription": "Custom sound, that overrides default sound from \"Sounds\" list to play when the button is pressed. It will play when the button is locked, too.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "distance",
+      "keyDescription": "How many degrees the button rotates around it's origin axis (z axis by default). Can be negative.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "returnspeed",
+      "keyDescription": "If \"Auto Return\" flag is enabled, this is the speed in which button turns back into it's starting position. Can be set to 0, so the button won't close itself (it's equally to disabling \"Auto Return\" flag though).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "If selected along other momentary_rot_buttons, this will move all buttons with the same target value synchronously- when one of the buttons with the same target as another button moves (is being used/auto returning), the another button moves as well."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Button need to be triggered to move- it's unusable."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "Button turns back to it's starting position automatically after player stop using it. Enables \"Auto-return speed\"."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If set, this will rotate around the x-axis."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "If set, this will rotate around the y-axis."
+        }
+      ]
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "use_type",
+      "keyDescription": "Set the use-type with which the button will trigger its targets. Default is 'Toggle'.",
+      "keyChoices": [
+        {
+          "choiceValue": "0",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "Classname": "trigger_script",
+  "Description": "This powerful entity allows you to put scripts made with AngelScript language on your map. You can find more info about trigger_script and scripting [here](https://github.com/baso88/SC_AngelScript/wiki/trigger_script).",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to run script.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszScriptFile",
+      "keyDescription": "The name of the script to load in \"scripts\\maps\" directory, e.g. \"mymap/my_script1\". This can be left empty if the function already exists from scripts specified via map_script in cfg.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iszScriptFunctionName",
+      "keyDescription": "Function (declared in the opened script file) to call when trigger_script is triggered. If the function belongs to namespace, you must use prefix with the namespace name (e.g. mynamespace::MyFunction) for the keyvalue.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_flThinkDelta",
+      "keyDescription": "If \"Mode\" is set to 'Think', this is a time delay between script calls.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "m_iMode",
+      "keyDescription": "Script call mode.",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Allows to execute script once."
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": "Executes script every X seconds (specified in \"Time between thinks\")."
+        }
+      ]
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Script is activated on start."
+        }
+      ]
+    }
+  ]
+}

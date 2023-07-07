@@ -1,0 +1,46 @@
+{
+  "Classname": "func_train",
+  "Description": "The func_train can move along a path made from [path_corner](../path_corner) entities. It is a more feature-rich movable object as [func_door](../func_door) is. It can serves as [env_laser](../env_laser)/[env_beam](../env_beam) target, [trigger_camera](../trigger_camera) target and just as a elevator or... train!",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start or stop it. Behaviour, when triggered, depends on \"Obey Trigger Mode\" value. See \"Obey Trigger Mode\" for more details on how {{ entname }} behaves depending on selected mode. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "avelocity",
+      "keyDescription": "Axial rotation each second. Fist value rotates brush around Y axis, second around Z axis, and the last one rotates brush around X axis. E. g. '0 180 0' makes train rotates 180 degrees around Z (height) axis, counter clockwise each second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "dmg",
+      "keyDescription": "Axial rotation each second. Fist value rotates brush around Y axis, second around Z axis, and the last one rotates brush around X axis. E. g. '0 180 0' makes train rotates 180 degrees around Z (height) axis, counter clockwise each second.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "skin",
+      "keyDescription": "It's used to change the 'contents' of this brush (e.g. water makes it behave as water when entities going though it). You don't really need to use this.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": "Train have it's collision off."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "Requirements for origin brush are questionable. Some entities like trigger_camera or trigger_setorigin may need it to work properly. Also train can't use \"Angular Velocity\" when no origin brush provided.",
+    "You can make train invisible, by setting render mode, when the train is a laser target.",
+    "If you name your train it will start stopped, waiting to be started by trigger (even if nothing is targeting this entity)."
+  ]
+}

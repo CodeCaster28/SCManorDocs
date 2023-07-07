@@ -1,0 +1,21 @@
+{
+  "Classname": "trigger_monsterjump",
+  "Description": "Forces first monster that touches it to jump. This entity works only once, cannot be toggled off or on (except by using \"master\"), cannot be reset in any way. Monster type is not customizable. Usefulness of this entity is questionable.",
+  "KeyDescriptions": [
+    {
+      "keyName": "master",
+      "keyDescription": "Name of the [multisource](../multisource) entity that (temporary) disables this {{ entname }}. If master is specified the {{ entname }} will be disabled and monster won't be able to jump. When [multisource](../multisource) entity is triggered/being triggering by all possible inputs, the {{ entname }} will be unlocked. When [multisource](../multisource) lost at least one input signal, the entities becomes locked again.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Speed in which jump is simulated.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "height",
+      "keyDescription": "Height of the jump. This must be significantly big value for results to be seen (e.g. 3000).",
+      "keyChoices": []
+    }
+  ]
+}

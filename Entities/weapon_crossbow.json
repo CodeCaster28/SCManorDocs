@@ -1,0 +1,39 @@
+{
+  "Classname": "weapon_crossbow",
+  "Description": "A Crossbow that can hold 5 bolts in its clip, you can carry a total of 50 bolts as backpack ammo. Uses [ammo_crossbow](../ammo_crossbow). By default, if not zooming with this weapon, bolts fly slower and explode on hit. When zoomed, bolts never explode and arrive instantly, as bullets do. CVars:<ul><li>weaponmode_crossbow 1/0 (Default: 0): Set to 1 and bolts won't be explosive.</li><li>sk_plr_xbow_bolt_monster# (Default: 65, 65, 120): Crossbow direct hit damage.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "sequence",
+      "keyDescription": "Crossbow placement method. It seems that changing option makes no difference.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

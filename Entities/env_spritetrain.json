@@ -1,0 +1,24 @@
+{
+  "Classname": "env_spritetrain",
+  "Description": "The env_spritetrain entity resembles an [env_sprite](../env_sprite) which can move along [path_corner](../path_corner) entities as a [func_train](../func_train) can. Ever wanted to make a flame travel along a fuse to a bomb? This entity is for you.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to start or stop sprite movement. Depending on trigger use-type: 'On'- start movement, 'Off'- stop movement, 'Toggle'- toggle movement. Can be kill-targeted but sprite is not removed, only the 'train' part.",
+      "keyChoices": []
+    },
+	{
+      "keyName": "model",
+      "keyDescription": "Set a sprite here. Path starts in modification's folder.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "scale",
+      "keyDescription": "Scaling factor for the sprite. Defaults to 0.25 if not set.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "Spritetrains are not efficient on the network-code. You should use them as little as possible and only temporarily."
+  ]
+}

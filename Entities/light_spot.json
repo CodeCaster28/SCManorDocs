@@ -1,0 +1,119 @@
+{
+  "Classname": "light_spot",
+  "Description": "This works as [light](../light) does, except that the emitted light will be limited to a cone. You can customize cone size and brightness. Perfect for searchlight, car lights, streetlights etc. It's more atmospheric than point light, however areas inside of the cone won't be illuminated enough (higher '-bounce' hlrad compile parameter values may increase brightness outside the light_spot a bit).",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to turn light on and off. Depending on trigger use-type: 'On'- turn light on, 'Off'- turn light off, 'Toggle'- toggle light. Kill-targeting this entity will remove {{ entname }} but won't remove lightstyles (you might want to just turn it off instead).",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "The name of an entity in the map that the spotlight will point at (preferably [info_null](../info_null)). This will override the spotlight's angles.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_cone",
+      "keyDescription": "The angle, in inches, in which cone is full-lit. It works separately from outer angle, so you can use either both or one of those keyvalues.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_cone2",
+      "keyDescription": "The angle, in inches, in which cone is fading out (outside of inner angle). It works separately from inner angle, so you can use either both or one of those keyvalues.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "pitch",
+      "keyDescription": "Pitch determines direction of the light, '0' is horizontal, '90' is vertical from top, '-90' is vertical from bottom. You can use info_target as a light target instead.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_light",
+      "keyDescription": "Red, green and blue amounts of the light color, from 0 to 255, followed by the brightness, which can have pretty much any value greater than 0. It is not limited to 200 or 255 and can be a decimal, although that level of precision is rarely required.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "_sky",
+      "keyDescription": "Makes light_spot simulates [light_environment](../light_environment), it will emit light from all sky textures. It's useful for dark maps, models will be displayed correctly within light and light_spot entities, in normal light_environment all model lightning are generated from sky, and point/spot lights are ignored.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, the light will be turned off at map start. This will only work when a targetname is set. This counts as an additional lightstyle. If you have multiple lights by the same name, they will count as one additional lightstyle, even if some of the lights are initially dark while others are not. Note that there can be at most 4 different light styles affecting a face in your map. Otherwise, light styles will be discarded from it, causing unrealistic lighting in extreme cases."
+        }
+      ]
+    },
+    {
+      "keyName": "style",
+      "keyDescription": "Allows you to select a light style. This will only work when a targetname is NOT set. Note that there can be at most 4 different light styles affecting a face in your map. Otherwise, light styles will be discarded from it, causing unrealistic lighting in extreme cases.",
+      "keyChoices": [
+        {
+          "choiceValue": "0 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "10",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "2 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "11",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "5 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "6 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "3 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "7 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "8 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "4 ",
+          "choiceDescription": ""
+        },
+        {
+          "choiceValue": "9 ",
+          "choiceDescription": ""
+        }
+      ]
+    },
+    {
+      "keyName": "pattern",
+      "keyDescription": "Allows you to set up a custom appearance of unnamed light. To do this, you will have to enter 1 to 64 chars from the alphabet ('a' to 'z'), whereas 'a' stands for being dark and 'z' for very bright. Normal lights' appearances uses 'm'. The program [Custom Lightstyle Generator](https://twhl.info/wiki/page/VERC%3A_Custom_Lightstyle_Generator_v1.0) by Craig \"CRAZG\" McLaren might help you here. Whatever sequence you enter is stepped through at about 8 Hertz. This will only work when a targetname is set. Note that there can be at most 4 different light styles affecting a face in your map. Otherwise, light styles will be discarded from it, causing unrealistic lighting in extreme cases.",
+      "keyChoices": []
+    }
+  ]
+}

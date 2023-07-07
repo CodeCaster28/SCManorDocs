@@ -1,0 +1,34 @@
+{
+  "Classname": "item_suit",
+  "Description": "The Hazardous Environment (H.E.V.) Protection Suit, which allows the player to use [item_battery](../item_battery), as well as giving him a crosshair to aim and a fully functional Head-up display (HUD) featuring health, armor, ammunition, damage and flashlight power indicators. Private flag:",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes item be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when item is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Non-functional in {{ entname }}."
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "Shorter H.E.V. Suit (item_suit) audio assistant."
+        }
+      ]
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"Touch only\" and \"Use only\" flags are selected, the item can only be collected by trigger. When those flags are not selected, item also can be collected by trigger, but only if player is the !activator."
+  ]
+}

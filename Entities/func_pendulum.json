@@ -1,0 +1,67 @@
+{
+  "Classname": "func_pendulum",
+  "Description": "Similar to [func_rotating](../func_rotating), this entity simulates a pendulum, using the center of an origin brush tied to it as rotation point.",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to toggle it's swinging. Every trigger use-type works uniformly. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Speed of rotation in a moment of full swing speed. Remember that pendulum smooth it's movement while changing direction. Also the speed is gradually decreased when \"Damping\" keyvalue is set.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "distance",
+      "keyDescription": "Distance in which pendulum is swinging (counter clockwise). It rotates around z axis by default (if either \"X Axis\" and \"Y Axis\" flags are not selected). Remember that starting position of func_pendulum is not it's rotation center. The pendulum will rotate the whole distance e.g. if it's positioned horizontally, and distance is set to 90, func_pendulum will rotate itself from starting horizontal position to ending vertical position.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "damp",
+      "keyDescription": "If set, the pendulum will slows itself gradually when activated, until it completely stops. Higher values makes pendulum stops quicker. Values like 600, 700 gives only several seconds for pendulum to stop. I you need realistic pendulum deceleration, you should be satisfied with values like 10, 20 or 30. Precise mathematical mechanics behind \"Damping\" are unknown.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "dmg",
+      "keyDescription": "Amount of damage to deal to entities that are blocking it. Only makes sense when \"Passable\" flag is not selected.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "Entity is enabled on start. If \"Damping\" is specified, it will gradually decelerates at map start."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "Disables collision of func_pendulum."
+        },
+        {
+          "choiceValue": "16",
+          "choiceDescription": "If selected, the pendulum returns to it's starting position when triggered. By default, it's stops at position where it has been triggered. Whenever this flag is selected or no, func_pendulum is toggleable entity."
+        },
+        {
+          "choiceValue": "64",
+          "choiceDescription": "If selected, the pendulum will rotate around X axis. Can be combined with \"Y Axis\". If either this flag and \"Y Axis\" are not selected, the pendulum rotates around z axis."
+        },
+        {
+          "choiceValue": "128",
+          "choiceDescription": "If selected, the pendulum will rotate around Y axis. Can be combined with \"X Axis\". If either this flag and \"X Axis\" are not selected, the pendulum rotates around z axis."
+        }
+      ]
+    },
+    {
+      "keyName": "_minlight",
+      "keyDescription": "Sets the minimum light level. Set this value if entity is too dark on compiled map. Also useful for things like computer screens or holograms. Default is 0, max 1.",
+      "keyChoices": []
+    }
+  ],
+  "Issues": [
+    "Triggering func_pendulum without \"Auto Return\" flag may break it's rotation range.",
+    "Func_pendulum is a little glitchy. Move distance might be increased, decreased or relocated by unknown reasons.",
+    "Func_pendulum won't react to frequent triggering properly. It might stay in whatever state it is when triggered consecutively."
+  ]
+}

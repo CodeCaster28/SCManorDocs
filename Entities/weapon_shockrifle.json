@@ -1,0 +1,25 @@
+{
+  "Classname": "weapon_shockrifle",
+  "Description": "The shockrifle (called also Shock Roach) consumes ammunition directly. Primary fire shot a swift laser that deal moderate amount of damage. Secondary fire produces unstable triple lightning bolt in front of player that may damage multiple enemies. It will only be picked up when the player issues his 'Use'-command on shock roach (dropped by Shock Troopers) before it dies. While holding the weapon, no other weapon can be selected. The Shockrifle has to be dropped first. Shockroach explodes when it's almost out of charge. Dropping it will damage nearby enemies- it act like a electric grenade. Dropped too late or not dropped at all will deal massive amount of damage to carrier. Shock rifle is not rechargeable. CVars:<ul><li>sk_shockroach_dmg_xpl_touch# (Default: 350): Damage dealt to carrier on overcharge.</li><li>sk_shockroach_dmg_xpl_splash_bullet# (Default: 150): Explosion damage.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

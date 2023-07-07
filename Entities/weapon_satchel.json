@@ -1,0 +1,25 @@
+{
+  "Classname": "weapon_satchel",
+  "Description": "A remote-triggered explosive. You can carry 5 of them at a time. While you have at least one placed somewhere in the map, you cannot pick up new ones. This is in order to prevent spamming which might eventually crash the server when all of them are triggered at once. Secondary fire throws a satchel. Primary fire detonates all of your placed satchels. You can pick up thrown satchels again by using them. Thrown satchels can be kicked around by players by walking over them, which, however, is unwanted in most cases. Bounces off of targets without detonating, dealing no damage. CVars:<ul><li>sk_plr_satchel# (Default: 160, 160, 225): Satchel explosion damage. Explosion damage values greater than 200 are known to occasionally cause damage to apply even through walls.</li></ul>",
+  "KeyDescriptions": [
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it. Only 'On' and 'Toggle' trigger use-types are accepted which makes weapon be picked up by player '!activator'. Kill-targeting this entity will remove {{ entname }} and stop it from respawning.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger when weapon is picked up. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when weapon is picked up.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "As all weapon-, ammo- and item- entities, this respawns after 15 seconds.",
+    "If \"TOUCH only\" and \"USE only\" flags are selected, the weapon can only be collected by trigger. When those flags are not selected, the weapon also can be collected by trigger, but only if player is the !activator."
+  ]
+}

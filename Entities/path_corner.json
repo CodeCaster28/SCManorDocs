@@ -1,0 +1,58 @@
+{
+  "Classname": "path_corner",
+  "Description": "Entity used to define a path for [func_train](../func_train). Can be also used to make Monsters go into specified direction (type path_corner name into \"Target\" of monster entity). To make it works, create a set of a path_corners entity, and in each path_corner's \"Next Stop Target\" specify a name of next path_corner to go to from this path_corner. If last path_corner targeting first path_corner, the path movement is looped. Note that monsters movement breaks upon combat initiation. Angles values does not affect train, however it's working with monsters like Osprey.",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1",
+          "choiceDescription": "The entity stops at this point and won't move until triggered (to continue normal travelling)."
+        },
+        {
+          "choiceValue": "2",
+          "choiceDescription": "Entity is teleported to this path_corner instead of moving to it. Useful when creating infinite trains that travels the whole path and gets back into first point to repeat.Note that setting this to first path_corner (when no loop provided) is useless because train is already teleported to first path_corner at map start."
+        },
+        {
+          "choiceValue": "4",
+          "choiceDescription": "Entity will trigger it's \"Fire on Arrive\" target once."
+        },
+        {
+          "choiceValue": "8",
+          "choiceDescription": "It requires multiple \"Next stop target\" path_corners with the same name. Picks random path_corner from within same named path_corners and go into it as a next destination target."
+        }
+      ]
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities (monsters, trains, path_corners) can link to this. Can be kill-targeted, any object heading this path_corner will stop.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Name of the next path_corner to go after entity reach this path_corner. Can be kill-targeted, any object heading this path_corner will stop.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "message",
+      "keyDescription": "Entity to trigger when train or NPC reach this path_corner. Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "wait",
+      "keyDescription": "Delay before travel continuation to next path_corner. The entity will stop here and wait specified amount of time (in seconds), after that it will proceed  to next path_corner (described in \"Next stop target\") if there is any.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "speed",
+      "keyDescription": "Overrides train speed after reaching this point.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "yaw_speed",
+      "keyDescription": "Overrides train rotation speed after reaching this point (degrees per seconds).",
+      "keyChoices": []
+    }
+  ]
+}

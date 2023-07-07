@@ -1,0 +1,91 @@
+{
+  "Classname": "BaseRandom",
+  "Description": "Entity_Description_here",
+  "KeyDescriptions": [
+    {
+      "keyName": "target_count",
+      "keyDescription": "Amount of random targets you have specified below. E.g. if you used \"Target 1'\" \"Target 2\" and \"Target 3\" then set it to 3.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target1",
+      "keyDescription": "Target no. 1 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target2",
+      "keyDescription": "Target no. 2 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target3",
+      "keyDescription": "Target no. 3 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target4",
+      "keyDescription": "Target no. 4 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target5",
+      "keyDescription": "Target no. 5 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target6",
+      "keyDescription": "Target no. 6 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target7",
+      "keyDescription": "Target no. 7 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target8",
+      "keyDescription": "Target no. 8 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target9",
+      "keyDescription": "Target no. 9 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target10",
+      "keyDescription": "Target no. 10 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target11",
+      "keyDescription": "Target no. 11 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target12",
+      "keyDescription": "Target no. 12 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target13",
+      "keyDescription": "Target no. 13 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target14",
+      "keyDescription": "Target no. 14 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target15",
+      "keyDescription": "Target no. 15 that can be triggered when picking random target.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "target16",
+      "keyDescription": "Target no. 16 that can be triggered when picking random target.",
+      "keyChoices": []
+    }
+  ]
+}

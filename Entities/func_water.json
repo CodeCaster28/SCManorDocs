@@ -1,0 +1,93 @@
+{
+  "Classname": "func_water",
+  "Description": "This entity is used to create water. In game, every flat surface of the brushes of this entity will be waving up and down a specified distance. The brushes which are part of this must be cuboids, ideally snapped to 64-units-grid. It requires liquid ('!') texture for waving. Func_water is also a door type, it can be triggered to be opened and closed the same was as [func_door](../func_door)- useful for rising/ascending water. Func_water should be touching the floor whenever it's closed or open or it may produce strange errors or become invisible. Func_water have breakable functionality (if enabled) just like other door types, however it cannot be destroyed by direct attack (bullet/melee), you can still destroy func_water by explosions or area of effect attacks(e.g. weapon_egon).",
+  "KeyDescriptions": [
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "1 ",
+          "choiceDescription": "If set, the {{ entname }} will treat its predetermined open- and close-position as swapped, meaning it will start in its open position, but treat it as its closed position. This is useful when you want your {{ entname }} to start open and still receive proper lighting, or the node-graph to generate properly before closing the {{ entname }}."
+        },
+        {
+          "choiceValue": "256",
+          "choiceDescription": "If set, this water can be triggered by using it but not by touching it anymore. It should be selected if you need your water to be opened or closed by using it by whatever reason."
+        }
+      ]
+    },
+    {
+      "keyName": "target",
+      "keyDescription": "Entity to trigger whenever water completely \"opens\" or \"closes\". Trigger use-type is 'Toggle'.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "targetname",
+      "keyDescription": "Set name of {{ entname }} so other entities can trigger it to move water. As water is a door type in GoldSrc, it can be moved just like [func_door](../func_door). Behaviour, when triggered, depends on \"Obey Trigger Mode\" value. See \"Obey Trigger Mode\" for more details on how water behaves depending on selected mode. Can be kill-targeted.",
+      "keyChoices": []
+    },
+    {
+      "keyName": "killtarget",
+      "keyDescription": "Entity to remove when water \"opens\".",
+      "keyChoices": []
+    },
+    {
+      "keyName": "skin",
+      "keyDescription": "Content of the water to use.",
+      "keyChoices": [
+        {
+          "choiceValue": "-3",
+          "choiceDescription": "Simple default water."
+        },
+        {
+          "choiceValue": "-4",
+          "choiceDescription": "Slime that deals damage."
+        },
+        {
+          "choiceValue": "-5",
+          "choiceDescription": "Lava that deals damage."
+        },
+        {
+          "choiceValue": "-9",
+          "choiceDescription": "Water that pushes entities in east direction."
+        },
+        {
+          "choiceValue": "-10",
+          "choiceDescription": "Water that pushes entities in north direction."
+        },
+        {
+          "choiceValue": "-11",
+          "choiceDescription": "Water that pushes entities in west direction."
+        },
+        {
+          "choiceValue": "-12",
+          "choiceDescription": "Water that pushes entities in south direction."
+        },
+        {
+          "choiceValue": "-13",
+          "choiceDescription": "Water that pushes entities upwards."
+        },
+        {
+          "choiceValue": "-14",
+          "choiceDescription": "Water that pushes entities downwards."
+        },
+        {
+          "choiceValue": "-15",
+          "choiceDescription": "Water with disabled underwater visual and sound effects."
+        }
+      ]
+    },
+    {
+      "keyName": "WaveHeight",
+      "keyDescription": "Height of the waves. Larger values for higher waves.",
+      "keyChoices": []
+    }
+  ],
+  "Notes": [
+    "It is advised to experiment with large texture scale values on the water surface, as the game engine will first fit the texture to be 64 units wide and high. Doing so can greatly improve performance and looks."
+  ],
+  "Issues": [
+    "Rotating the surface texture by non-by-90-divisible values causes shred water surface.",
+    "Multiple func_water entities touching on edge will not correctly blend into each other unless both are snapped to 64-units-grid on the touching corners.."
+  ]
+}
