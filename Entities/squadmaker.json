@@ -402,6 +402,7 @@
     }
   ],
   "Issues": [
-    "You must specify monster type, otherwise it will crash the game with \"Spawned a NULL entity!\" error message."
+    "You must specify monster type, otherwise it will crash the game with \"Spawned a NULL entity!\" error message.",
+    "Not Solid key does not work."
   ]
 }

@@ -1,6 +1,6 @@
 {
   "Classname": "func_monsterclip",
-  "Description": "This is an invisible entity which will block all monsters who have the \"MonsterClip\"-spawnflag enabled. Starts enabled.",
+  "Description": "This is an invisible entity which will block all monsters who have the \"MonsterClip\"-spawnflag enabled. Starts enabled, but can be toggled on and off by trigger. To make func_monsterclip disabled at start use [trigger_auto](../trigger_auto).",
   "KeyDescriptions": [
     {
       "keyName": "targetname",
