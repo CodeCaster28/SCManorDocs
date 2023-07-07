@@ -77,7 +77,7 @@ fireonstop(string) : "Fire On Stop"
 ```
 Because of this you can't change names of keyvalues inside entity guide. They are always the same as these from FGD.
 
-
-More coming soon...
+Check wiki for documentation:
+https://github.com/CodeCaster28/SCManorDocs/wiki
 
 
