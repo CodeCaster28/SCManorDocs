@@ -9,6 +9,9 @@ Two folders are present in this repo: BaseClasses and Entities. Both contains .j
 Each file inside Entities folder represents sven co-op entity, while BaseClasses contains all base classes that are shared between some of the entities.
 The structure is similar to FGD, each entity description consist of one file from Entities folder and files from BaseClasses based on what are base classes of this entity.
 
+Check wiki for documentation:
+https://github.com/CodeCaster28/SCManorDocs/wiki
+
 ## Changing description of entities
 Every entity inside Entities/ folder have description on op of file:
 ```
@@ -77,7 +80,7 @@ fireonstop(string) : "Fire On Stop"
 ```
 Because of this you can't change names of keyvalues inside entity guide. They are always the same as these from FGD.
 
-
-More coming soon...
+More info in wiki:
+https://github.com/CodeCaster28/SCManorDocs/wiki
 
 
