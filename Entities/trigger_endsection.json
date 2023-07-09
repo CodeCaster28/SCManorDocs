@@ -1,6 +1,6 @@
 {
   "Classname": "trigger_endsection",
-  "Description": "Used to end the game (not the map). Obsolete for Sven Co-op.",
+  "Description": "Obsolete in Sven Co-op. Used to end the game (not the map) in Half-Life.",
   "KeyDescriptions": [
     {
       "keyName": "section",

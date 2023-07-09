@@ -1,6 +1,6 @@
 {
   "Classname": "world_items",
-  "Description": "The world_items entity is the old way of adding items to your map. It's development has been discontinued. Please add items to your map directly. Also, this only supports the creation of only four different items.",
+  "Description": "Obsolete in Sven Co-op. The world_items entity is the old way of adding items to your map. It's development has been discontinued. Please add items to your map directly.",
   "KeyDescriptions": [
     {
       "keyName": "type",

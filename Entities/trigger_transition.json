@@ -1,5 +1,5 @@
 {
   "Classname": "trigger_transition",
-  "Description": "This entity controls which entities move to the next map in a level transition. It is not required in Sven Co-op.",
+  "Description": "Obsolete in Sven Co-op. This entity controlled which entities move to the next map in a level transition in Half-Life.",
   "KeyDescriptions": []
 }
