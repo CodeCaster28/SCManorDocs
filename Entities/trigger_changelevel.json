@@ -31,11 +31,6 @@
       "keyChoices": []
     },
     {
-      "keyName": "landmark",
-      "keyDescription": "Landmark used to work as an orientation point between two maps in a center of both trigger_changelevels of maps. It doesn't work in Sven Co-op, cause players starts at spawn points normally when new map loads.",
-      "keyChoices": []
-    },
-    {
       "keyName": "keep_inventory",
       "keyDescription": "If set to \"Yes\", player's ammo, armor and weapons are carried to target map.",
       "keyChoices": [
@@ -48,16 +43,6 @@
           "choiceDescription": ""
         }
       ]
-    },
-    {
-      "keyName": "changetarget",
-      "keyDescription": "Unknown purpose. Maybe it triggers a target in goal map.",
-      "keyChoices": []
-    },
-    {
-      "keyName": "changedelay",
-      "keyDescription": "Delays \"Change Target\" action, whatever that action does.",
-      "keyChoices": []
     },
     {
       "keyName": "percent_of_players",
