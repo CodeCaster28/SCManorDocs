@@ -24,7 +24,7 @@
         },
         {
           "choiceValue": "16 ",
-          "choiceDescription": "Does not work. Supposed to cause this entity to be enabled from level load onward, this only makes sense in combination with \"Constant\". Use delayed trigger_auto instead."
+          "choiceDescription": "Causes this entity to be enabled from level load onward, this only makes sense in combination with \"Constant\"."
         },
         {
           "choiceValue": "32 ",

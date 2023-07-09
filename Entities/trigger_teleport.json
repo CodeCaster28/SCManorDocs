@@ -35,7 +35,7 @@
     },
     {
       "keyName": "target",
-      "keyDescription": "Name of [info_teleport_destination(s)](../info_teleport_destination) where players will be teleported to.",
+      "keyDescription": "Name of [info_teleport_destination(s)](../info_teleport_destination) where players will be teleported to. Ideally an [info_teleport_destination](../info_teleport_destination) entity, but other entities can be used.",
       "keyChoices": []
     },
     {

@@ -1,6 +1,6 @@
 {
   "Classname": "trigger_script",
-  "Description": "This powerful entity allows you to put scripts made with AngelScript language on your map. You can find more info about trigger_script and scripting [here](https://github.com/baso88/SC_AngelScript/wiki/trigger_script).",
+  "Description": "This powerful entity allows you to put scripts made with AngelScript language on your map. Before Sven Co-op 5.0 you already were able to create almost anything with existed entities- this entity pushes imagination barrier even further allowing you to open an existing script and use functions. For more information on how to build trigger_script functions, visit the [SC AngelScript documentation](https://github.com/baso88/SC_AngelScript/wiki/trigger_script).",
   "KeyDescriptions": [
     {
       "keyName": "targetname",
@@ -46,5 +46,8 @@
         }
       ]
     }
+  ],
+  "Notes": [
+    "A think mode trigger_script obeys usetype: triggering with \"Off\" will stop the trigger_script entity running, similarly \"Toggle\" will allow to switch between running and not running."
   ]
 }
