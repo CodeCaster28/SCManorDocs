@@ -21,6 +21,16 @@
       "keyName": "killtarget",
       "keyDescription": "Entity to remove when {{ entname }} is touched (or when stop touched if \"Fire On Exit\" flag is selected).",
       "keyChoices": []
+    },
+    {
+      "keyName": "spawnflags",
+      "keyDescription": "SpawnflagsEmpty",
+      "keyChoices": [
+        {
+          "choiceValue": "16 ",
+          "choiceDescription": "If set, trigger_multiple will fire on initial entry and not continuously while touching the entity, requiring re-entry to trigger again."
+        }
+      ]
     }
   ],
   "Issues": [

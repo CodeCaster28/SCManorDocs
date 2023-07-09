@@ -14,13 +14,14 @@
     },
     {
       "keyName": "targetname",
-      "keyDescription": "Set name of {{ entname }} so other entities can refer to it as their master or trigger it as one of required inputs to enable it. Every trigger use-type works uniformly. Should not be kill-targeted because it breaks it's functionality.",
+      "keyDescription": "Set name of {{ entname }} so other entities can refer to it as their master or trigger it as one of required inputs to enable it. Every trigger use-type works uniformly. Should not be kill-targeted because it breaks it's functionality. When using a multisource as a master to lock another entity, this multisource's targetname value must be put in the master value for entity-to-be-locked in order for the multisource to lock it, ensuring that some other entity is set to target this multisource.",
       "keyChoices": []
     }
   ],
   "Notes": [
+    "If a valid entity does not target a multisource that is being used as a master, or the targetting entity no longer exists, the multisource will not lock entities until something is able to target it.",
     "If you change the target of an entity targeting a multisource entity, the multisource entity will automatically no longer expect input from it.",
-    "Note that entity takes only \"targets\" and \"killtargets\" keys into account, so other triggering inputs like \"TriggerTarget\" won't wor. In that case use trigger_relay like a bridge between entity with atypical-triggering output and multisource."
+    "Note that entity takes only \"targets\" and \"killtargets\" keys into account, so other triggering inputs like \"TriggerTarget\" won't work. In that case use [trigger_relay](../trigger_relay) like a bridge between entity with atypical-triggering output and multisource."
   ],
   "Issues": [
     "Kill Target is count as a normal targetting in multisource, do not \"kill target\" this entity or it won't work expecting a kill input."
