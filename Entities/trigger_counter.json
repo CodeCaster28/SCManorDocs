@@ -9,26 +9,6 @@
         {
           "choiceValue": "1",
           "choiceDescription": " If set, message of how many inputs are to go won't be displayed."
-        },
-        {
-          "choiceValue": "2",
-          "choiceDescription": "Non-functional in {{ entname }}."
-        },
-        {
-          "choiceValue": "4",
-          "choiceDescription": "Non-functional in {{ entname }}."
-        },
-        {
-          "choiceValue": "8",
-          "choiceDescription": " Non-functional in {{ entname }}."
-        },
-        {
-          "choiceValue": "16",
-          "choiceDescription": "Non-functional in {{ entname }}."
-        },
-        {
-          "choiceValue": "32",
-          "choiceDescription": "Non-functional in {{ entname }}."
         }
       ]
     },
