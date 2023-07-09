@@ -4,7 +4,7 @@
   "KeyDescriptions": [
     {
       "keyName": "target",
-      "keyDescription": "Target to apply effects on.",
+      "keyDescription": "Target to apply effects on. Supports use of !activator and !caller.",
       "keyChoices": []
     },
 
