@@ -24,7 +24,7 @@
         },
         {
           "choiceValue": "32 ",
-          "choiceDescription": "If set, the {{ entname }} will trigger its target whenever a player respawns at its position."
+          "choiceDescription": "If set, the {{ entname }} will trigger its target whenever a player respawns at its position. The player spawned is passed as !activator to the target."
         }
       ]
     },

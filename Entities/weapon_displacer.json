@@ -73,7 +73,7 @@
     },
     {
       "keyName": "m_iszTeleportDestination",
-      "keyDescription": "Name of teleport destination of secondary fire mode ([info_teleport_destination](../info_teleport_destination)).",
+      "keyDescription": "Name of teleport destination of secondary fire mode ([info_teleport_destination](../info_teleport_destination)). If not specified, all teleport destinations with name \"displacer_global_target\" will be picked.",
       "keyChoices": []
     },
     {

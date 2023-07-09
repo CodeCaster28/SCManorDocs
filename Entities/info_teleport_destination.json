@@ -1,10 +1,10 @@
 {
   "Classname": "info_teleport_destination",
-  "Description": "This is the correct entity to use as the teleport destination entity of a [trigger_teleport](../trigger_teleport). Although other entities such as [info_target](../info_target) can be used as a target as well, only info_teleport_destination allows features such as triggering something on teleport. Setting entity name to displacer_global_target allows for weapon_displacer secondary fire to have players teleport to this info_teleport_destination, if the displacer does not have \"Teleport Destination\" (m_iszTeleportDestination).",
+  "Description": "This is the correct entity to use as the teleport destination entity of a [trigger_teleport](../trigger_teleport) or [weapon_displacer](../weapon_displacer). Although other entities such as [info_target](../info_target) can be used as a target as well, only info_teleport_destination allows features such as triggering something on teleport.",
   "KeyDescriptions": [
     {
       "keyName": "targetname",
-      "keyDescription": "Set name of info_teleport_destination so [trigger_teleport](../trigger_teleport) can set it as it's target.",
+      "keyDescription": "Set name of info_teleport_destination so [trigger_teleport](../trigger_teleport) or [weapon_displacer](../weapon_displacer) can set it as it's teleport target. Setting the targetname to \"displacer_global_target\" allows for [weapon_displacer](../weapon_displacer) secondary fire to have players teleport to this info_teleport_destination, if the displacer does not have \"m_iszTeleportDestination\" key set.",
       "keyChoices": []
     },
     {

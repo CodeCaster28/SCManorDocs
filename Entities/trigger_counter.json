@@ -1,6 +1,6 @@
 {
   "Classname": "trigger_counter",
-  "Description": "Obsolete counter entity. You might prefer to use [game_counter](../game_counter). Counts how many times trigger_counter is triggered and displays message how many inputs are to go \"Only X more to go...\". After being triggered \"count\" times, it triggers it's target. Placement/shape/texturing of this entity does not matter as it behaves like point entity.",
+  "Description": "You might prefer to use [game_counter](../game_counter). Counts how many times trigger_counter is triggered and displays message how many inputs are to go \"Only X more to go...\". After being triggered \"count\" times, it triggers it's target. Placement/shape/texturing of this entity does not matter as it behaves like point entity.",
   "KeyDescriptions": [
     {
       "keyName": "spawnflags",
