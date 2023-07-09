@@ -1,6 +1,6 @@
 {
   "Classname": "env_beam",
-  "Description": "The env_beam entity is used to create a bolt between two entities. The actual beam has the classname \"beam\"",
+  "Description": "The env_beam entity is used to create a bolt between two entities. The actual beam has the classname \"beam\".",
   "KeyDescriptions": [
     {
       "keyName": "targetname",
