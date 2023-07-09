@@ -4,6 +4,8 @@ The idea behind this repo is to allow users to contribute to Sven Co-op Manor En
 Sven Co-op Manor Entity Guide is using Sven Co-op FGD and documentation files to generate webpages you see in svenmanor.com.
 To contribute, fork this repo, make your changes and create a Pull Request. After accepted, I upload changes to svenmanor.com (unfortunately there is no automation for this).
 
+Git tag "Live" points to commit which changes are live on svenmanor.com.
+
 If changing for future Sven Co-op version (release candidate) please use branch named after game version. E.g. for 5.26 you should use branch "rc5.26".
 
 Two folders are present in this repo: BaseClasses and Entities. Both contains .json files. 
