@@ -137,7 +137,7 @@
     },
     {
       "keyName": "displayname",
-      "keyDescription": "If set, this will overwrite the monster's default in-game name, which appears in the HUD monster info, which can be enabled/disabled using the CVar 'mp_allowmonsterinfo'. You can use '\n' here to perform a line-break.",
+      "keyDescription": "If set, this will overwrite the monster's default in-game name, which appears in the HUD monster info, which can be enabled/disabled using the CVar 'mp_allowmonsterinfo'. You can use '\\n' here to perform a line-break.",
       "keyChoices": []
     },
     {
