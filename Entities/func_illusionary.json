@@ -1,6 +1,6 @@
 {
   "Classname": "func_illusionary",
-  "Description": "Essentially an entirely non-solid func_wall.",
+  "Description": "Essentially an entirely non-solid func_wall. If it has toggleable textures, they will toggle when the entity is triggered.",
   "KeyDescriptions": [
     {
       "keyName": "targetname",
@@ -100,6 +100,6 @@
     }
   ],
   "Notes": [
-    "Even if non-solid, this entity still adds clipnodes. Set \"ZHLT Disable Clipping\" to 'Always non-solid' to prevent that or add zhlt_noclip key with value of 1."
+    "Even if non-solid, this entity still adds clipnodes. Set \"ZHLT Disable Clipping\" to 'Always non-solid' to prevent that or add zhlt_noclip key with value of 1. Alternatively, use SKIP texture instead of NULL on faces that have the texture on the entity."
   ]
 }

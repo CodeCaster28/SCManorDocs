@@ -60,5 +60,9 @@
       "keyDescription": "Entity to copy render values which will be applied to target entity. 'Use Entity to copy from' flag must be selected for this to take effect.",
       "keyChoices": []
     }
+  ],
+  "Notes": [
+    "Once applied, entity appearance for affected players won't change even if players gets respawned with new targetname.",
+    "Entities that have their appearance changed will revert back to the original render settings if the env_render_individual that applied the rendering is removed from the game, e.g. via killtarget."
   ]
 }

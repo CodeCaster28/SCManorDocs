@@ -29,9 +29,10 @@
     }
   ],
   "Notes": [
-    "Unlike other entities, game_player_counter sends 'On' output instead of 'Toggle'."
+    "Unlike other entities, game_player_counter sends 'On' output instead of 'Toggle'.",
+    "You can access current player value of this entity by refering to \"dmg\" keyvalue."
   ],
   "Issues": [
-    "You can access current player value of this entity by refering to \"dmg\" keyvalue."
+    "This entity is partially broken, it doesn’t work correctly after a level change for instance, and you cannot access the current number of connected players with it. You can instead replace this entity’s behaviour with a trigger_entity_iterator and a game_counter."
   ]
 }

@@ -1,6 +1,6 @@
 {
   "Classname": "trigger_entity_iterator",
-  "Description": "This entity allows you to simulate one or multiple entities triggering a specific other entity. For example, you can have all entities of classname \"player\" trigger a trigger_condition, or all entities with targetname \"zombie\" trigger a trigger_copyvalue. The triggered entity will receive every iterated entity as activator.",
+  "Description": "This entity allows you to simulate one or multiple entities triggering a specific other entity. For example, you can have all entities of classname \"player\" trigger a [trigger_condition](../trigger_condition), or all entities with targetname \"zombie\" trigger a [trigger_copyvalue](../trigger_copyvalue). The triggered entity will receive every iterated entity as activator.",
   "KeyDescriptions": [
     {
       "keyName": "name_filter",

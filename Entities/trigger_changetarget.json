@@ -22,5 +22,8 @@
       "keyDescription": "New \"Target\" value for targeted entity.",
       "keyChoices": []
     }
+  ],
+  "Issues": [
+    "This entity only changes one entity’s target, likely the first entity that it can find, instead of applying the change to all entity instances whose name matches the target. [trigger_changevalue](../trigger_changevalue) can be used to get around this."
   ]
 }

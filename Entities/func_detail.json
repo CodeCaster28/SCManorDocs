@@ -4,7 +4,7 @@
   "KeyDescriptions": [
     {
       "keyName": "zhlt_detaillevel",
-      "keyDescription": "Detailed brushes with different detail level won't chop each other. Use higher amount for smaller details. Try to avoid too many detail levels in the map (it's increasing .bsp file size). E.g. func_detail table made of brushes have detail level of 1. On the table there are another func_details that represents computer screen, keyboard and mug. Those should have detail level value of 2 so they won't chop the faces of the table.",
+      "keyDescription": "The brush's detail level. Each level will be chopped by brushes of equal or lower detail level, and always be chopped by world brushes, and only chop brushes of equal or greater level. Use higher amount for smaller details. Try to avoid too many detail levels in the map (it increases .bsp file size). Example: func_detail table made of brushes have detail level of 1. On the table there are another func_details that represents computer screen, keyboard and mug. Those should have detail level value of 2 so they won't chop the faces of the table.",
       "keyChoices": []
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "keyName": "zhlt_coplanarpriority",
-      "keyDescription": "Prevents z-fighting. When two brushes have overlapping faces, this value controls which of those brushes faces have rendering priority. Note that both of those brushes must have same \"Detail Level\".",
+      "keyDescription": "Helps prevent z-fighting between two or more overlapping detail brush faces by giving each detail its own priority. Note that both of those brushes must have the same detail level to make use of this priority (use detail level 0 to work with world brushes).",
       "keyChoices": []
     },
     {
@@ -43,6 +43,8 @@
     }
   ],
   "Notes": [
-    "Detail layers uses an advanced method to decide leafnode content, so they won't cause \"Ambiguous leafnode contents\" compile warning."
+    "Detail layers uses an advanced method to decide leafnode content, so they won't cause \"Ambiguous leafnode contents\" compile warning.",
+    "Despite becoming an ordinary world brush during compilation, it cannot be used to seal the map. It is kept separate from ordinary world brushes during processing of Hull 0 and as such cannot be used to prevent leaks. Only ordinary world brushes should be used to close up a map.",
+    "Even if Passable is set to Yes (zhlt_noclip 1) it will still be affected by decals such as sprays and bullet holes."
   ]
 }
