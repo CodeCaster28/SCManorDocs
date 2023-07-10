@@ -21,6 +21,11 @@
       "keyName": "skin",
       "keyDescription": "Skin to use on target model.",
       "keyChoices": []
+    },
+    {
+      "keyName": "bodygroup",
+      "keyDescription": "Bodygroup to use on target model.",
+      "keyChoices": []
     }
   ]
 }
