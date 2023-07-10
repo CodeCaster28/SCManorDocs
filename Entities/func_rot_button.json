@@ -145,5 +145,8 @@
         }
       ]
     }
+  ],
+  "Issues": [
+    "Using \"X-axis\" flag causes sparks at world origin due to conflict with flag 64 of func_button."
   ]
 }

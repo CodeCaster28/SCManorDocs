@@ -1,6 +1,6 @@
 {
   "Classname": "trigger_changelevel",
-  "Description": "Entity which causes a level-change when entered, without showing up a scoreboard. Scores are no transferred. Can be set to only react to triggering. You can add master keyvalue manually to this entity.",
+  "Description": "Entity which causes a level-change when entered, without showing up a scoreboard. Scores are no transferred. Can be set to only react to triggering. You can add \"master\" keyvalue manually to this entity.",
   "KeyDescriptions": [
     {
       "keyName": "spawnflags",
@@ -66,8 +66,8 @@
     }
   ],
   "Notes": [
-    "Trigger_changelevel supports to have a master (even if it is not listed in object properties). You can set it by adding \"targetname\" key with SmartEdit mode disabled.",
-    "Using the map cfg CVar nomaptrans followed by a map name will disable any trigger_changelevel entities with a matching map value, becoming solid walls that will block players."
+    "Trigger_changelevel supports \"master\" key (even if it is not listed in object properties). You can set it by adding \"master\" key with SmartEdit mode disabled, using the targetname of a given [multisource](../multisource) entity as the key's value.",
+    "Using the map cfg CVar \"nomaptrans\" followed by a map name will disable any trigger_changelevel entities with a matching map value, becoming solid walls that will block players."
   ],
   "Issues": [
     "Percentage of players needed feature only counts players currently touching the trigger_changelevel, i.e. players that have touched and no longer touching will not be counted."

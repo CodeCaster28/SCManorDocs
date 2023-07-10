@@ -13,19 +13,19 @@
       "keyChoices": [
         {
           "choiceValue": "0",
-          "choiceDescription": ""
+          "choiceDescription": "No"
         },
         {
           "choiceValue": "2",
-          "choiceDescription": "Set this brush as a player standing hull shape."
+          "choiceDescription": "Set this brush as a player standing player hull (hull 1)."
         },
         {
           "choiceValue": "4",
-          "choiceDescription": "Set this brush as big monster's hull but ask yourself- do you really need to change this?."
+          "choiceDescription": "Set this brush as big monster's hull (hull 2) but ask yourself- do you really need to change this?."
         },
         {
           "choiceValue": "8",
-          "choiceDescription": "Set this brush as a player crouching hull shape."
+          "choiceDescription": "Set this brush as a player crouching hull shape (hull 3)."
         }
       ]
     },
