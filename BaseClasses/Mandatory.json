@@ -1,7 +1,6 @@
 {
   "Classname": "Mandatory",
   "Description": "Entity_Description_here",
-  "Group": "OnDestroy Function",
   "KeyDescriptions": [
     {
       "keyName": "ondestroyfn",
