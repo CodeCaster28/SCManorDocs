@@ -1,6 +1,7 @@
 {
   "Classname": "OpenClosable",
   "Description": "Entity_Description_here",
+  "Group": "More Open/Close Triggers",
   "KeyDescriptions": [
     {
       "keyName": "fireonopening",

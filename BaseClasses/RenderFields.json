@@ -1,6 +1,7 @@
 {
   "Classname": "RenderFields",
   "Description": "Entity_Description_here",
+  "Group": "Render Keyvalues",
   "KeyDescriptions": [
     {
       "keyName": "rendermode",

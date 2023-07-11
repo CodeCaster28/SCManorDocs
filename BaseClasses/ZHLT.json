@@ -1,6 +1,7 @@
 {
   "Classname": "ZHLT",
   "Description": "Entity_Description_here",
+  "Group": "ZHLT Keyvalues",
   "KeyDescriptions": [
     {
       "keyName": "zhlt_lightflags",
@@ -30,7 +31,7 @@
     },
     {
       "keyName": "light_origin",
-      "keyDescription": "Set it to the name of [info_target](../info_target), this entity will receive lights from specified [info_taget](../info_taget) position instead of it's own position. As a lot of entites can moves and lightning is not updated dynamically you can choose how your entity will be lit in game (e.g. elevators, pushables e.t.c.). Now you don't need to put the whole entity in the well-lit room at map start to make them look desirable.",
+      "keyDescription": "Set it to the name of [info_target](../info_target), this entity will receive lights from specified [info_target](../info_target) position instead of it's own position. As a lot of entites can moves and lightning is not updated dynamically you can choose how your entity will be lit in game (e.g. elevators, pushables e.t.c.). Now you don't need to put the whole entity in the well-lit room at map start to make them look desirable.",
       "keyChoices": []
     }
   ]

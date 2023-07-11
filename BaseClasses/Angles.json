@@ -1,6 +1,7 @@
 {
   "Classname": "Angles",
   "Description": "Entity_Description_here",
+  "Group": "Pitch Yaw Roll",
   "KeyDescriptions": [
     {
       "keyName": "angles",
