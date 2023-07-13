@@ -1,6 +1,7 @@
 {
   "Classname": "InventoryRules",
   "Description": "Entity_Description_here",
+  "Group": "Inventory Rules",
   "KeyDescriptions": [
     {
       "keyName": "item_name_required",

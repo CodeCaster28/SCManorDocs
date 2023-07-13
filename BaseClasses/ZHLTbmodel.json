@@ -1,6 +1,7 @@
 {
   "Classname": "ZHLTbmodel",
   "Description": "Entity_Description_here",
+  "Group": "ZHLT Keyvalues",
   "KeyDescriptions": [
     {
       "keyName": "zhlt_usemodel",

@@ -1,6 +1,7 @@
 {
   "Classname": "BaseLockable",
   "Description": "Entity_Description_here",
+  "Group": "Sounds and Sentences",
   "KeyDescriptions": [
     {
       "keyName": "locked_sound",

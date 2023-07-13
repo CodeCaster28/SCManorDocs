@@ -1,6 +1,8 @@
 {
   "Classname": "PlatSounds",
   "Description": "Entity_Description_here",
+  "Group": "Inventory Rules",
+  "Group": "Move and Stop Sounds",
   "KeyDescriptions": [
     {
       "keyName": "movesnd",

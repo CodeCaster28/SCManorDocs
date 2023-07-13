@@ -1,6 +1,6 @@
 {
   "Classname": "func_wall_toggle",
-  "Description": "This is a [func_wall](../func_wall) which can be toggled between visible and invisible. In invisible state, it will also be non-solid. Be careful not to unintentionally stuck players when making a func_wall_toggle visible. While invisible, it does not affect the game's graphics performance.",
+  "Description": "This is a [func_wall](../func_wall) which can be toggled between visible and invisible. In invisible state, it will also be non-solid. Be careful not to unintentionally trap players when making a func_wall_toggle visible. While invisible, it does not affect the game's graphics performance.",
   "KeyDescriptions": [
     {
       "keyName": "spawnflags",

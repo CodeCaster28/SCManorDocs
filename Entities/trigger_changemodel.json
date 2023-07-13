@@ -14,7 +14,7 @@
     },
     {
       "keyName": "model",
-      "keyDescription": "Path to the new model. Is precached automatically. Path starts in \"svencoop\" directory.",
+      "keyDescription": "Path to the new model. It is precached automatically. Path starts in \"svencoop\" directory.",
       "keyChoices": []
     },
     {
@@ -27,5 +27,8 @@
       "keyDescription": "Bodygroup to use on target model.",
       "keyChoices": []
     }
+  ],
+  "Notes": [
+    "Trigger_changemodel supports \"bodygroup\" key (even if it is not listed in object properties). The key allows for changing of the model's bodygroup. You can set it by adding \"bodygroup\" key with SmartEdit mode disabled."
   ]
 }
