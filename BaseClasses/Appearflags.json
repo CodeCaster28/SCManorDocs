@@ -8,7 +8,7 @@
       "keyChoices": [
         {
           "choiceValue": "2048 ",
-          "choiceDescription": "Obsolete in Sven Co-op. Makes the entity don't appear in Multiplayer Games."
+          "choiceDescription": "Obsolete in Sven Co-op. Removes the entity from the map in Multiplayer Games. Do not use."
         }
       ]
     }
