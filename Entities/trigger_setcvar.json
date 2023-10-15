@@ -79,6 +79,10 @@
           "choiceDescription": "Set the behaviour of killing allied NPCs. This replaces the old killnpc setting. 0: Disallows allied NPCs to be killed. 1: Allows allied NPCs to be killed. 2: Allows allied NPCs to be killed by anything other than players, allied NPCs, and human passive class."
         },
         {
+          "choiceValue": "\"mp_observer_mode\"",
+          "choiceDescription": "Enables or disables observer mode on player death."
+        },
+        {
           "choiceValue": "\"mp_pcbalancing_factorlist\"",
           "choiceDescription": "Balance player weapon damage based on the amount of players present based on a sequence of multipliers. The default value (1.0;1.8;1.4;1.2;1.1;1.0) means damage multipliers of 1x for 1 player, 1.8x for 2 players, 1.4x for 3 players, 1.2x for 4 players, 1.5x for 5 players, and 1x for 6 or more players."
         },
