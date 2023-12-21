@@ -152,6 +152,6 @@
   ],
   "Notes": [
     "Monsters gets hurt only while moving inside of trigger_hurt- use \"Affect non-moving NPC's\" flag to fix it.",
-    "Trigger_hurt supports to have a killtarget (even if it is not listed in object properties). You can set it by adding \"killtarget\" key with SmartEdit mode disabled. When damage is dealt to anyone the specified target is removed."
+    "Trigger_hurt supports \"killtarget\" key (even if it is not listed in object properties). You can set it by adding \"killtarget\" key with SmartEdit mode disabled. When damage is dealt to anyone the specified target is removed."
   ]
 }

@@ -1,6 +1,6 @@
 {
   "Classname": "item_generic",
-  "Description": "Widely used as a reliable way to display prop models in the map. This item ignores all player touch (even if flag selected) and can be only triggered by use when appropriate flag is selected. For custom items that recognizes collision use [item_security](../item_security) with custom model. For item that can be also stored in inventory and add additional effects to carrier use [item_inventory](../item_inventory).",
+  "Description": "Widely used as a reliable way to display prop models in the map. This entity can't be picked up like other item entities when touched or used. For custom items that can be picked up use [item_security](../item_security) with custom model. For item that can be also stored in inventory and add additional effects to carrier use [item_inventory](../item_inventory).",
   "KeyDescriptions": [
     {
       "keyName": "targetname",
@@ -9,7 +9,7 @@
     },
     {
       "keyName": "target",
-      "keyDescription": "Non-functional in {{ entname }}.",
+      "keyDescription": "Target to trigger when the entity is touched or used. Although {{ entname }} can't be picked up like any other item entity, it will still respond to the player's touch and use input.",
       "keyChoices": []
     },
     {

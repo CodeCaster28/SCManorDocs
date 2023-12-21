@@ -238,7 +238,6 @@
     "You cannot copy the model from one brush entity to another brush entity, because additional actions are required for that to work. Use [trigger_changemodel](../trigger_changemodel) for that instead."
   ],
   "Issues": [
-    "Writing to strings currently does continuously eat away at server memory because of how Valve did string-\"management\" in the Goldsource-engine; that means strings you have set remain in server memory unless it restarts, eventually causing memory to be full and the server to shut down. While this is rather obsolete (strings don't need much memory), try not to write them THAT often, e.g. not every server frame when in constant mode, but only every 0.3 seconds, at least when you assemble larger strings.",
-    "Constant mode with \"Start On\" doesn't work. Use delayed [trigger_auto](../trigger_auto) instead to activate this entity on map start."
+    "Writing to strings currently does continuously eat away at server memory because of how Valve did string-\"management\" in the Goldsource-engine; that means strings you have set remain in server memory unless it restarts, eventually causing memory to be full and the server to shut down. While this is rather obsolete (strings don't need much memory), try not to write them THAT often, e.g. not every server frame when in constant mode, but only every 0.3 seconds, at least when you assemble larger strings."
   ]
 }
