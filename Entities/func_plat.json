@@ -1,6 +1,6 @@
 {
   "Classname": "func_plat",
-  "Description": "Vertically moving elevator that moves up automatically when player step on it. It is also automatically called when player wait for it at the top of the whole travel altitude.",
+  "Description": "Vertically moving elevator that moves up automatically when a player steps on it. It is also automatically called when player waits for it at the top of the whole travel altitude.",
   "KeyDescriptions": [
     {
       "keyName": "spawnflags",
@@ -34,6 +34,6 @@
     }
   ],
   "Notes": [
-    "Just specifying a targetname makes func_plat not working until triggered."
+    "Setting a targetname makes the func_plat not work until it is triggered."
   ]
 }

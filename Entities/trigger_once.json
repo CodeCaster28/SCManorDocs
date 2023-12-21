@@ -1,6 +1,6 @@
 {
   "Classname": "trigger_once",
-  "Description": "A simple brush-based trigger which triggers its target once when a players enters it - never a second time. The entity deletes itself from the game regardless if it successfully fires it's target or not. For reusable version, use [trigger_multiple](../trigger_multiple).",
+  "Description": "A simple brush-based trigger which triggers its target once when a players enters it - never a second time. The entity deletes itself from the game regardless if it successfully fires it's target or not. For a reusable version, use [trigger_multiple](../trigger_multiple).",
   "KeyDescriptions": [
     {
       "keyName": "targetname",
